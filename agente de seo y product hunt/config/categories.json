@@ -1,0 +1,48 @@
+{
+  "mercadolibre": {
+    "_note": "URL slugs para scraping de mas-vendidos por categoria",
+    "categories": {
+      "celulares-telefonos": "Celulares y Teléfonos",
+      "computacion": "Computación",
+      "electronica-audio-video": "Electrónica, Audio y Video",
+      "hogar-muebles-jardin": "Hogar, Muebles y Jardín",
+      "deportes-fitness": "Deportes y Fitness",
+      "belleza-cuidado-personal": "Belleza y Cuidado Personal",
+      "ropa-accesorios": "Ropa y Accesorios",
+      "consolas-videojuegos": "Consolas y Videojuegos",
+      "juguetes-bebes": "Juguetes y Bebés",
+      "herramientas": "Herramientas"
+    }
+  },
+  "amazon": {
+    "USA": [
+      "electronics",
+      "computers",
+      "home-garden",
+      "sports-outdoors",
+      "beauty",
+      "fashion",
+      "toys-games",
+      "health-personal-care",
+      "tools-home-improvement",
+      "video-games"
+    ],
+    "MX": [
+      "electronics",
+      "computers",
+      "home",
+      "sports",
+      "beauty",
+      "fashion",
+      "toys",
+      "health",
+      "tools",
+      "videogames"
+    ]
+  },
+  "settings": {
+    "max_products_per_category": 20,
+    "min_total_products": 50,
+    "max_total_products": 200
+  }
+}

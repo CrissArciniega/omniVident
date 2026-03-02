@@ -1,0 +1,168 @@
+# =============================================================================
+# CONFIGURACION PRINCIPAL DEL PIPELINE
+# =============================================================================
+
+pipeline:
+  name: "Agente Contenido y RRSS"
+  version: "1.0.0"
+  language: "es"
+  target_market: "LATAM"
+  top_keywords_count: 10
+
+# ---------------------------------------------------------------------------
+# SEED KEYWORDS (en espanol)
+# Estas son las keywords semilla que se expandiran con las 8 fuentes
+# ---------------------------------------------------------------------------
+seed_keywords:
+  - "productos novedosos importados de china"
+  - "gadgets baratos"
+  - "productos virales tiktok"
+  - "accesorios tecnologicos baratos"
+  - "productos de belleza coreanos"
+  - "juguetes novedosos"
+  - "utensilios cocina novedosos"
+  - "regalos originales baratos"
+  - "accesorios para celular baratos"
+  - "productos de limpieza novedosos"
+  - "gadgets para el hogar"
+  - "productos trending aliexpress"
+  - "gadgets utiles y baratos"
+  - "productos innovadores para el hogar"
+  - "accesorios de moda importados"
+
+# ---------------------------------------------------------------------------
+# SCORING - Pesos para ranking de keywords (deben sumar 1.0)
+# ---------------------------------------------------------------------------
+scoring:
+  weights:
+    volume_estimate: 0.25       # Estimacion de volumen de busqueda
+    trend_direction: 0.25       # Tendencia (subiendo = mejor)
+    competition_level: 0.15     # Competencia (menos = mejor, score invertido)
+    commercial_intent: 0.20     # Intencion de compra
+    virality_potential: 0.15    # Potencial viral en RRSS
+  deduplication_threshold: 0.85 # Similitud Levenshtein para considerar duplicado
+  min_sources_required: 1       # Minimo de fuentes donde debe aparecer
+
+# ---------------------------------------------------------------------------
+# FUENTES DE KEYWORDS (Phase 1)
+# ---------------------------------------------------------------------------
+sources:
+  google_trends:
+    enabled: true
+    geo: "MX"                   # Mexico como mercado LATAM primario
+    timeframe: "today 3-m"     # Ultimos 3 meses
+    language: "es"
+    max_keywords_per_seed: 25
+
+  google_autocomplete:
+    enabled: true
+    language: "es"
+    country: "mx"
+    expand_with_alphabet: true  # Expandir seeds con a-z
+    max_depth: 2                # Niveles de profundidad de expansion
+    delay_between_requests: 1.5 # Segundos entre peticiones
+
+  youtube_autocomplete:
+    enabled: true
+    language: "es"
+    delay_between_requests: 1.0
+
+  tiktok_trends:
+    enabled: true
+    region: "MX"
+    max_hashtags: 50
+    delay_between_requests: 3.0 # TikTok es agresivo con anti-bot
+
+  people_also_ask:
+    enabled: true
+    language: "es"
+    max_questions_per_seed: 8
+    delay_between_requests: 2.0
+
+  reddit_trends:
+    enabled: true
+    subreddits:
+      - "mexico"
+      - "LatinAmerica"
+      - "compras"
+      - "gadgets"
+      - "ProductReviews"
+      - "AliExpress"
+    max_posts_per_sub: 25
+    delay_between_requests: 1.0
+
+  google_related:
+    enabled: true
+    language: "es"
+    delay_between_requests: 2.0
+
+  perplexity_trends:
+    enabled: true
+    max_queries: 5
+    # Las queries se construyen automaticamente desde los seeds
+
+# ---------------------------------------------------------------------------
+# GENERACION DE IMAGENES (Phase 4)
+# ---------------------------------------------------------------------------
+image_generation:
+  primary_api: "together_ai"
+  fallback_api: "pixazo"
+  max_retries: 3
+  retry_delay: 2.0
+
+  together_ai:
+    base_url: "https://api.together.xyz/v1/images/generations"
+    model: "black-forest-labs/FLUX.1-schnell-Free"
+    steps: 4
+    default_width: 1024
+    default_height: 1024
+
+  pixazo:
+    base_url: "https://api.pixazo.com/v1/generate"
+    model: "stable-diffusion"
+    default_width: 1024
+    default_height: 1024
+
+# ---------------------------------------------------------------------------
+# GOOGLE DRIVE (Phase 5)
+# ---------------------------------------------------------------------------
+google_drive:
+  root_folder_name: "Content Pipeline"
+  service_account_file: "credentials/service_account.json"
+  upload_retries: 3
+  upload_retry_delay: 5.0
+
+# ---------------------------------------------------------------------------
+# SCHEDULING
+# ---------------------------------------------------------------------------
+schedule:
+  enabled: true
+  type: "interval"             # "interval" o "cron"
+  interval_weeks: 2            # Cada 2 semanas
+  start_day: "monday"
+  start_hour: 9
+  start_minute: 0
+  timezone: "America/Mexico_City"
+
+# ---------------------------------------------------------------------------
+# LOGGING
+# ---------------------------------------------------------------------------
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
+  max_bytes: 10485760          # 10MB
+  backup_count: 5
+  console_output: true
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+
+# ---------------------------------------------------------------------------
+# OUTPUT PATHS
+# ---------------------------------------------------------------------------
+output:
+  base_dir: "output"
+  phase1_dir: "output/phase1_raw"
+  phase2_dir: "output/phase2_ranked"
+  phase3_dir: "output/phase3_scripts"
+  phase4_dir: "output/phase4_designs"
+  phase5_dir: "output/phase5_final"
+  state_file: "output/pipeline_state.json"

@@ -1,0 +1,27 @@
+{
+  "api": {
+    "base_url": "https://api.mercadolibre.com",
+    "auth_url": "https://auth.mercadolibre.com/authorization",
+    "token_url": "https://api.mercadolibre.com/oauth/token",
+    "rate_limit_per_minute": 1500,
+    "request_delay_ms": 100
+  },
+  "endpoints": {
+    "site_categories": "/sites/{site_id}/categories",
+    "category_trends": "/trends/{site_id}/{category_id}",
+    "site_trends": "/trends/{site_id}",
+    "search": "/sites/{site_id}/search",
+    "item_details": "/items/{item_id}",
+    "item_reviews": "/reviews/item/{item_id}"
+  },
+  "search_params": {
+    "sort": "sold_quantity_desc",
+    "limit": 50,
+    "condition": "new"
+  },
+  "site_ids": {
+    "EC": "MEC",
+    "MX": "MLM",
+    "CO": "MCO"
+  }
+}

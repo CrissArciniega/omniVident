@@ -1,0 +1,41 @@
+{
+  "countries": {
+    "EC": {
+      "name": "Ecuador",
+      "currency": "USD",
+      "mercadolibre_site_id": "MEC",
+      "amazon_domain": null,
+      "locale": "es-EC",
+      "fallback_usd_rate": 1.0
+    },
+    "MX": {
+      "name": "Mexico",
+      "currency": "MXN",
+      "mercadolibre_site_id": "MLM",
+      "amazon_domain": "amazon.com.mx",
+      "locale": "es-MX",
+      "fallback_usd_rate": 0.058
+    },
+    "CO": {
+      "name": "Colombia",
+      "currency": "COP",
+      "mercadolibre_site_id": "MCO",
+      "amazon_domain": null,
+      "locale": "es-CO",
+      "fallback_usd_rate": 0.00024
+    },
+    "USA": {
+      "name": "United States",
+      "currency": "USD",
+      "mercadolibre_site_id": null,
+      "amazon_domain": "amazon.com",
+      "locale": "en-US",
+      "fallback_usd_rate": 1.0
+    }
+  },
+  "currency_api": {
+    "base_url": "https://v6.exchangerate-api.com/v6",
+    "base_currency": "USD",
+    "cache_hours": 168
+  }
+}

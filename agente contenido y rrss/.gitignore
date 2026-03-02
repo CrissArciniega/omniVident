@@ -1,0 +1,50 @@
+# =============================================================================
+# AGENTE CONTENIDO Y RRSS - .gitignore
+# =============================================================================
+
+# Credenciales y secretos
+credentials/
+.env
+*.json.key
+
+# Outputs generados (regenerables)
+output/phase1_raw/
+output/phase2_ranked/
+output/phase3_scripts/
+output/phase4_designs/
+output/phase5_final/
+output/pipeline_state.json
+
+# Logs
+logs/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code agent memory (regenerable)
+.claude/agent-memory*/

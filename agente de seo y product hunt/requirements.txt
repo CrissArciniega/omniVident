@@ -1,0 +1,24 @@
+# API y Web
+requests>=2.31.0
+playwright>=1.40.0
+beautifulsoup4>=4.12.2
+
+# MercadoLibre SDK
+# pip install mercadolibre (o usar requests directamente con la API REST)
+
+# Google Trends
+pytrends>=4.9.2
+
+# Data Processing
+pandas>=2.1.4
+python-dateutil>=2.8.2
+
+# Schema Validation
+pydantic>=2.5.3
+
+# Utilities
+python-dotenv>=1.0.0
+tenacity>=8.2.3
+
+# Scheduling (opcional, alternativa a Windows Task Scheduler)
+schedule>=1.2.0

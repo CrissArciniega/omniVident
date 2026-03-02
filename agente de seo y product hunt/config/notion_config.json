@@ -1,0 +1,33 @@
+{
+  "database": {
+    "id": "7371079a66b249a9a5c0fca7aa37333b",
+    "data_source_id": "fe63d180-638d-4435-a926-ddcc6056ecd8",
+    "name": "Weekly Market Research 2026"
+  },
+  "property_mapping": {
+    "rank": "Rank",
+    "product_name": "Name",
+    "category": "Category",
+    "opportunity_score": "Opportunity Score",
+    "week": "Week",
+    "usa_price": "USA Price USD",
+    "mx_price": "MX Price USD",
+    "ec_price": "EC Price USD",
+    "co_price": "CO Price USD",
+    "price_range": "Price Range",
+    "avg_rating": "Avg Rating",
+    "total_sales": "Total Sales Est",
+    "trend": "Trend",
+    "trend_score": "Trend Score",
+    "market_gaps": "Market Gaps",
+    "gap_details": "Gap Details",
+    "top_country": "Top Country",
+    "sources": "Sources",
+    "product_urls": "Product URLs",
+    "status": "Status"
+  },
+  "defaults": {
+    "status": "New",
+    "batch_size": 10
+  }
+}

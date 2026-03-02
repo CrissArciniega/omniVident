@@ -1,0 +1,59 @@
+{
+  "playwright": {
+    "headless": true,
+    "timeout_ms": 30000,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  "mercadolibre": {
+    "bestsellers_url": "https://listado.mercadolibre.com.{tld}/mas-vendidos",
+    "category_url": "https://listado.mercadolibre.com.{tld}/{category_slug}/mas-vendidos_NoIndex_True",
+    "domains": {
+      "EC": "ec",
+      "MX": "mx",
+      "CO": "co"
+    },
+    "request_delay_min_ms": 3000,
+    "request_delay_max_ms": 6000,
+    "max_pages_per_category": 1,
+    "selectors": {
+      "product_card": ".ui-search-layout__item",
+      "product_title": ".poly-component__title",
+      "product_price_fraction": ".poly-price__current .andes-money-amount__fraction",
+      "product_price_cents": ".poly-price__current .andes-money-amount__cents",
+      "product_currency": ".poly-price__current .andes-money-amount__currency-symbol",
+      "product_review": ".poly-component__review-compacted",
+      "product_image": ".poly-component__picture",
+      "product_seller": ".poly-component__seller",
+      "product_shipping": ".poly-component__shipping",
+      "category_links": ".ui-search-filter-dl a[href*='mas-vendidos']"
+    }
+  },
+  "amazon": {
+    "bestsellers_url": "https://www.{domain}/gp/bestsellers/{category}",
+    "request_delay_min_ms": 3000,
+    "request_delay_max_ms": 8000,
+    "max_pages_per_category": 2,
+    "selectors": {
+      "product_container": "#gridItemRoot",
+      "product_title": ".p13n-sc-truncated, ._cDEzb_p13n-sc-css-line-clamp-3_g3dy1",
+      "product_price": ".p13n-sc-price, ._cDEzb_p13n-sc-price_3mJ9Z",
+      "product_rating": ".a-icon-alt",
+      "product_link": ".a-link-normal",
+      "product_image": ".a-dynamic-image",
+      "bestseller_rank": ".zg-bdg-text"
+    },
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+    ]
+  },
+  "retry": {
+    "max_attempts": 3,
+    "backoff_factor": 2,
+    "retry_on_status": [429, 500, 502, 503]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "canvas": "^3.2.1",
+    "docx": "^9.5.1",
+    "xlsx": "^0.18.5"
+  }
+}

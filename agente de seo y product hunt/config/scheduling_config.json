@@ -1,0 +1,44 @@
+{
+  "schedule": {
+    "day": "monday",
+    "time": "08:00",
+    "timezone": "America/Guayaquil"
+  },
+  "pipeline": {
+    "timeout_minutes": 60,
+    "retry_failed_agents": true,
+    "max_retries": 3,
+    "retry_delay_seconds": 30
+  },
+  "execution_order": [
+    {
+      "step": 1,
+      "agents": ["mercadolibre_collector", "amazon_collector"],
+      "parallel": true,
+      "timeout_minutes": 20
+    },
+    {
+      "step": 2,
+      "agents": ["trends_enricher"],
+      "parallel": false,
+      "timeout_minutes": 10
+    },
+    {
+      "step": 3,
+      "agents": ["market_analyzer"],
+      "parallel": false,
+      "timeout_minutes": 10
+    },
+    {
+      "step": 4,
+      "agents": ["notion_publisher"],
+      "parallel": false,
+      "timeout_minutes": 10
+    }
+  ],
+  "data_retention": {
+    "raw_data_weeks": 4,
+    "processed_data_weeks": 12,
+    "logs_weeks": 8
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "last_run": null,
+  "last_status": null,
+  "agents_status": {
+    "mercadolibre_collector": null,
+    "amazon_collector": null,
+    "trends_enricher": null,
+    "market_analyzer": null,
+    "notion_publisher": null
+  },
+  "products_published": 0,
+  "errors": []
+}

@@ -1,0 +1,28 @@
+# Environment
+.env
+config/.exchange_rates_cache.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Outputs (datos temporales, no versionar)
+outputs/raw/
+outputs/logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Playwright
+playwright/.cache/

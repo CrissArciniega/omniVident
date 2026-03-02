@@ -1,0 +1,203 @@
+# =============================================================================
+# ESPECIFICACIONES POR PLATAFORMA
+# =============================================================================
+
+platforms:
+  # ---------------------------------------------------------------------------
+  tiktok:
+    display_name: "TikTok"
+    content_type: "short_video_script"
+    thumbnail:
+      width: 1080
+      height: 1920
+      aspect_ratio: "9:16"
+      format: "png"
+    constraints:
+      min_duration_seconds: 15
+      max_duration_seconds: 60
+      hook_duration_seconds: 3
+      max_caption_chars: 2200
+      max_hashtags: 10
+    style:
+      tone: "informal, energetico, juvenil, LATAM"
+      language_style: "tuteo, expresiones coloquiales LATAM, emojis"
+      format_suggestions:
+        - "POV"
+        - "Unboxing"
+        - "Antes/Despues"
+        - "Storytime"
+        - "Ranking / Top 5"
+        - "Expectativa vs Realidad"
+        - "Tips rapidos"
+        - "Duet / Stitch format"
+    cta_examples:
+      - "Sigueme para mas gadgets!"
+      - "Guardalo para despues!"
+      - "Link en bio!"
+      - "Comenta cual quieres!"
+      - "Comparte con alguien que lo necesite!"
+
+  # ---------------------------------------------------------------------------
+  facebook:
+    display_name: "Facebook"
+    content_type: "engagement_post"
+    thumbnail:
+      width: 1200
+      height: 630
+      aspect_ratio: "1.91:1"
+      format: "png"
+    constraints:
+      max_post_chars: 63206
+      recommended_chars: 500
+      max_hashtags: 5
+      optimal_post_length: "150-300 palabras"
+    style:
+      tone: "conversacional, emotivo, compartible, cercano"
+      language_style: "coloquial LATAM, preguntas abiertas, emojis moderados"
+      format_suggestions:
+        - "Pregunta abierta"
+        - "Lista numerada"
+        - "Historia personal / Testimonio"
+        - "Comparacion Antes/Despues"
+        - "Encuesta informal"
+        - "Dato curioso + pregunta"
+    cta_examples:
+      - "Comenta si lo necesitas!"
+      - "Etiqueta a un amigo que le encantaria esto"
+      - "Comparte si te parecio util"
+      - "Que producto te gustaria que probemos?"
+
+  # ---------------------------------------------------------------------------
+  instagram:
+    display_name: "Instagram"
+    content_type: "caption_with_carousel"
+    thumbnail:
+      width: 1080
+      height: 1080
+      aspect_ratio: "1:1"
+      format: "png"
+    reel_thumbnail:
+      width: 1080
+      height: 1920
+      aspect_ratio: "9:16"
+      format: "png"
+    story_thumbnail:
+      width: 1080
+      height: 1920
+      aspect_ratio: "9:16"
+      format: "png"
+    constraints:
+      max_caption_chars: 2200
+      required_hashtags: 30
+      max_carousel_slides: 10
+      first_line_hook: true     # Primera linea debe ser un hook
+    style:
+      tone: "aspiracional, visual, comunidad, lifestyle"
+      language_style: "LATAM coloquial, emojis frecuentes, saltos de linea"
+      format_suggestions:
+        - "Carousel educativo (swipe para aprender)"
+        - "Reel demostracion de producto"
+        - "Before/After visual"
+        - "Tips rapidos en carousel"
+        - "Unboxing reel"
+        - "Comparativa visual"
+    hashtag_strategy:
+      high_volume: 10           # Hashtags de alto volumen (500k+ posts)
+      medium_volume: 10         # Hashtags de volumen medio (50k-500k posts)
+      niche_specific: 10        # Hashtags de nicho (<50k posts)
+
+  # ---------------------------------------------------------------------------
+  youtube:
+    display_name: "YouTube"
+    content_type: "full_video_script"
+    thumbnail:
+      width: 1280
+      height: 720
+      aspect_ratio: "16:9"
+      format: "png"
+    constraints:
+      min_duration_minutes: 3
+      max_duration_minutes: 15
+      max_title_chars: 100
+      max_description_chars: 5000
+      max_tags: 15
+      hook_duration_seconds: 10
+      recommended_chapters: true
+    style:
+      tone: "informativo, entretenido, confiable, detallado"
+      language_style: "LATAM profesional pero accesible, sin jerga excesiva"
+      format_suggestions:
+        - "Top 10 / Ranking de productos"
+        - "Review detallado con pros y contras"
+        - "Comparativa entre productos"
+        - "Haul / Unboxing masivo"
+        - "Tutorial de uso"
+        - "Aliexpress vs Amazon"
+        - "Productos virales de TikTok - Funcionan?"
+    script_structure:
+      - section: "Hook"
+        duration: "0:00 - 0:10"
+        description: "Gancho que genere curiosidad, mostrar el resultado final"
+      - section: "Intro"
+        duration: "0:10 - 0:30"
+        description: "Presentacion breve, contexto del video"
+      - section: "Contenido principal"
+        duration: "0:30 - variable"
+        description: "Desarrollo del tema, productos, demostraciones"
+      - section: "CTA"
+        duration: "ultimos 30s"
+        description: "Like, suscribirse, comentar, link en descripcion"
+    thumbnail_style:
+      text_max_words: 5
+      face_recommended: true
+      high_contrast: true
+      emoji_allowed: true
+
+  # ---------------------------------------------------------------------------
+  blog:
+    display_name: "Blog"
+    content_type: "seo_article"
+    thumbnail:
+      width: 1200
+      height: 628
+      aspect_ratio: "1.91:1"
+      format: "png"
+    constraints:
+      min_words: 800
+      max_words: 1500
+      max_meta_title_chars: 60
+      max_meta_description_chars: 160
+      keyword_density_percent: 1.5
+      min_headings: 3
+      max_heading_depth: 3      # H1, H2, H3
+      min_paragraphs: 6
+      images_recommended: 3
+    style:
+      tone: "profesional, informativo, SEO-optimizado, util"
+      language_style: "espanol formal pero accesible, sin modismos excesivos"
+      format_suggestions:
+        - "Guia completa de compra"
+        - "Lista de mejores productos (Top 10)"
+        - "Comparativa detallada"
+        - "Review con pros y contras"
+        - "Guia para principiantes"
+        - "Tendencias del mes"
+    seo_structure:
+      - element: "Meta Title"
+        format: "{Keyword Principal} | {Beneficio} - {Marca/Sitio}"
+        max_chars: 60
+      - element: "Meta Description"
+        format: "Descripcion atractiva con keyword, beneficio y CTA"
+        max_chars: 160
+      - element: "H1"
+        format: "Titulo principal con keyword exacta"
+        count: 1
+      - element: "H2"
+        format: "Secciones principales del articulo"
+        count: "3-6"
+      - element: "H3"
+        format: "Subsecciones dentro de cada H2"
+        count: "0-3 por H2"
+      - element: "Internal Links"
+        format: "Links a otros articulos relacionados"
+        count: "2-4"
