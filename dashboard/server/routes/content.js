@@ -336,12 +336,60 @@ router.get('/last-run-summary', auth, (req, res) => {
       packCount = packFolders.length;
     }
 
-    // Extract top keywords and sources
-    const topKeywords = trends?.all_keywords_ranked?.slice(0, 15)?.map(k => ({
-      keyword: k.keyword,
-      sources: k.sources,
-      count: k.count,
-    })) || [];
+    // Load all products ONCE for matching
+    let allMarketProducts = [];
+    try {
+      const { getProducts } = require('../services/marketParser');
+      const result = getProducts({ page: 1, limit: 500 });
+      allMarketProducts = result.products || [];
+      console.log(`[Content] Product matching: ${allMarketProducts.length} products loaded from market study`);
+    } catch (err) {
+      console.log(`[Content] Could not load market products: ${err.message}`);
+    }
+
+    // Extract top keywords and sources, enriched with matched products
+    const topKeywords = (trends?.all_keywords_ranked?.slice(0, 15) || []).map(k => {
+      const entry = {
+        keyword: k.keyword,
+        sources: k.sources,
+        count: k.count,
+      };
+
+      // Match keyword to real products from market study
+      if (allMarketProducts.length > 0) {
+        const kwWords = k.keyword.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+        if (kwWords.length > 0) {
+          // Score each product by how many keyword words match its title
+          const scored = allMarketProducts
+            .map(p => {
+              const title = (p.title || '').toLowerCase();
+              const matchCount = kwWords.filter(w => title.includes(w)).length;
+              return { product: p, matchCount, matchRatio: matchCount / kwWords.length };
+            })
+            .filter(s => s.matchCount >= 1 && s.matchRatio >= 0.4)
+            .sort((a, b) => {
+              // Sort by match ratio first, then by soldQuantity
+              if (b.matchRatio !== a.matchRatio) return b.matchRatio - a.matchRatio;
+              return (b.product.soldQuantity || 0) - (a.product.soldQuantity || 0);
+            });
+
+          if (scored.length > 0) {
+            const best = scored[0].product;
+            entry.matchedProduct = {
+              title: best.title,
+              price: best.price,
+              currency: best.currency,
+              source: best.source,
+              thumbnail: best.thumbnail,
+              soldQuantity: best.soldQuantity,
+              permalink: best.permalink,
+            };
+          }
+        }
+      }
+
+      return entry;
+    });
 
     const verticalCounts = {};
     if (trends?.all_keywords_ranked) {
@@ -363,6 +411,48 @@ router.get('/last-run-summary', auth, (req, res) => {
   } catch (err) {
     console.error('[Content] Error last-run-summary:', err);
     res.json({ lastGenerated: null, totalTrends: 0, topKeywords: [], verticalCounts: {}, packCount: 0, docCount: 0 });
+  }
+});
+
+// Keyword → product matching (for custom generation too)
+router.get('/keyword-products', auth, (req, res) => {
+  try {
+    const { keyword } = req.query;
+    if (!keyword || keyword.trim().length < 2) {
+      return res.status(400).json({ error: 'Keyword requerido' });
+    }
+
+    const { getProducts } = require('../services/marketParser');
+    const kwWords = keyword.toLowerCase().split(/\s+/).filter(w => w.length > 1);
+    if (kwWords.length === 0) return res.json({ products: [] });
+
+    const allProducts = getProducts({ page: 1, limit: 500 });
+    const matches = (allProducts.products || [])
+      .map(p => {
+        const title = (p.title || '').toLowerCase();
+        const matchCount = kwWords.filter(w => title.includes(w)).length;
+        return { ...p, matchCount, matchRatio: matchCount / kwWords.length };
+      })
+      .filter(p => p.matchCount >= 1 && p.matchRatio >= 0.4)
+      .sort((a, b) => {
+        if (b.matchRatio !== a.matchRatio) return b.matchRatio - a.matchRatio;
+        return (b.soldQuantity || 0) - (a.soldQuantity || 0);
+      })
+      .slice(0, 3)
+      .map(p => ({
+        title: p.title,
+        price: p.price,
+        currency: p.currency,
+        source: p.source,
+        thumbnail: p.thumbnail,
+        soldQuantity: p.soldQuantity,
+        country: p.country,
+      }));
+
+    res.json({ products: matches });
+  } catch (err) {
+    console.error('[Content] Error keyword-products:', err);
+    res.json({ products: [] });
   }
 });
 

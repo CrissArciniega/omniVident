@@ -543,29 +543,59 @@ function LastRunSummary({ summary }) {
           </p>
           <div className="space-y-1.5">
             {summary.topKeywords.slice(0, 10).map((kw, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <span className={`text-[10px] font-mono w-5 text-right ${dark ? 'text-gray-600' : 'text-gray-300'}`}>
-                  {i + 1}
-                </span>
-                <span className={`text-xs flex-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  {kw.keyword}
-                </span>
-                <div className="flex items-center gap-1">
-                  {(kw.sources || []).map(src => (
-                    <span key={src} className={`text-[9px] px-1 py-0.5 rounded font-medium ${
-                      src === 'google' ? (dark ? 'bg-blue-900/40 text-blue-300' : 'bg-blue-100 text-blue-600')
-                      : src === 'youtube' ? (dark ? 'bg-red-900/40 text-red-300' : 'bg-red-100 text-red-600')
+              <div key={i} className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className={`text-[10px] font-mono w-5 text-right ${dark ? 'text-gray-600' : 'text-gray-300'}`}>
+                    {i + 1}
+                  </span>
+                  <span className={`text-xs flex-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+                    {kw.keyword}
+                  </span>
+                  <div className="flex items-center gap-1">
+                    {(kw.sources || []).map(src => (
+                      <span key={src} className={`text-[9px] px-1 py-0.5 rounded font-medium ${
+                        src === 'google' ? (dark ? 'bg-blue-900/40 text-blue-300' : 'bg-blue-100 text-blue-600')
+                        : src === 'youtube' ? (dark ? 'bg-red-900/40 text-red-300' : 'bg-red-100 text-red-600')
+                        : src === 'tiktok' ? (dark ? 'bg-pink-900/40 text-pink-300' : 'bg-pink-100 text-pink-600')
+                        : (dark ? 'bg-gray-700 text-gray-400' : 'bg-gray-100 text-gray-500')
+                      }`}>
+                        {src === 'google' ? 'G' : src === 'youtube' ? 'YT' : src === 'tiktok' ? 'TK' : src[0]?.toUpperCase()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {kw.matchedProduct && (
+                  <div className={`ml-7 flex items-center gap-2 px-2 py-1 rounded-lg ${dark ? 'bg-dark-card/50' : 'bg-gray-50'}`}>
+                    {kw.matchedProduct.thumbnail && (
+                      <img src={kw.matchedProduct.thumbnail} alt="" className="w-6 h-6 rounded object-cover flex-shrink-0" />
+                    )}
+                    <span className={`text-[10px] flex-1 truncate ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+                      {kw.matchedProduct.title?.length > 45 ? kw.matchedProduct.title.substring(0, 43) + '...' : kw.matchedProduct.title}
+                    </span>
+                    <span className={`text-[10px] font-semibold flex-shrink-0 ${dark ? 'text-green-400' : 'text-green-600'}`}>
+                      ${kw.matchedProduct.price} {kw.matchedProduct.currency}
+                    </span>
+                    <span className={`text-[8px] px-1 py-0.5 rounded font-medium flex-shrink-0 ${
+                      kw.matchedProduct.source === 'mercadolibre' ? (dark ? 'bg-yellow-900/30 text-yellow-300' : 'bg-yellow-100 text-yellow-700')
+                      : kw.matchedProduct.source === 'amazon' ? (dark ? 'bg-orange-900/30 text-orange-300' : 'bg-orange-100 text-orange-700')
                       : (dark ? 'bg-gray-700 text-gray-400' : 'bg-gray-100 text-gray-500')
                     }`}>
-                      {src === 'google' ? 'G' : src === 'youtube' ? 'YT' : src[0]?.toUpperCase()}
+                      {kw.matchedProduct.source === 'mercadolibre' ? 'ML' : kw.matchedProduct.source === 'amazon' ? 'AMZ' : kw.matchedProduct.source?.toUpperCase()}
                     </span>
-                  ))}
-                </div>
+                    {kw.matchedProduct.permalink && (
+                      <a href={kw.matchedProduct.permalink} target="_blank" rel="noopener noreferrer"
+                        className={`flex-shrink-0 p-0.5 rounded hover:opacity-80 transition-opacity ${dark ? 'text-blue-400 hover:text-blue-300' : 'text-blue-500 hover:text-blue-600'}`}
+                        title="Ver producto">
+                        <ExternalLink size={12} />
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
           <p className={`text-[9px] mt-2 ${dark ? 'text-gray-600' : 'text-gray-300'}`}>
-            G = Google Autocomplete · YT = YouTube Autocomplete
+            G = Google · YT = YouTube · TK = TikTok
           </p>
         </div>
       )}

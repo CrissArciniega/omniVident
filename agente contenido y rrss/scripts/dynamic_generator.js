@@ -80,6 +80,34 @@ function detectVertical(keyword) {
 // ============================================================================
 function fetchSuggestions(query, source = "google") {
   return new Promise((resolve) => {
+    if (source === "tiktok") {
+      const url = `https://www.tiktok.com/api/search/suggest/keyword/?keyword=${encodeURIComponent(query)}&lang=es`;
+      const req = https.get(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+          'Accept': 'application/json',
+        },
+        timeout: 5000,
+      }, (res) => {
+        const buffers = [];
+        res.on("data", (chunk) => buffers.push(chunk));
+        res.on("end", () => {
+          try {
+            const data = Buffer.concat(buffers).toString("utf8");
+            const parsed = JSON.parse(data);
+            if (parsed.sug_list && Array.isArray(parsed.sug_list)) {
+              resolve(parsed.sug_list.map(s => s.content).filter(Boolean));
+            } else if (parsed.data && Array.isArray(parsed.data)) {
+              resolve(parsed.data.map(s => s.content || s.keyword || s).filter(Boolean));
+            } else resolve([]);
+          } catch { resolve([]); }
+        });
+      });
+      req.on("error", () => resolve([]));
+      req.on("timeout", () => { req.destroy(); resolve([]); });
+      return;
+    }
+
     const url = source === "youtube"
       ? `https://suggestqueries.google.com/complete/search?client=youtube&ds=yt&q=${encodeURIComponent(query)}&hl=es&gl=MX`
       : `https://suggestqueries.google.com/complete/search?client=firefox&q=${encodeURIComponent(query)}&hl=es&gl=mx`;
@@ -107,9 +135,10 @@ function fetchSuggestions(query, source = "google") {
 }
 
 async function fetchKeywordTrends(keyword) {
-  const [google, youtube] = await Promise.all([
+  const [google, youtube, tiktok] = await Promise.all([
     fetchSuggestions(keyword, "google"),
     fetchSuggestions(keyword, "youtube"),
+    fetchSuggestions(keyword, "tiktok"),
   ]);
 
   // IMPORTANT: Only keep suggestions that are relevant to the searched keyword
@@ -127,11 +156,13 @@ async function fetchKeywordTrends(keyword) {
 
   const googleFiltered = filterRelevant(google);
   const youtubeFiltered = filterRelevant(youtube);
-  const combined = [...new Set([...googleFiltered, ...youtubeFiltered])];
+  const tiktokFiltered = filterRelevant(tiktok);
+  const combined = [...new Set([...googleFiltered, ...youtubeFiltered, ...tiktokFiltered])];
 
   return {
     google: googleFiltered.slice(0, 10),
     youtube: youtubeFiltered.slice(0, 10),
+    tiktok: tiktokFiltered.slice(0, 10),
     combined: combined.slice(0, 15),
   };
 }
@@ -209,11 +240,12 @@ async function generateCustomContent(keyword, platforms = ["tiktok", "instagram"
   }
 
   // 2. Buscar tendencias reales para este keyword
-  progress(5, 'Buscando tendencias en tiempo real...', 'Google + YouTube');
+  progress(5, 'Buscando tendencias en tiempo real...', 'Google + YouTube + TikTok');
   console.log(`\n🔍 Buscando tendencias en tiempo real...`);
   const trends = await fetchKeywordTrends(keyword);
   console.log(`  ✅ Google: ${trends.google.length} sugerencias relevantes`);
   console.log(`  ✅ YouTube: ${trends.youtube.length} sugerencias relevantes`);
+  console.log(`  ✅ TikTok: ${trends.tiktok.length} sugerencias relevantes`);
   console.log(`  📊 Combinadas: ${trends.combined.length} únicas`);
 
   if (trends.combined.length > 0) {
@@ -386,6 +418,7 @@ async function generateCustomContent(keyword, platforms = ["tiktok", "instagram"
     trends: {
       google: trends.google,
       youtube: trends.youtube,
+      tiktok: trends.tiktok,
       combined: trends.combined,
     },
     ideas: ideas.map(i => ({

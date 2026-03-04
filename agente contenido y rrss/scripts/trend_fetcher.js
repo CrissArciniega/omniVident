@@ -6,6 +6,7 @@
  * APIs gratuitas usadas:
  *   - Google Autocomplete (suggestqueries.google.com)
  *   - YouTube Autocomplete (suggestqueries.google.com/complete/search?client=youtube)
+ *   - TikTok Autocomplete (www.tiktok.com/api/search/suggest/keyword)
  */
 
 const https = require("https");
@@ -186,6 +187,45 @@ function fetchYouTubeSuggestions(query) {
 }
 
 // ============================================================================
+// TIKTOK AUTOCOMPLETE FETCHER
+// ============================================================================
+function fetchTikTokSuggestions(query) {
+  return new Promise((resolve) => {
+    const url = `https://www.tiktok.com/api/search/suggest/keyword/?keyword=${encodeURIComponent(query)}&lang=es`;
+
+    const req = https.get(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+      },
+      timeout: 5000,
+    }, (res) => {
+      const buffers = [];
+      res.on("data", (chunk) => buffers.push(chunk));
+      res.on("end", () => {
+        try {
+          const data = Buffer.concat(buffers).toString("utf8");
+          const parsed = JSON.parse(data);
+          // TikTok returns { sug_list: [{ content: "keyword" }, ...] }
+          if (parsed.sug_list && Array.isArray(parsed.sug_list)) {
+            resolve(parsed.sug_list.map(s => s.content).filter(Boolean));
+          } else if (parsed.data && Array.isArray(parsed.data)) {
+            resolve(parsed.data.map(s => s.content || s.keyword || s).filter(Boolean));
+          } else {
+            resolve([]);
+          }
+        } catch {
+          resolve([]);
+        }
+      });
+    });
+
+    req.on("error", () => resolve([]));
+    req.on("timeout", () => { req.destroy(); resolve([]); });
+  });
+}
+
+// ============================================================================
 // FUNCIÓN PRINCIPAL: Obtener tendencias actuales
 // ============================================================================
 async function fetchCurrentTrends() {
@@ -218,17 +258,19 @@ async function fetchCurrentTrends() {
       // Pequeño delay para no saturar
       await new Promise((r) => setTimeout(r, 150));
 
-      const [googleResults, youtubeResults] = await Promise.all([
+      const [googleResults, youtubeResults, tiktokResults] = await Promise.all([
         fetchGoogleSuggestions(query),
         fetchYouTubeSuggestions(query),
+        fetchTikTokSuggestions(query),
       ]);
 
-      const combined = [...new Set([...googleResults, ...youtubeResults])];
+      const combined = [...new Set([...googleResults, ...youtubeResults, ...tiktokResults])];
       trends[vertical].push({
         seed,
         google: googleResults.slice(0, 5),
         youtube: youtubeResults.slice(0, 5),
-        combined: combined.slice(0, 8),
+        tiktok: tiktokResults.slice(0, 5),
+        combined: combined.slice(0, 10),
       });
 
       allSuggestions.push(
@@ -239,6 +281,7 @@ async function fetchCurrentTrends() {
           sources: [
             googleResults.includes(s) ? "google" : null,
             youtubeResults.includes(s) ? "youtube" : null,
+            tiktokResults.includes(s) ? "tiktok" : null,
           ].filter(Boolean),
         }))
       );
