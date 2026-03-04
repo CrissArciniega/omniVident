@@ -50,11 +50,17 @@ function getAgentCommand(slug) {
     if (!fs.existsSync(cwd)) {
       return { error: `Directorio del agente no encontrado: ${cwd}` };
     }
-    // Chain: collector → generate_report to get both fresh data AND fresh HTML report
-    if (process.platform === 'win32') {
-      return { cwd, command: pythonCmd, args: ['agents/mercadolibre_collector.py'], postCommand: { command: pythonCmd, args: ['scripts/generate_report.py'] } };
-    }
-    return { cwd, command: pythonCmd, args: ['agents/mercadolibre_collector.py'], postCommand: { command: pythonCmd, args: ['scripts/generate_report.py'] } };
+    // Fase 1: ML + Amazon en PARALELO (run_collectors.py)
+    // Fase 2: Trend analyzer → Report (secuencial)
+    return {
+      cwd,
+      command: pythonCmd,
+      args: ['scripts/run_collectors.py'],
+      postCommands: [
+        { command: pythonCmd, args: ['scripts/trend_analyzer.py'] },
+        { command: pythonCmd, args: ['scripts/generate_report.py', '--no-open'] },
+      ],
+    };
   }
 
   if (slug === 'content-rrss') {
@@ -167,29 +173,38 @@ async function runAgent(slug) {
   });
 
   proc.on('close', async (code) => {
-    // If main command succeeded and there's a postCommand, run it first
-    if (code === 0 && cmd.postCommand) {
-      console.log(`[AgentRunner] ${slug}: Ejecutando post-comando: ${cmd.postCommand.command} ${cmd.postCommand.args.join(' ')}`);
-      try {
-        const postProc = spawn(cmd.postCommand.command, cmd.postCommand.args, {
-          cwd: cmd.cwd,
-          env: { ...process.env },
-          shell: true,
-          windowsHide: true,
-        });
-        postProc.stdout.on('data', (d) => {
-          const txt = d.toString();
-          stdout += txt;
-          txt.split('\n').filter(l => l.trim()).forEach(l => console.log(`[${slug}:post] ${l}`));
-        });
-        postProc.stderr.on('data', (d) => {
-          const txt = d.toString();
-          txt.split('\n').filter(l => l.trim()).forEach(l => console.log(`[${slug}:post:err] ${l}`));
-        });
-        await new Promise((resolve) => postProc.on('close', resolve));
-        console.log(`[AgentRunner] ${slug}: Post-comando completado`);
-      } catch (postErr) {
-        console.log(`[AgentRunner] ${slug}: Post-comando fallo (no critico): ${postErr.message}`);
+    // If main command succeeded and there are postCommands, run them sequentially
+    const postCommands = cmd.postCommands || (cmd.postCommand ? [cmd.postCommand] : []);
+    if (code === 0 && postCommands.length > 0) {
+      for (let i = 0; i < postCommands.length; i++) {
+        const postCmd = postCommands[i];
+        const stepLabel = `post ${i + 1}/${postCommands.length}`;
+        console.log(`[AgentRunner] ${slug}: Ejecutando ${stepLabel}: ${postCmd.command} ${postCmd.args.join(' ')}`);
+        try {
+          const postProc = spawn(postCmd.command, postCmd.args, {
+            cwd: cmd.cwd,
+            env: { ...process.env },
+            shell: true,
+            windowsHide: true,
+          });
+          postProc.stdout.on('data', (d) => {
+            const txt = d.toString();
+            stdout += txt;
+            txt.split('\n').filter(l => l.trim()).forEach(l => console.log(`[${slug}:${stepLabel}] ${l}`));
+          });
+          postProc.stderr.on('data', (d) => {
+            const txt = d.toString();
+            txt.split('\n').filter(l => l.trim()).forEach(l => console.log(`[${slug}:${stepLabel}:err] ${l}`));
+          });
+          const postCode = await new Promise((resolve) => postProc.on('close', resolve));
+          console.log(`[AgentRunner] ${slug}: ${stepLabel} completado (code: ${postCode})`);
+          // If a step fails, continue with next steps (non-critical)
+          if (postCode !== 0) {
+            console.log(`[AgentRunner] ${slug}: ${stepLabel} fallo (code: ${postCode}), continuando...`);
+          }
+        } catch (postErr) {
+          console.log(`[AgentRunner] ${slug}: ${stepLabel} fallo (no critico): ${postErr.message}`);
+        }
       }
     }
 

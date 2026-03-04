@@ -3,6 +3,17 @@ import { Play, Loader2, CheckCircle2, XCircle, AlertTriangle, Sparkles } from 'l
 import { useTheme } from '../context/ThemeContext';
 import api from '../api/client';
 
+const AGENT_LABELS = {
+  'content-rrss': {
+    title: 'Generando contenido SEO y RRSS',
+    subtitle: 'Buscando tendencias y creando guiones',
+  },
+  'market-research': {
+    title: 'Realizando Estudio de Mercado',
+    subtitle: 'MercadoLibre + Amazon en paralelo',
+  },
+};
+
 export default function RunAgentButton({ slug, color = '#2563EB', onComplete }) {
   const { dark } = useTheme();
   const [state, setState] = useState('idle'); // idle | running | completed | error
@@ -103,10 +114,10 @@ export default function RunAgentButton({ slug, color = '#2563EB', onComplete }) 
             <Sparkles className="animate-pulse" size={30} style={{ color }} />
           </div>
           <h3 className={`text-lg font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>
-            Generando contenido SEO y RRSS
+            {AGENT_LABELS[slug]?.title || 'Ejecutando agente'}
           </h3>
           <p className={`text-sm mt-1 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
-            Espera un momento por favor
+            {AGENT_LABELS[slug]?.subtitle || 'Espera un momento por favor'}
           </p>
         </div>
 

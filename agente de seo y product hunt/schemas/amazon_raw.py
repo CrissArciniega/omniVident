@@ -13,16 +13,22 @@ class AmazonProduct(BaseModel):
     rating: Optional[float] = Field(default=None, ge=0, le=5)
     reviews_count: Optional[int] = Field(default=None)
     bestseller_rank: Optional[int] = Field(default=None)
-    category: str
+    category: str = Field(default="")
+    category_name: str = Field(default="", description="Nombre legible de la categoria")
     url: Optional[str] = None
     image_url: Optional[str] = None
+    seller_id: Optional[str] = Field(default=None, description="Nombre del vendedor")
+    ranking: Optional[int] = Field(default=None, description="Posicion en ranking bestsellers")
+    ranking_label: Optional[str] = Field(default=None, description="Etiqueta del ranking (ej: '#1 Best Seller')")
 
 
 class AmazonRawCollection(BaseModel):
     collection_timestamp: datetime
-    country: str = Field(..., pattern="^(USA|MX)$")
+    country: str = Field(..., pattern="^(USA|MX|CO)$")
     source: str = Field(default="amazon")
     domain: str
-    category: str
+    site_id: str = Field(default="", description="ID del sitio (ej: USA, MX)")
+    category_id: str = Field(default="all")
+    category_name: str = Field(default="Bestsellers - All Categories")
     total_results: int
     products: list[AmazonProduct]

@@ -20,6 +20,8 @@ class MLProduct(BaseModel):
     available_quantity: int = Field(default=0)
     condition: str = Field(default="new")
     thumbnail: Optional[str] = None
+    ranking: Optional[int] = Field(default=None, description="Posición en ranking de más vendidos")
+    ranking_label: Optional[str] = Field(default=None, description="Etiqueta del ranking (ej: '1° MÁS VENDIDO')")
 
 
 class MLRawCollection(BaseModel):

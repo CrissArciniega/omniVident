@@ -14,7 +14,7 @@ const { runAgent, isRunning } = require('./services/agentRunner');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
+app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3001'], credentials: true }));
 app.use(express.json());
 
 // Routes
@@ -27,6 +27,17 @@ app.use('/api/content', contentRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
+
+// Serve static frontend build (production mode)
+const clientDist = path.join(__dirname, '..', 'client', 'dist');
+const fs = require('fs');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
 
 // ─── Ejecucion automatica: Lunes, Miercoles, Viernes a las 7:00 AM ───
 cron.schedule('0 7 * * 1,3,5', async () => {

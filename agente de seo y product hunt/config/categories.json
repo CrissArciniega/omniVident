@@ -1,48 +1,148 @@
 {
   "mercadolibre": {
-    "_note": "URL slugs para scraping de mas-vendidos por categoria",
-    "categories": {
-      "celulares-telefonos": "Celulares y Teléfonos",
-      "computacion": "Computación",
-      "electronica-audio-video": "Electrónica, Audio y Video",
-      "hogar-muebles-jardin": "Hogar, Muebles y Jardín",
-      "deportes-fitness": "Deportes y Fitness",
-      "belleza-cuidado-personal": "Belleza y Cuidado Personal",
-      "ropa-accesorios": "Ropa y Accesorios",
-      "consolas-videojuegos": "Consolas y Videojuegos",
-      "juguetes-bebes": "Juguetes y Bebés",
-      "herramientas": "Herramientas"
+    "_note": "IDs reales de categorías de más vendidos en MercadoLibre. Se descubren dinámicamente pero estos son fallback.",
+    "_url_pattern": "https://www.mercadolibre.com.{tld}/mas-vendidos/{CATEGORY_ID}",
+    "common_category_ids": {
+      "1051": "Celulares y Teléfonos",
+      "1648": "Computación",
+      "1000": "Electrónica, Audio y Video",
+      "1276": "Deportes y Fitness",
+      "1246": "Belleza y Cuidado Personal",
+      "1430": "Ropa y Accesorios",
+      "1144": "Consolas y Videojuegos",
+      "1574": "Hogar y Muebles",
+      "1747": "Accesorios para Vehículos",
+      "5726": "Electrodomésticos"
+    },
+    "country_prefixes": {
+      "EC": "MEC",
+      "MX": "MLM",
+      "CO": "MCO"
+    },
+    "country_specific": {
+      "EC": {
+        "MEC1051": "Celulares y Telefonía",
+        "MEC1648": "Computación",
+        "MEC1000": "Electrónica, Audio y Video",
+        "MEC409431": "Salud y Equipamiento Médico"
+      },
+      "MX": {
+        "MLM187772": "Salud y Equipamiento Médico",
+        "MLM1648": "Computación",
+        "MLM1747": "Accesorios para Vehículos"
+      },
+      "CO": {
+        "MCO1051": "Celulares y Teléfonos",
+        "MCO1747": "Accesorios para Vehículos",
+        "MCO1403": "Alimentos y Bebidas",
+        "MCO1384": "Bebés",
+        "MCO1246": "Belleza y Cuidado Personal",
+        "MCO1648": "Computación",
+        "MCO1144": "Consolas y Videojuegos",
+        "MCO1276": "Deportes y Fitness",
+        "MCO5726": "Electrodomésticos",
+        "MCO1000": "Electrónica, Audio y Video",
+        "MCO175794": "Herramientas",
+        "MCO1574": "Hogar y Muebles",
+        "MCO1132": "Juegos y Juguetes",
+        "MCO1430": "Ropa y Accesorios",
+        "MCO180800": "Salud y Equipamiento Médico"
+      }
     }
   },
   "amazon": {
-    "USA": [
-      "electronics",
-      "computers",
-      "home-garden",
-      "sports-outdoors",
-      "beauty",
-      "fashion",
-      "toys-games",
-      "health-personal-care",
-      "tools-home-improvement",
-      "video-games"
-    ],
-    "MX": [
-      "electronics",
-      "computers",
-      "home",
-      "sports",
-      "beauty",
-      "fashion",
-      "toys",
-      "health",
-      "tools",
-      "videogames"
-    ]
+    "USA": {
+      "electronics": "Electronics",
+      "computers": "Computers & Accessories",
+      "home-garden": "Home & Garden",
+      "sports-outdoors": "Sports & Outdoors",
+      "beauty": "Beauty & Personal Care",
+      "fashion": "Clothing, Shoes & Jewelry",
+      "toys-games": "Toys & Games",
+      "health-personal-care": "Health & Household",
+      "tools-home-improvement": "Tools & Home Improvement",
+      "video-games": "Video Games"
+    },
+    "MX": {
+      "electronics": "Electrónica",
+      "computers": "Computadoras",
+      "home": "Hogar y Cocina",
+      "sports": "Deportes y Aire Libre",
+      "beauty": "Belleza",
+      "fashion": "Ropa y Accesorios",
+      "toys": "Juguetes y Juegos",
+      "health": "Salud y Cuidado Personal",
+      "tools": "Herramientas",
+      "videogames": "Videojuegos"
+    },
+    "CO": {
+      "electronics": "Electronics",
+      "computers": "Computers & Accessories",
+      "home-garden": "Home & Garden",
+      "sports-outdoors": "Sports & Outdoors",
+      "beauty": "Beauty & Personal Care",
+      "fashion": "Clothing, Shoes & Jewelry",
+      "toys-games": "Toys & Games",
+      "health-personal-care": "Health & Household"
+    }
+  },
+  "temu": {
+    "USA": {
+      "electronics": "Electronics",
+      "home": "Home & Kitchen",
+      "fashion": "Women's Clothing",
+      "beauty": "Beauty & Health",
+      "toys": "Toys & Games",
+      "sports": "Sports & Outdoors",
+      "kitchen": "Kitchen & Dining",
+      "pet": "Pet Supplies"
+    },
+    "MX": {
+      "electronics": "Electrónica",
+      "home": "Hogar y Cocina",
+      "fashion": "Ropa de Mujer",
+      "beauty": "Belleza y Salud",
+      "toys": "Juguetes",
+      "sports": "Deportes",
+      "kitchen": "Cocina",
+      "pet": "Mascotas"
+    },
+    "CO": {
+      "electronics": "Electrónica",
+      "home": "Hogar y Cocina",
+      "fashion": "Ropa de Mujer",
+      "beauty": "Belleza y Salud",
+      "toys": "Juguetes",
+      "sports": "Deportes",
+      "kitchen": "Cocina",
+      "pet": "Mascotas"
+    },
+    "EC": {
+      "electronics": "Electrónica",
+      "home": "Hogar y Cocina",
+      "fashion": "Ropa de Mujer",
+      "beauty": "Belleza y Salud",
+      "toys": "Juguetes",
+      "sports": "Deportes",
+      "kitchen": "Cocina",
+      "pet": "Mascotas"
+    }
+  },
+  "alibaba": {
+    "GLOBAL": {
+      "electronics": "Consumer Electronics",
+      "machinery": "Machinery & Equipment",
+      "apparel": "Apparel & Accessories",
+      "home_garden": "Home & Garden",
+      "beauty": "Beauty & Personal Care",
+      "sports": "Sports & Entertainment",
+      "toys": "Toys & Hobbies",
+      "auto": "Automobiles & Motorcycles"
+    }
   },
   "settings": {
-    "max_products_per_category": 20,
+    "max_products_per_category": 50,
     "min_total_products": 50,
-    "max_total_products": 200
+    "max_total_products": 500
   }
 }

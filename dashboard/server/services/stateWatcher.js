@@ -56,7 +56,7 @@ function normalizeMarketState(raw) {
   try {
     if (fs.existsSync(rawDir)) {
       const files = fs.readdirSync(rawDir)
-        .filter(f => f.startsWith('raw_mercadolibre_') && f.endsWith('.json'))
+        .filter(f => (f.startsWith('raw_mercadolibre_') || f.startsWith('raw_amazon_') || f.startsWith('raw_temu_') || f.startsWith('raw_alibaba_')) && f.endsWith('.json'))
         .map(f => path.join(rawDir, f));
       const newest = getNewestFileDate(files);
       if (newest) {

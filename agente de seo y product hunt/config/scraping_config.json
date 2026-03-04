@@ -8,34 +8,46 @@
     }
   },
   "mercadolibre": {
-    "bestsellers_url": "https://listado.mercadolibre.com.{tld}/mas-vendidos",
-    "category_url": "https://listado.mercadolibre.com.{tld}/{category_slug}/mas-vendidos_NoIndex_True",
+    "bestsellers_main_url": "https://www.mercadolibre.com.{tld}/mas-vendidos",
+    "bestsellers_category_url": "https://www.mercadolibre.com.{tld}/mas-vendidos/{category_id}",
     "domains": {
       "EC": "ec",
       "MX": "mx",
       "CO": "co"
     },
-    "request_delay_min_ms": 3000,
-    "request_delay_max_ms": 6000,
+    "request_delay_min_ms": 500,
+    "request_delay_max_ms": 1200,
     "max_pages_per_category": 1,
+    "max_categories_per_country": 8,
+    "max_subcategories_per_category": 0,
+    "discover_categories": true,
+    "include_subcategories": false,
     "selectors": {
-      "product_card": ".ui-search-layout__item",
+      "product_card": ".poly-card, .ui-search-layout__item",
       "product_title": ".poly-component__title",
-      "product_price_fraction": ".poly-price__current .andes-money-amount__fraction",
-      "product_price_cents": ".poly-price__current .andes-money-amount__cents",
-      "product_currency": ".poly-price__current .andes-money-amount__currency-symbol",
+      "product_price_fraction": ".andes-money-amount__fraction",
+      "product_price_cents": ".andes-money-amount__cents",
+      "product_currency": ".andes-money-amount__currency-symbol",
       "product_review": ".poly-component__review-compacted",
       "product_image": ".poly-component__picture",
       "product_seller": ".poly-component__seller",
       "product_shipping": ".poly-component__shipping",
-      "category_links": ".ui-search-filter-dl a[href*='mas-vendidos']"
+      "product_highlight": ".poly-component__highlight",
+      "category_links": "a[href*='mas-vendidos/']",
+      "subcategory_links": "a[href*='mas-vendidos/']"
     }
   },
   "amazon": {
     "bestsellers_url": "https://www.{domain}/gp/bestsellers/{category}",
-    "request_delay_min_ms": 3000,
-    "request_delay_max_ms": 8000,
-    "max_pages_per_category": 2,
+    "domains": {
+      "USA": "amazon.com",
+      "MX": "amazon.com.mx",
+      "CO": "amazon.com"
+    },
+    "request_delay_min_ms": 1500,
+    "request_delay_max_ms": 3000,
+    "max_pages_per_category": 1,
+    "max_categories_per_country": 8,
     "selectors": {
       "product_container": "#gridItemRoot",
       "product_title": ".p13n-sc-truncated, ._cDEzb_p13n-sc-css-line-clamp-3_g3dy1",
@@ -49,6 +61,61 @@
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0"
+    ]
+  },
+  "temu": {
+    "bestsellers_url": "https://www.temu.com/{path}bestsellers.html",
+    "country_paths": {
+      "USA": "",
+      "MX": "mx/",
+      "CO": "co/",
+      "EC": "ec/"
+    },
+    "request_delay_min_ms": 3000,
+    "request_delay_max_ms": 8000,
+    "max_products_per_category": 50,
+    "max_categories_per_country": 8,
+    "selectors": {
+      "product_container": "[data-testid='product-card'], .js-product-card, ._2L_OA, ._3dLgs",
+      "product_title": "._2L_OA h3, .goods-title, [data-testid='product-title']",
+      "product_price": "._2de_A, .goods-price, [data-testid='product-price']",
+      "product_original_price": "._2jlmH, .goods-origin-price",
+      "product_discount": "._1hVBm, .goods-discount",
+      "product_image": "._3NRXF img, .goods-img img",
+      "product_link": "a[href*='/goods/']",
+      "product_sold": "._3BjGz, .goods-sold",
+      "product_rating": "._3dLgs .star-rating, .goods-rating",
+      "captcha_indicators": "[class*='captcha'], .geetest_holder, #captcha-box"
+    },
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+    ]
+  },
+  "alibaba": {
+    "search_url": "https://www.alibaba.com/trade/search?SearchText={query}&sort=TRANSACTION_LEVEL_DESC",
+    "domain": "alibaba.com",
+    "request_delay_min_ms": 4000,
+    "request_delay_max_ms": 10000,
+    "max_products_per_category": 40,
+    "max_categories": 8,
+    "selectors": {
+      "product_container": ".organic-list .list-no-v2-outter, .J-offer-wrapper, [data-content='productItem']",
+      "product_title": ".elements-title-normal, .elements-title-normal__outter a",
+      "product_price": ".elements-offer-price-normal, .elements-offer-price-normal__price",
+      "product_moq": ".element-offer-minorder-normal, .elements-offer-minorder",
+      "product_image": ".seb-img-switcher__imgs img, .offer-img img",
+      "product_link": ".elements-title-normal a, .organic-gallery-offer__img-section a",
+      "product_supplier": ".seller-tag__name, .seller-tag",
+      "product_verified": ".verified-icon, .seb-supplier-tag__verified",
+      "product_orders": ".element-offer-onetier-normal, .offer-attr-item",
+      "product_rating": ".seb-star-rating"
+    },
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
     ]
   },
   "retry": {

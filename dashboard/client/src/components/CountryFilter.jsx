@@ -1,6 +1,6 @@
 import { useTheme } from '../context/ThemeContext';
 
-const countryFlags = { EC: '🇪🇨 Ecuador', MX: '🇲🇽 Mexico', CO: '🇨🇴 Colombia', USA: '🇺🇸 USA' };
+const countryFlags = { EC: '🇪🇨 Ecuador', MX: '🇲🇽 Mexico', CO: '🇨🇴 Colombia', USA: '🇺🇸 USA', GLOBAL: '🌏 Global' };
 
 export default function CountryFilter({ countries, selected, onChange }) {
   const { dark } = useTheme();

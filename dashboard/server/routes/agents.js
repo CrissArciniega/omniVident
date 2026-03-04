@@ -100,7 +100,9 @@ router.get('/:slug/progress', auth, (req, res) => {
 
   if (!agentDir) return res.json({ percent: 0, message: '', detail: '', active: false });
 
-  const progressFile = path.join(agentDir, 'output', 'agent_progress.json');
+  // content-rrss uses 'output/', market-research uses 'outputs/'
+  const outputFolder = slug === 'market-research' ? 'outputs' : 'output';
+  const progressFile = path.join(agentDir, outputFolder, 'agent_progress.json');
   try {
     if (fs.existsSync(progressFile)) {
       const data = JSON.parse(fs.readFileSync(progressFile, 'utf8'));

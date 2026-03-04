@@ -1,0 +1,2537 @@
+{
+  "analysis_date": "2026-03-02T18:26:23.070010",
+  "current_total": 491,
+  "previous_total": 1339,
+  "summary": {
+    "new_products": 491,
+    "dropped_products": 1339,
+    "price_changes": 0,
+    "ranking_changes": 0,
+    "sales_velocity_changes": 0,
+    "category_trends": 37
+  },
+  "new_products": [
+    {
+      "id": "MCO65786647",
+      "title": "Casco Integral Shaft 562 R Toon World Certificado Color Azul Brillo Con Amarillo Y Visor Iridium Rojo Tamaño Del Casco Xl Azul Brillo Con Amarillo Visor Iridium Rojo Brillante",
+      "price": 310000.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MCO35874093",
+      "title": "Tapete Extra Grande Plegable Para Bebé 200x180 Cm Doble Faz",
+      "price": 71001.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 5
+    },
+    {
+      "id": "MCO19712370",
+      "title": "Repetidor Extensor De Rango Wifi Dual Band 5g Tp-link Ac750 Color Blanco",
+      "price": 74695.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MCO3568894800",
+      "title": "Fular Cargador De Bebé Tela Premium Pat Primo+4 Potectores Gris Oscuro Fular Gris",
+      "price": 64680.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 20
+    },
+    {
+      "id": "MCO3522454588",
+      "title": "Interruptor Inteligente Wifi Con O Sin Neutro Con Capacitor Negro 1 Boton",
+      "price": 54700.0,
+      "category": "Construcción",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 20
+    },
+    {
+      "id": "MCO22913340",
+      "title": "Perfume Eau De Toilette Cyzone Nitro De 100 Ml Para Hombre",
+      "price": 22689.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO2351247632",
+      "title": "Escalera Plegable 3 Pasos Acero Capacidad 150kg Color Blanco Blanco",
+      "price": 138200.0,
+      "category": "Construcción",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MCO52938807",
+      "title": "Soporte Monitor A Escritorio Nb F80 17 A 30 Blanco",
+      "price": 99900.0,
+      "category": "Computación",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "ML_6824908731",
+      "title": "Llavero Lujo En Cuero Gamuza Elegante Con Logo Emblema Carro",
+      "price": 27455.0,
+      "category": "Antigüedades",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO28965400",
+      "title": "Qcy H3 Anc Audífonos Inalámbricos Gamer Diadema Hi-res Na Color Azul",
+      "price": 142000.0,
+      "category": "Accesorios para PC Gaming",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 12
+    },
+    {
+      "id": "MCO22734235",
+      "title": "Máquina Afeitadora Rasuradora Inalámbrica Profesio Vgr V-331 Color Negro 110v",
+      "price": 37000.0,
+      "category": "Artefactos para el Cabello",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MCO52279138",
+      "title": "Taladro Inalámbrico Sisdata 45talv1 Potencia Real 650w 1y Color Amarillo Frecuencia 50hz /60hz 110v",
+      "price": 80967.0,
+      "category": "Agro",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "ML_7997418801",
+      "title": "2 Piezas Mica Privacidad Cristal Templado 9d Para iPhone",
+      "price": 85.0,
+      "category": "Celulares y Telefonía",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MCO27960105",
+      "title": "Samsung Adaptador De 25w - Carga Rápida Color Negro",
+      "price": 60000.0,
+      "category": "Accesorios para Celulares",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 11
+    },
+    {
+      "id": "MLM29817397",
+      "title": "Báscula Electrónica Bluetooth Digital Inteligente De Baño Color Rosa",
+      "price": 129.0,
+      "category": "Cuidado de la Salud",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 12
+    },
+    {
+      "id": "MCO41990487",
+      "title": "Xiaomi Audifonos Redmi Buds 6 Active Color Negro",
+      "price": 72662.0,
+      "category": "Accesorios para Celulares",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MLM56120364",
+      "title": "Aldeaprint Papel Fotográfico Glossy Brillante A4 200g 1000 Hojas Blanco",
+      "price": 1.959,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "MCO23459913",
+      "title": "Protector Solar La Roche Posay Anthelios Uv Mune 400 Oil Control Fluid.",
+      "price": 97990.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MCO28530218",
+      "title": "Trimmer Kemei Km2299 Cortadora Recargable Inalámbrica Acero Inoxidable Negro 110v",
+      "price": 60001.0,
+      "category": "Artefactos para el Cabello",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MCO34987696",
+      "title": "Guantes Deportivos Probiker Protección Nudillos Ventilados Negro Xxl",
+      "price": 32000.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 17
+    },
+    {
+      "id": "MLM50366054",
+      "title": "Auriculares Inalámbricos Bluetooth Jbl Wave Beam Color Negro",
+      "price": 603.0,
+      "category": "Consolas y Videojuegos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "MCO29790258",
+      "title": "Inflador De Llantas Portable Compresor Carro Moto Balon Color Negro Fase Eléctrica Monofásica 110v/220v",
+      "price": 60000.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MLM20722265",
+      "title": "Creatina Monohidratada Micronizada En Polvo | Pre Workout - 100% Alta Pureza Certificada | Disuelve Rápido -con Scoop... Sin Sabor",
+      "price": 287.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "MCO1507246577",
+      "title": "Clips De Sujecion Remaches Pines Para Carroceria 725 Piezas",
+      "price": 66599.0,
+      "category": "Acc. para Carros y Camionetas",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MEC647738570",
+      "title": "Creatina Dragon Pharma 1 Kilo Sin Sabor",
+      "price": 53.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MLM21268126",
+      "title": "Aceite De Motor 100% Sintetico 5w30 Castrol Gtx Para Carros, Pickups, Suv Garrafa 4.73 L",
+      "price": 662.0,
+      "category": "Accesorios para Vehículos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 5
+    },
+    {
+      "id": "MCO21318940",
+      "title": "Ventilador Universal Mesa Pie Pared 90w Control Remoto 18 Pg Negro 110v Gris Plástico 5",
+      "price": 259202.0,
+      "category": "Antigüedades",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MCO55049299",
+      "title": "Silla Mecedora, Vibradora Y Musical Para Bebe 3 En 1 Babyon Color Rey De La Selva - Toldillo",
+      "price": 124900.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO2998126654",
+      "title": "Orinal Niño Entrenador Baño Infantil Portátil Urinario Verde Orinal Portatil Para Ninos",
+      "price": 23310.0,
+      "category": "Artículos de Bebés para Baños",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 13
+    },
+    {
+      "id": "MCO51382019",
+      "title": "Extractor Eléctrico De Leche Materna Portátil Recargable Genéri",
+      "price": 85999.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MCO28863969",
+      "title": "Cinta Ancha Adhesiva Transparente X 300m Empaque Embalaje",
+      "price": 11144.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MCO29089603",
+      "title": "Estiletes Plásticos Bp 22 Uds Doble Punta Blanco Para Porcelanicron Y Arcilla",
+      "price": 9776.0,
+      "category": "Arte y Manualidades",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 13
+    },
+    {
+      "id": "MLM47488317",
+      "title": "Baumanometro De Presion Medidor Arterial. Monitor De Brazo, Oximetro Termometro Kit Sacre Solutions Blanco",
+      "price": 182.0,
+      "category": "Cuidado de la Salud",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MCO24326256",
+      "title": "Crema Bálsamo La Roche Posay Cicaplast Baume B5+ 40ml. Todo Tipo De Piel Día/noche",
+      "price": 60001.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO24456842",
+      "title": "Microsoft Xbox Wireless Control Series X S Robot Whiteregalo Color Carbon Black",
+      "price": 259900.0,
+      "category": "Accesorios para PC Gaming",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MCO2806061612",
+      "title": "Cinta Doble Faz Adhesiva Transparente Nano Gel Reutilizable Transparente",
+      "price": 8900.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 20
+    },
+    {
+      "id": "MCO20912075",
+      "title": "Audífonos Lenovo Gm2pro Inalambrico Gaming Deportivos Color Negro",
+      "price": 28329.0,
+      "category": "Accesorios para PC Gaming",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "ML_9185437005",
+      "title": "2 Piezas Mica Privacidad Cristal Templado 9d Para iPhone",
+      "price": 85.0,
+      "category": "Accesorios para Celulares",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO36905702",
+      "title": "Kit De 6 Recambios De Tinta Epson T544 L3110 L3150 B Y C M Color Kit Kit De Colores",
+      "price": 78570.0,
+      "category": "Computación",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 13
+    },
+    {
+      "id": "MCO1511346545",
+      "title": "Resina Epòxica Gemelos Rígidos 1-1 Tipo Cristal 500gr Transparente Cristal",
+      "price": 42750.0,
+      "category": "Arte y Manualidades",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 5
+    },
+    {
+      "id": "MCO25858659",
+      "title": "Asiento Entrenador Infantil Con Escalera Kiddos Adaptador Wc Con Colchon Antideslizante Ergonómico Seguro Plegable Para Niños O Niñas Color Azul Y Amarillo Azul/ojitos Rana",
+      "price": 119900.0,
+      "category": "Artículos de Bebés para Baños",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MCO50164794",
+      "title": "Lijadora Orbital 5 320w Velocidad Variable + 5 Lijas Total Color Turquesa Frecuencia 50hz/60hz",
+      "price": 208819.0,
+      "category": "Herramientas de Trabajo",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "MLM27174258",
+      "title": "Pulsera Antiestática Con Cable Protección Evita Descargas",
+      "price": 58.0,
+      "category": "Accesorios de Antiestática",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 15
+    },
+    {
+      "id": "MCO52430427",
+      "title": "Babero Para Bebés Enfantasy Delantal Color Fucsia Diseño Animales Talle Unico",
+      "price": 9800.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "MCO1646245511",
+      "title": "Masas Surtidas Play-doh 8 Unidades Hasbro Multicolor",
+      "price": 44900.0,
+      "category": "Arte y Manualidades",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MLM45894293",
+      "title": "2 Pcs Audífonos Bluetooth Compatible iPhone Xiaomi Android Blanco",
+      "price": 205.0,
+      "category": "Accesorios para Celulares",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MLM51506339",
+      "title": "Audífonos Inalámbricos Realme Buds Air 7 Pro In-ear Blanco Beige",
+      "price": 1.3,
+      "category": "Accesorios para Consolas",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "MCO3514568890",
+      "title": "Baul Maletero 45 Litros Con Espaldar Base Desmontable Negro",
+      "price": 155520.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MCO3011208670",
+      "title": "Trípode Profesional Para Cámara Estuche + Adaptador Celular Negro",
+      "price": 61559.0,
+      "category": "Accesorios para Cámaras",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MCO6417063",
+      "title": "Diadema Logitech H390 Usb Negro Con Micrófono",
+      "price": 99167.0,
+      "category": "Accesorios para PC Gaming",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    }
+  ],
+  "dropped_products": [
+    {
+      "id": "MCO2023825428",
+      "title": "Los Nuevos Auriculares Inalámbricos A6s Más Vendidos, Baterí",
+      "price": 39625.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2062182248",
+      "title": "Lápices Soldador 2 Piezas Con 48 Recambios Redondos",
+      "price": 77.0,
+      "category": "Herramientas",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "ML_5171033494",
+      "title": "Auriculares Bluetooth Para Juegos Supraaurales Para Ps5",
+      "price": 543.0,
+      "category": "Consolas y Videojuegos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC62699715",
+      "title": "Secador de Cabello Rucha Titanium 23000 Ionico Ceramico Negro Pro",
+      "price": 69.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2065938758",
+      "title": "Xbox One Agents Mayhem Nuevo Sellado Vendo Cambio",
+      "price": 56000.0,
+      "category": "Consolas y Videojuegos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM3516494370",
+      "title": "Vendo Amplificadores Y Nodos Nuevos Tmbn Moduladores Usados",
+      "price": 2950.0,
+      "category": "Electrónica, Audio y Video",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM689291102",
+      "title": "Mikrotik Haplite Rb941 + Hotspot + Vende Internet Por Ficha",
+      "price": 1216.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2029797301",
+      "title": "As Juguetes 1-2 Años-material Didáctico Preescolar ./\\.",
+      "price": 92.0,
+      "category": "Juguetes y Bebés",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM4756834574",
+      "title": "Mesa Auxiliar Circular De Madera Blanca Ideal Para Sala",
+      "price": 380.0,
+      "category": "Hogar, Muebles y Jardín",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC574822350",
+      "title": "Esparadrapo Microporoso X12pz Gran Promocion  Blanco",
+      "price": 10.0,
+      "category": "Juguetes y Bebés",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2044758217",
+      "title": "Gafas De Corrección Visual Con Orificios Xz",
+      "price": 19299.0,
+      "category": "Ropa y Accesorios",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC680706732",
+      "title": "Vendo Vintage Portátil Radio Gpx R1504sp Fm Nuevo Blanco",
+      "price": 28.0,
+      "category": "Juguetes y Bebés",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2030871887",
+      "title": "H. Pala Plegable Multifuncional Para Jardinería Exterior",
+      "price": 70.0,
+      "category": "Herramientas",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "ML_6038013148",
+      "title": "Antifaz Suave Y Tapones Antiruido Para Un Sueño Reparador",
+      "price": 24.0,
+      "category": "Ropa y Accesorios",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MWO1",
+      "title": "Venda Elástica De Alta Compresión 15cm (6 Piezas) Beige",
+      "price": 489.0,
+      "category": "Deportes y Fitness",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM4087069472",
+      "title": "Venda Elastica Premium Le Roy 10cm X 5m 1 Pack Con 24 Piezas Blanco",
+      "price": 299.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM43835336",
+      "title": "2 Vendas De Fibra De Vidrio De 10 Cm Ancho Y 3.6 M Largo Color Blanco",
+      "price": 360.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2057250217",
+      "title": "Kit Com 50 Máscaras For Dormir Tapa Olhos Revenda Atacado E",
+      "price": 121.0,
+      "category": "Ropa y Accesorios",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2062697590",
+      "title": "16 Almohadillas De Espuma Negra Para Audífonos In-ear",
+      "price": 68.0,
+      "category": "Consolas y Videojuegos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2044850898",
+      "title": "Auriculares Bluetooth Champonic Micrófono Inalámbrico Con Ca",
+      "price": 155805.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2019903727",
+      "title": "30 Piezas Máscara For Dormir, Parche For Los Ojos, Venda",
+      "price": 190.0,
+      "category": "Ropa y Accesorios",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC55027908",
+      "title": "Samsung Galaxy A07 128 GB, teléfono celular de 4 GB, cámara de 50 MP, pantalla 6.7, protección IP54, procesador de 6 nm, verde",
+      "price": 137.0,
+      "category": "Celulares y Teléfonos",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM663707074",
+      "title": "Groovea 52hpn Mikrotik - Vende Internet X Fichas - Hotspot",
+      "price": 3870.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "ML_561889262",
+      "title": "Protector Funda Ropa Traje Cubre Polvo Colgante Bolsa 10pz",
+      "price": 229.0,
+      "category": "Ropa y Accesorios",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM24733057",
+      "title": "Venda Elastomedic de Alta Compresión Le Roy 15cm x 5m - 1 pieza",
+      "price": 150.0,
+      "category": "Deportes y Fitness",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2065543061",
+      "title": "Más Vendido Zz // Veleta Negra Vintage For Jardín,",
+      "price": 108467.0,
+      "category": "Hogar, Muebles y Jardín",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO480321708",
+      "title": "Oferta, Se Vende Jigsaw Madness Ps1",
+      "price": 65000.0,
+      "category": "Consolas y Videojuegos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2038988475",
+      "title": "50 Kg Arena Silica Para Pasto Sintético El Mas Vendido",
+      "price": 279.0,
+      "category": "Hogar, Muebles y Jardín",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM50623897",
+      "title": "Venda Elástica De 15 Cms Jaloma Paquete C/12 Color Blanco",
+      "price": 229.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "ML_6204484062",
+      "title": "2pcs Estatuas Gigantes Vendadas Control De Juego",
+      "price": 37346.0,
+      "category": "Consolas y Videojuegos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2701655903",
+      "title": "Dual Sim El Teléfono Más Vendido En 2026 I17 Pro Max Android 14 Celular 5g Súper Barato 6.95 Pulgadas Pantalla Hd Desbloquea 16gb Ram 1024gb Rom Plateado",
+      "price": 4438.0,
+      "category": "Celulares y Teléfonos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC517889901",
+      "title": "Ltc Disco Duro Externo Adata 4tb Hd710 Antigolpe Agua Usb3,2 Negro",
+      "price": 218.0,
+      "category": "Consolas y Videojuegos",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC654460230",
+      "title": "Nintendo Switch 2 Mario - Consola De Juegos Blanco",
+      "price": 780.0,
+      "category": "Consolas y Videojuegos",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEP1",
+      "title": "Venda Medicinal AKOPLAMED-AKOPLACAST 12.5cm Fibra Vidrio Pack 10 Rosa",
+      "price": 1800.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2059871483",
+      "title": "Más Vendido Wbi ` Lentes De Soldar Automático On Off",
+      "price": 51137.0,
+      "category": "Herramientas",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM660028054",
+      "title": "Mikrotik Groove A 52 + Vende Internet + Generador Fichas",
+      "price": 3860.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2039010935",
+      "title": "Access Point Para Una Colonia Mesh Ac1200 Oferta Esclusiva",
+      "price": 3080.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2040547875",
+      "title": "C 2pcs Funda Protectora Silicona Para Huawei Freebuds Se2 D",
+      "price": 167.0,
+      "category": "Electrónica, Audio y Video",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC57841738",
+      "title": "Celular Xiaomi 15t Pro 5g 12 GB de RAM Color Negro",
+      "price": 969.0,
+      "category": "Herramientas",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM3442733456",
+      "title": "Tabla Chica De Taquero, 28 Cm. X 5 Cm. Con Machete Y Tenaza Lisa Blanco",
+      "price": 840.0,
+      "category": "Hogar, Muebles y Jardín",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "ML_1369734104",
+      "title": "Forros Fundas Estuches Protectores Silicone Case Para Samsung   A10s/ A22 5g/ A53/ J5 Prime/ J7 Prime/ J6 Plus/ M53/ Note 10/ Note 10 Plus/ S22",
+      "price": 48700.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC609779734",
+      "title": "Guantes De Cuero Impermeables Y Térmicos Para Motociclista Negro M",
+      "price": 39.0,
+      "category": "Ropa y Accesorios",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC38523070",
+      "title": "Taser con linterna, linterna LED, luz blanca y negra",
+      "price": 19.0,
+      "category": "Ropa y Accesorios",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC2063766433",
+      "title": "Mica Hydrogel Para Todo Tipo De Telefono Tienda Fisica",
+      "price": 5.0,
+      "category": "Celulares y Teléfonos",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC656214590",
+      "title": "Regulador De Voltaje Automático 2200va/1100w, 8 Salidas, Rj1 Negro",
+      "price": 31.0,
+      "category": "Consolas y Videojuegos",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MCO2058325429",
+      "title": "Funda Teclado Mouse Lápiz P/huawei Matepad 11,5 Pulgadas 202",
+      "price": 55772.0,
+      "category": "Computación",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2062651572",
+      "title": "A Kit Y Altavoces Diy Con Radio Fm 87,5-108 Mhz Diy Sold-fs",
+      "price": 145.0,
+      "category": "Electrónica, Audio y Video",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MEC21428285",
+      "title": "Cintas adhesivas de gel originales para blanquear los dientes en 3D, blancas",
+      "price": 6.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM63420917",
+      "title": "Nuevo Modelo Gt20 Pro 2026 Smartphone, Superventas, 16 Gb + 512 Gb, Clasificación De Resistencia Al Agua Ip68, Configuración De Cámara De 32 Mp + 50 Mp, Procesador Dimensity 9200+,batería De 8000 Mah",
+      "price": 3180.0,
+      "category": "Celulares y Teléfonos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    },
+    {
+      "id": "MLM2699613753",
+      "title": "Parches Para Aliviar El Dolor Muscular De Espalda 100 Piezas Nude",
+      "price": 208.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": null
+    }
+  ],
+  "price_changes": [],
+  "ranking_changes": [],
+  "sales_velocity": [],
+  "category_trends": [
+    {
+      "category": "Almacén",
+      "current_count": 16,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Juguetes y Bebés",
+      "current_count": 0,
+      "previous_count": 117,
+      "change_pct": -100.0,
+      "trend": "shrinking"
+    },
+    {
+      "category": "Periféricos de PC",
+      "current_count": 3,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Accesorios de Antiestática",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Herramientas",
+      "current_count": 0,
+      "previous_count": 148,
+      "change_pct": -100.0,
+      "trend": "shrinking"
+    },
+    {
+      "category": "Cámaras y Accesorios",
+      "current_count": 3,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Bebés",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Construcción",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Herramientas de Trabajo",
+      "current_count": 10,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Accesorios para Cámaras",
+      "current_count": 19,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Celulares y Telefonía",
+      "current_count": 18,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Audio",
+      "current_count": 2,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Acc. para Carros y Camionetas",
+      "current_count": 19,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Accesorios para Vehículos",
+      "current_count": 27,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Ropa y Accesorios",
+      "current_count": 0,
+      "previous_count": 146,
+      "change_pct": -100.0,
+      "trend": "shrinking"
+    },
+    {
+      "category": "Cuidado de la Salud",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Antigüedades y Colecciones",
+      "current_count": 5,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Arte y Manualidades",
+      "current_count": 16,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Artefactos para el Cabello",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Hogar, Muebles y Jardín",
+      "current_count": 0,
+      "previous_count": 107,
+      "change_pct": -100.0,
+      "trend": "shrinking"
+    }
+  ],
+  "enrichment": {
+    "mercadolibre:MCO65786647": {
+      "isNew": true
+    },
+    "mercadolibre:MCO35874093": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19712370": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3568894800": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3522454588": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22913340": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2351247632": {
+      "isNew": true
+    },
+    "mercadolibre:MCO52938807": {
+      "isNew": true
+    },
+    "mercadolibre:ML_6824908731": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28965400": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22734235": {
+      "isNew": true
+    },
+    "mercadolibre:MCO52279138": {
+      "isNew": true
+    },
+    "mercadolibre:ML_7997418801": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27960105": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29817397": {
+      "isNew": true
+    },
+    "mercadolibre:MCO41990487": {
+      "isNew": true
+    },
+    "mercadolibre:MLM56120364": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23459913": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28530218": {
+      "isNew": true
+    },
+    "mercadolibre:MCO34987696": {
+      "isNew": true
+    },
+    "mercadolibre:MLM50366054": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29790258": {
+      "isNew": true
+    },
+    "mercadolibre:MLM20722265": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1507246577": {
+      "isNew": true
+    },
+    "mercadolibre:MEC647738570": {
+      "isNew": true
+    },
+    "mercadolibre:MLM21268126": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21318940": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55049299": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2998126654": {
+      "isNew": true
+    },
+    "mercadolibre:MCO51382019": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28863969": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29089603": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47488317": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24326256": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24456842": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2806061612": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20912075": {
+      "isNew": true
+    },
+    "mercadolibre:ML_9185437005": {
+      "isNew": true
+    },
+    "mercadolibre:MCO36905702": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1511346545": {
+      "isNew": true
+    },
+    "mercadolibre:MCO25858659": {
+      "isNew": true
+    },
+    "mercadolibre:MCO50164794": {
+      "isNew": true
+    },
+    "mercadolibre:MLM27174258": {
+      "isNew": true
+    },
+    "mercadolibre:MCO52430427": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1646245511": {
+      "isNew": true
+    },
+    "mercadolibre:MLM45894293": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51506339": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3514568890": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3011208670": {
+      "isNew": true
+    },
+    "mercadolibre:MCO6417063": {
+      "isNew": true
+    },
+    "mercadolibre:MCO49787093": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26686078": {
+      "isNew": true
+    },
+    "mercadolibre:MCO56442889": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44917116": {
+      "isNew": true
+    },
+    "mercadolibre:MCO34016199": {
+      "isNew": true
+    },
+    "mercadolibre:MCO31012130": {
+      "isNew": true
+    },
+    "mercadolibre:MCO62312110": {
+      "isNew": true
+    },
+    "mercadolibre:MLM55891622": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8749366585": {
+      "isNew": true
+    },
+    "mercadolibre:MCO60366595": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47201237": {
+      "isNew": true
+    },
+    "mercadolibre:MLM2014187388": {
+      "isNew": true
+    },
+    "mercadolibre:ML_5557775612": {
+      "isNew": true
+    },
+    "mercadolibre:MCO25108722": {
+      "isNew": true
+    },
+    "mercadolibre:MEC16211423": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44035879": {
+      "isNew": true
+    },
+    "mercadolibre:MLM4830702024": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2029054073": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19681520": {
+      "isNew": true
+    },
+    "mercadolibre:MCO36161240": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43938473": {
+      "isNew": true
+    },
+    "mercadolibre:MCO51714866": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1588696203": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26915038": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1396765489": {
+      "isNew": true
+    },
+    "mercadolibre:MEC42485998": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43581646": {
+      "isNew": true
+    },
+    "mercadolibre:MCO63341547": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23027132": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23986875": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27598135": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44236554": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29857601": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21047002": {
+      "isNew": true
+    },
+    "mercadolibre:MLM50843005": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38518568": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29760702": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24394711": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8532019753": {
+      "isNew": true
+    },
+    "mercadolibre:MCO649320859": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2683639650": {
+      "isNew": true
+    },
+    "mercadolibre:MEC47259580": {
+      "isNew": true
+    },
+    "mercadolibre:MLM28022298": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23880796": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1014050786": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29367061": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55006241": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1689997275": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1562838787": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43932195": {
+      "isNew": true
+    },
+    "mercadolibre:MCO37156633": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47857275": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44127614": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38921521": {
+      "isNew": true
+    },
+    "mercadolibre:MLM34107770": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26373620": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23542333": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19559684": {
+      "isNew": true
+    },
+    "mercadolibre:MLM28943143": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28450757": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24262300": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2843979869": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23534947": {
+      "isNew": true
+    },
+    "mercadolibre:MEC44799235": {
+      "isNew": true
+    },
+    "mercadolibre:MEC39426849": {
+      "isNew": true
+    },
+    "mercadolibre:MLM607599611": {
+      "isNew": true
+    },
+    "mercadolibre:MLM54104950": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1605642437": {
+      "isNew": true
+    },
+    "mercadolibre:ML_757043485": {
+      "isNew": true
+    },
+    "mercadolibre:MCO508601525": {
+      "isNew": true
+    },
+    "mercadolibre:MLM41679628": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43319779": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1684351473": {
+      "isNew": true
+    },
+    "mercadolibre:MEC55462947": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24829400": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39388818": {
+      "isNew": true
+    },
+    "mercadolibre:MCO40656539": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27360661": {
+      "isNew": true
+    },
+    "mercadolibre:MLM43397587": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44777786": {
+      "isNew": true
+    },
+    "mercadolibre:MCO56071652": {
+      "isNew": true
+    },
+    "mercadolibre:MLM28002232": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55462947": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3044883614": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20543733": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18574417": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43497777": {
+      "isNew": true
+    },
+    "mercadolibre:MCO57739555": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23517582": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18630322": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21149334": {
+      "isNew": true
+    },
+    "mercadolibre:MCO41149389": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2971652160": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21334121": {
+      "isNew": true
+    },
+    "mercadolibre:MLM20922199": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38776385": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29637193": {
+      "isNew": true
+    },
+    "mercadolibre:MEC42520227": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1538501525": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23132570": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44807052": {
+      "isNew": true
+    },
+    "mercadolibre:MCO530989290": {
+      "isNew": true
+    },
+    "mercadolibre:MEC755573502": {
+      "isNew": true
+    },
+    "mercadolibre:MLM2558071771": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24531567": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1472340693": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1412052701": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26642843": {
+      "isNew": true
+    },
+    "mercadolibre:MLM24252612": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26811117": {
+      "isNew": true
+    },
+    "mercadolibre:MCO513393961": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47115122": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21346650": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1579963234": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24722413": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24750853": {
+      "isNew": true
+    },
+    "mercadolibre:MCO25714424": {
+      "isNew": true
+    },
+    "mercadolibre:MCO37257516": {
+      "isNew": true
+    },
+    "mercadolibre:MEC62995693": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63975730": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3493076502": {
+      "isNew": true
+    },
+    "mercadolibre:MEC29268937": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2834000964": {
+      "isNew": true
+    },
+    "mercadolibre:MLM55043275": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51967027": {
+      "isNew": true
+    },
+    "mercadolibre:MCO63022677": {
+      "isNew": true
+    },
+    "mercadolibre:MCO40564881": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27766156": {
+      "isNew": true
+    },
+    "mercadolibre:MCO48939799": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18638355": {
+      "isNew": true
+    },
+    "mercadolibre:MLM2441996517": {
+      "isNew": true
+    },
+    "mercadolibre:MCO36513474": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29093516": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22563886": {
+      "isNew": true
+    },
+    "mercadolibre:MEC18446928": {
+      "isNew": true
+    },
+    "mercadolibre:MLM39276154": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2351775628": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44007277": {
+      "isNew": true
+    },
+    "mercadolibre:MEC16211425": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1406426887": {
+      "isNew": true
+    },
+    "mercadolibre:MLM27171022": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27606910": {
+      "isNew": true
+    },
+    "mercadolibre:MLM52688702": {
+      "isNew": true
+    },
+    "mercadolibre:MLM45697705": {
+      "isNew": true
+    },
+    "mercadolibre:MLM60055968": {
+      "isNew": true
+    },
+    "mercadolibre:MCO32319037": {
+      "isNew": true
+    },
+    "mercadolibre:ML_180986074": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24539340": {
+      "isNew": true
+    },
+    "mercadolibre:MLM22929831": {
+      "isNew": true
+    },
+    "mercadolibre:MLM55745179": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38479089": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21304043": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51205663": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19850052": {
+      "isNew": true
+    },
+    "mercadolibre:ML_4966790516": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26084641": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2058552429": {
+      "isNew": true
+    },
+    "mercadolibre:MLM18601142": {
+      "isNew": true
+    },
+    "mercadolibre:ML_7028427082": {
+      "isNew": true
+    },
+    "mercadolibre:MEC44710531": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51113360": {
+      "isNew": true
+    },
+    "mercadolibre:MLM61849097": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39130447": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26684781": {
+      "isNew": true
+    },
+    "mercadolibre:ML_9728381892": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1012715386": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2064351961": {
+      "isNew": true
+    },
+    "mercadolibre:MLM46556598": {
+      "isNew": true
+    },
+    "mercadolibre:MEC50417107": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1547044655": {
+      "isNew": true
+    },
+    "mercadolibre:MCO63728618": {
+      "isNew": true
+    },
+    "mercadolibre:MLM46454604": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43789382": {
+      "isNew": true
+    },
+    "mercadolibre:ML_9687210376": {
+      "isNew": true
+    },
+    "mercadolibre:MCO31472572": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47797574": {
+      "isNew": true
+    },
+    "mercadolibre:MLM17968068": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19487611": {
+      "isNew": true
+    },
+    "mercadolibre:MLM15995537": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18030214": {
+      "isNew": true
+    },
+    "mercadolibre:MCO597271455": {
+      "isNew": true
+    },
+    "mercadolibre:MCO61683828": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21860771": {
+      "isNew": true
+    },
+    "mercadolibre:MCO40558360": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44069385": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24210388": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19526657": {
+      "isNew": true
+    },
+    "mercadolibre:MCO56490382": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47104902": {
+      "isNew": true
+    },
+    "mercadolibre:MLM17968066": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26582454": {
+      "isNew": true
+    },
+    "mercadolibre:MEC23995389": {
+      "isNew": true
+    },
+    "mercadolibre:MEC53968883": {
+      "isNew": true
+    },
+    "mercadolibre:MCO64404750": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1076788332": {
+      "isNew": true
+    },
+    "mercadolibre:MCO867338862": {
+      "isNew": true
+    },
+    "mercadolibre:MCO817634142": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27465188": {
+      "isNew": true
+    },
+    "mercadolibre:MLM39313151": {
+      "isNew": true
+    },
+    "mercadolibre:MLM18010993": {
+      "isNew": true
+    },
+    "mercadolibre:MCO61810585": {
+      "isNew": true
+    },
+    "mercadolibre:MLM39962085": {
+      "isNew": true
+    },
+    "mercadolibre:MLM52931314": {
+      "isNew": true
+    },
+    "mercadolibre:MEC64613797": {
+      "isNew": true
+    },
+    "mercadolibre:MLM16268161": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1484656981": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55306053": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1628400015": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53772241": {
+      "isNew": true
+    },
+    "mercadolibre:MCO40231670": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2667784362": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38094826": {
+      "isNew": true
+    },
+    "mercadolibre:MLM22316395": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2188090096": {
+      "isNew": true
+    },
+    "mercadolibre:MCO30463814": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1687478567": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44123314": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1598648807": {
+      "isNew": true
+    },
+    "mercadolibre:MLM43319779": {
+      "isNew": true
+    },
+    "mercadolibre:MCO540485150": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1344305525": {
+      "isNew": true
+    },
+    "mercadolibre:MCO25683965": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19945330": {
+      "isNew": true
+    },
+    "mercadolibre:MCO855600919": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44372580": {
+      "isNew": true
+    },
+    "mercadolibre:MLM46155875": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63651254": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44601586": {
+      "isNew": true
+    },
+    "mercadolibre:MLM24718703": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28854249": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20018816": {
+      "isNew": true
+    },
+    "mercadolibre:MLM52151968": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21334079": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28036188": {
+      "isNew": true
+    },
+    "mercadolibre:MCO25864168": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19959467": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51506301": {
+      "isNew": true
+    },
+    "mercadolibre:MEC654459648": {
+      "isNew": true
+    },
+    "mercadolibre:MLM65973943": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1691075371": {
+      "isNew": true
+    },
+    "mercadolibre:MLM2267781109": {
+      "isNew": true
+    },
+    "mercadolibre:MCO54898167": {
+      "isNew": true
+    },
+    "mercadolibre:ML_7804453801": {
+      "isNew": true
+    },
+    "mercadolibre:MEC647816574": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1669351719": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43938480": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38757127": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21348445": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28871584": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20652526": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24089790": {
+      "isNew": true
+    },
+    "mercadolibre:MEC50181342": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19524126": {
+      "isNew": true
+    },
+    "mercadolibre:MLM24229277": {
+      "isNew": true
+    },
+    "mercadolibre:MLM15503957": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1465408043": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19837562": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55509292": {
+      "isNew": true
+    },
+    "mercadolibre:MCO824722580": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8771741259": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44332245": {
+      "isNew": true
+    },
+    "mercadolibre:MLM26311503": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8661628351": {
+      "isNew": true
+    },
+    "mercadolibre:MCO15279609": {
+      "isNew": true
+    },
+    "mercadolibre:MEC39962085": {
+      "isNew": true
+    },
+    "mercadolibre:MLM24011104": {
+      "isNew": true
+    },
+    "mercadolibre:MCO948977030": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47967697": {
+      "isNew": true
+    },
+    "mercadolibre:MCO54564318": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18010993": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2340783722": {
+      "isNew": true
+    },
+    "mercadolibre:MCO38015659": {
+      "isNew": true
+    },
+    "mercadolibre:MLM34198910": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63043383": {
+      "isNew": true
+    },
+    "mercadolibre:MLM21854068": {
+      "isNew": true
+    },
+    "mercadolibre:MCO532313911": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29091982": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23609944": {
+      "isNew": true
+    },
+    "mercadolibre:MCO40583984": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47859442": {
+      "isNew": true
+    },
+    "mercadolibre:MCO32098206": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1834446807": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44113908": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2840102694": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39943889": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53225642": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1835152574": {
+      "isNew": true
+    },
+    "mercadolibre:MLM50217647": {
+      "isNew": true
+    },
+    "mercadolibre:MLM49897388": {
+      "isNew": true
+    },
+    "mercadolibre:MCO30410512": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1171241835": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1091740079": {
+      "isNew": true
+    },
+    "mercadolibre:MCO16268159": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29621580": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23508486": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44129334": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28839352": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1800150059": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20544150": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2827131934": {
+      "isNew": true
+    },
+    "mercadolibre:MCO53156308": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43812360": {
+      "isNew": true
+    },
+    "mercadolibre:MLM17968069": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19526660": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1377235233": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1721414369": {
+      "isNew": true
+    },
+    "mercadolibre:MEC43391684": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2633336214": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47259580": {
+      "isNew": true
+    },
+    "mercadolibre:MLM62229864": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1408048655": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20768478": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29262058": {
+      "isNew": true
+    },
+    "mercadolibre:MLM22538839": {
+      "isNew": true
+    },
+    "mercadolibre:MLM23238083": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1532834813": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53991612": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27467607": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2072225218": {
+      "isNew": true
+    },
+    "mercadolibre:MLM45526695": {
+      "isNew": true
+    },
+    "mercadolibre:MCO9406415": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24235357": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24791679": {
+      "isNew": true
+    },
+    "mercadolibre:MCO6344843": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1761948952": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1561376149": {
+      "isNew": true
+    },
+    "mercadolibre:MCO17360051": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18010994": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1361606495": {
+      "isNew": true
+    },
+    "mercadolibre:MCO60719911": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39962085": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43759478": {
+      "isNew": true
+    },
+    "mercadolibre:MLM31472572": {
+      "isNew": true
+    },
+    "mercadolibre:MLM48710705": {
+      "isNew": true
+    },
+    "mercadolibre:MEC35507000": {
+      "isNew": true
+    },
+    "mercadolibre:MCO45716702": {
+      "isNew": true
+    },
+    "mercadolibre:MLM65684018": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19915657": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1465968577": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47685632": {
+      "isNew": true
+    },
+    "mercadolibre:MLM2250463783": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3512011706": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47299489": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28314135": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26304330": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20544310": {
+      "isNew": true
+    },
+    "mercadolibre:ML_7662490252": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3344009828": {
+      "isNew": true
+    },
+    "mercadolibre:MCO888047140": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1506985152": {
+      "isNew": true
+    },
+    "mercadolibre:MLM58672314": {
+      "isNew": true
+    },
+    "mercadolibre:MLM50286496": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47809248": {
+      "isNew": true
+    },
+    "mercadolibre:ML_5857528781": {
+      "isNew": true
+    },
+    "mercadolibre:MLM3832994436": {
+      "isNew": true
+    },
+    "mercadolibre:MLM54569114": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26643079": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27236956": {
+      "isNew": true
+    },
+    "mercadolibre:MCO46219508": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26311504": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8272193434": {
+      "isNew": true
+    },
+    "mercadolibre:MLM60840887": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2828762632": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24768463": {
+      "isNew": true
+    },
+    "mercadolibre:MCO45680390": {
+      "isNew": true
+    },
+    "mercadolibre:MCO41279269": {
+      "isNew": true
+    },
+    "mercadolibre:MEC18908342": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2754597452": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63651710": {
+      "isNew": true
+    },
+    "mercadolibre:MCO32396607": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22775025": {
+      "isNew": true
+    },
+    "mercadolibre:ML_4583544911": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1592037556": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47728902": {
+      "isNew": true
+    },
+    "mercadolibre:MCO921186796": {
+      "isNew": true
+    },
+    "mercadolibre:MCO45511788": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39407869": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22666533": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29095301": {
+      "isNew": true
+    },
+    "mercadolibre:MCO46209968": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29262823": {
+      "isNew": true
+    },
+    "mercadolibre:MCO45298346": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19809886": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21334090": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2447920849": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20867647": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21700786": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24285349": {
+      "isNew": true
+    },
+    "mercadolibre:MCO65111434": {
+      "isNew": true
+    },
+    "mercadolibre:MCO20529420": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1418614159": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24611947": {
+      "isNew": true
+    },
+    "mercadolibre:MCO16039929": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2633400314": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39814836": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29078198": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51628817": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63859436": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18957818": {
+      "isNew": true
+    },
+    "mercadolibre:ML_6165187768": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26892103": {
+      "isNew": true
+    },
+    "mercadolibre:MCO450538980": {
+      "isNew": true
+    },
+    "mercadolibre:MLM41104009": {
+      "isNew": true
+    },
+    "mercadolibre:ML_6055140687": {
+      "isNew": true
+    },
+    "mercadolibre:MCO18987698": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1143613606": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29314871": {
+      "isNew": true
+    },
+    "mercadolibre:MLM41149389": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26195145": {
+      "isNew": true
+    },
+    "mercadolibre:MLM38284161": {
+      "isNew": true
+    },
+    "mercadolibre:MCO54099424": {
+      "isNew": true
+    },
+    "mercadolibre:MLM26860300": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2034121587": {
+      "isNew": true
+    },
+    "mercadolibre:MCO35256823": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63975733": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1384449959": {
+      "isNew": true
+    },
+    "mercadolibre:MEC28821733": {
+      "isNew": true
+    },
+    "mercadolibre:MLM27646246": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19925014": {
+      "isNew": true
+    },
+    "mercadolibre:MLM23633415": {
+      "isNew": true
+    },
+    "mercadolibre:MCO62388737": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47013585": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44304551": {
+      "isNew": true
+    },
+    "mercadolibre:MLM49006175": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2548911282": {
+      "isNew": true
+    },
+    "mercadolibre:MLM568471822": {
+      "isNew": true
+    },
+    "mercadolibre:MLM64983480": {
+      "isNew": true
+    },
+    "mercadolibre:MCO33903024": {
+      "isNew": true
+    },
+    "mercadolibre:MCO652323820": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1537200537": {
+      "isNew": true
+    },
+    "mercadolibre:MCO22261792": {
+      "isNew": true
+    },
+    "mercadolibre:MLM54105376": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1649823729": {
+      "isNew": true
+    },
+    "mercadolibre:MCO32427509": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21318959": {
+      "isNew": true
+    },
+    "mercadolibre:MCO36693338": {
+      "isNew": true
+    },
+    "mercadolibre:MCO26990277": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24005999": {
+      "isNew": true
+    },
+    "mercadolibre:MCO51763787": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28765287": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51962410": {
+      "isNew": true
+    }
+  }
+}

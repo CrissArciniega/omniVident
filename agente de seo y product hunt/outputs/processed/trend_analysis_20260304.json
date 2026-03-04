@@ -1,0 +1,2433 @@
+{
+  "analysis_date": "2026-03-04T11:52:11.989368",
+  "current_total": 581,
+  "previous_total": 542,
+  "summary": {
+    "new_products": 149,
+    "dropped_products": 110,
+    "price_changes": 30,
+    "ranking_changes": 67,
+    "sales_velocity_changes": 0,
+    "category_trends": 8
+  },
+  "new_products": [
+    {
+      "id": "B08YHLVJN3",
+      "title": "Fruit of the Loom Eversoft Fleece Elastic Bottom Sweatpants with Pockets, Relaxed Fit, Moisture Wicking, Breathable",
+      "price": 14.31,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 30
+    },
+    {
+      "id": "MCO52347854",
+      "title": "Babero Delantal Bebés Y Niños De Manga Larga Impermeable Color Morado Talla Unica Enfantasy",
+      "price": 9800.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MLM52069200",
+      "title": "Birdman Creatina Monohidratada + Proteína Performance 1.14kg Sabor Chocolate",
+      "price": 1.6,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MLM27646246",
+      "title": "Mando Inalámbrico Sony Dualshock 4 Ps4 Blue Midnight Blue",
+      "price": 780.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MCO29078198",
+      "title": "Crema Dental Pasta De Dientes Herbs Sin F - g a $95",
+      "price": 20490.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "MLM19480202",
+      "title": "Tenis Reebok Npc || Con Un Estilo Urbano Para Hombre Blanco 9.5 Mx",
+      "price": 892.0,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 11
+    },
+    {
+      "id": "MCO56067795",
+      "title": "Corrector De Postura Ortopédico Unisex Con Faja Moldeadora Soporte Lumbar Y Dorsal Ajustable Mejora La Postura Alivia Dolores De Espalda Y Moldea El Abdomen Ideal Para Uso Diario S",
+      "price": 38165.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MCO27606910",
+      "title": "Protector Solar Control Brillo Sun Faci - mL a $934",
+      "price": 39295.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "MCO812496246",
+      "title": "Kefir De Leche Búlgaros - Ml A $189",
+      "price": 35000.0,
+      "category": "Alimentos y Bebidas",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "B001M5TW6K",
+      "title": "Speedo Vanquisher 2.0, White",
+      "price": 399.2,
+      "category": "Deportes y Aire Libre",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 28
+    },
+    {
+      "id": "MCO62312110",
+      "title": "Labial Mate Studio Look - Cyzone Color Red Star",
+      "price": 22000.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "MCO54564318",
+      "title": "Audífonos Inalambricos 1hora Aut211 Con Cancelación De Ruido Ambiental Activa, Bluetooth 5.4 Micrófono Con Cancelación De Ruido Para Manos Libres Ergonómicos Auriculares Negro",
+      "price": 60000.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 17
+    },
+    {
+      "id": "MCO53348593",
+      "title": "Silla Mecedora, Vibradora Y Musical Crececonmigo 3 En 1 Bebe Color Fantastic Jiraffe - Toldillo",
+      "price": 124900.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "B0FVDS27XT",
+      "title": "Vertvie Jelly Bras for Women Plus Size Minimizer Soft Wireless Push Up Bra Full Supportive Older Lift Back Coverage Bralette",
+      "price": 18.89,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 22
+    },
+    {
+      "id": "MLM29109246",
+      "title": "Vans Sk8-hi Hombre Adultos Negro 5 Us",
+      "price": 1.297,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MLM34962481",
+      "title": "Mando Joystick Inalámbrico Sony Playstation Dualshock 4 Ps4 Color Red Camouflage Red Cam",
+      "price": 606.0,
+      "category": "Consolas y Videojuegos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 5
+    },
+    {
+      "id": "ML_7133314760",
+      "title": "Baranda Seguridad Enfantasy Barrera Cama Varios Tamaños Bebé",
+      "price": 139500.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 16
+    },
+    {
+      "id": "MLM37828632",
+      "title": "Guantes De Nitrilo Uniseal Rosa Metalico Talla Xch",
+      "price": 159.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MCO21318959",
+      "title": "Ventilador Torre Plus Solutions Control Remoto 45w 180° 3 Velocidades Negro Plástico",
+      "price": 189900.0,
+      "category": "Antigüedades y Colecciones",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 12
+    },
+    {
+      "id": "MCO44716550",
+      "title": "Walkie-talkie Baofeng Walkie-talkie Bf 888s De 2 Radios - Negro",
+      "price": 71089.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MCO23958967",
+      "title": "Calculadora Cientifica Casio Fx-82ms 2da Edicion Color Marron",
+      "price": 64345.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 19
+    },
+    {
+      "id": "MCO27436118",
+      "title": "Pulsera Premium Para Xiaomi Redmi Watch 3 Active Screen 1.83 Color Blanco",
+      "price": 15999.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 15
+    },
+    {
+      "id": "B08MTBCXWX",
+      "title": "6Ft Power Strip Surge Protector - Yintar Extension Cord with 6 AC Outlets and 3 USB Ports for for Home, Office, Dorm Essentials, 1680 Joules, ETL Listed, (Black)",
+      "price": 12.99,
+      "category": "Electronics",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 28
+    },
+    {
+      "id": "B075ZZ7XKD",
+      "title": "Gildan Adult Ultra Cotton T-Shirt, Style G2000, Multipack",
+      "price": 12.41,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 27
+    },
+    {
+      "id": "MCO43938473",
+      "title": "Ventilador De Mesa Genérica Mini Ventilador Usb Con 3 Palas De Plástico Color Verde Estructura Color Verde Musgo, 21cm De Diámetro 5 21 Cm 110v",
+      "price": 26140.0,
+      "category": "Antigüedades y Colecciones",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "B00NESCOY0",
+      "title": "Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover with Deep Pocket Stretches up to 16 Inches, Machine Washable (White)",
+      "price": 22.21,
+      "category": "Home & Garden",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 30
+    },
+    {
+      "id": "MLM37879250",
+      "title": "Tenis Classics Princess De Mujer Reebok Negro Liso 3.5 Mx",
+      "price": 1.399,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 12
+    },
+    {
+      "id": "MCO24454586",
+      "title": "Audífonos Sony Wi-c100 Color Blanco",
+      "price": 98542.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 19
+    },
+    {
+      "id": "B0B9WDZZXH",
+      "title": "DQST - 1 Par de Rodilleras Deportivas, Rodilleras Elásticas Antideslizantes, Protege tus Rodillas，Adecuado para Voleibol, Baloncesto, GYM, Correr, Ciclismo de Montaña, Deportes Al Aire Libre, etc",
+      "price": 199.87,
+      "category": "Deportes y Aire Libre",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 26
+    },
+    {
+      "id": "B09JFR8HTV",
+      "title": "J.VER Men's Dress Shirts Solid Long Sleeve Stretch Wrinkle-Free Formal Shirt Business Casual Button Down Shirts",
+      "price": 19.99,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 9
+    },
+    {
+      "id": "B00N1Q5WYO",
+      "title": "Hot Wheels Pista City Color Shifters Laboratorio Científico con Cambio de Color y Vehículo para Niños de 4 Años",
+      "price": 342.65,
+      "category": "Juguetes y Juegos",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 9
+    },
+    {
+      "id": "MCO2064351961",
+      "title": "Audífonos Bluetooth Para Casco Moto Impermeables Soft Micro",
+      "price": 56787.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 19
+    },
+    {
+      "id": "ML_5404586339",
+      "title": "Tenis Sneakers Mujer Confort Antiderrapante Dama",
+      "price": 291.0,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MLM41354999",
+      "title": "Bandana Tubular Uv Protección Actividades Al Aire Libre Pack 10 Colores Evd-x Variedad De Colores Mujer 8 Unitalla Adulto",
+      "price": 269.0,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MLM47345483",
+      "title": "Aldeaprint Papel Fotográfico Adhesivo Glossy Carta 150g 250 Hojas Blanco",
+      "price": 859.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MLM63651615",
+      "title": "Gorra Lisa De Malla/esponja Trucker Camionero P Sublimar Color Fucsia Talla Unitalla Liso",
+      "price": 92.0,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MEC16211422",
+      "title": "Mouse Gamer Logitech G Series Lightsync G203 Negro",
+      "price": 20.0,
+      "category": "Computación",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MEC23995389",
+      "title": "Amazon Echo Pop C2h4r9 Con Asistente Virtual Alexa Color Glacier White",
+      "price": 50.0,
+      "category": "Electrónica, Audio y Video",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "B0714K41PB",
+      "title": "Utopia Bedding Throw Pillows (Set of 4, White) – 18 x 18 Inches Down Alternative Pillows for Bed, Sofa, and Couch - Fluffy Decorative Stuffer Pillow for Indoors & Outdoors",
+      "price": 16.18,
+      "category": "Home & Garden",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 28
+    },
+    {
+      "id": "MCO42520227",
+      "title": "Reloj Smartwatch Xiaomi Redmi Watch 5 Lite 1,96 Amoled Black Caja Negro Malla Negro Bisel Negro",
+      "price": 182490.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "MLM40283636",
+      "title": "Evd-x Balaclava Negra Secado Rápido Uv Protección Deportes Y Moto Adultos Negro Liso Unitalla Adulto",
+      "price": 112.0,
+      "category": "Accesorios para Vehículos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MLM46018983",
+      "title": "Tenis Under Armour Charged Assert 10 Estilo Deportivo Hombre Downpour Gray / Downpour Gray / Halo Gray Liso 7.5 Us",
+      "price": 1.6,
+      "category": "Ropa, Bolsas y Calzado",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MCO19975321",
+      "title": "Protector Solar Facial Toque Seco Fps 50+ Oil Control Piel Mixta-grasa 50ml Eucerin",
+      "price": 99900.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "MLM63975732",
+      "title": "Audífonos 1hora Con Estuche Giratorio, Auriculares Inalámbricos In-ear Manos Libres Bluetooth 5.4, 32h Batería Sonido Hd 6 Colores Y Cable Tipo C Rosa",
+      "price": 178.0,
+      "category": "Consolas y Videojuegos",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MCO28765287",
+      "title": "Power Bank Batería Portátil 20000mah Pd 22.5w Carga Rápida 1hora Gar158 Con 1 Puerto Salida Usb 2 Puertos Entrada Salida Tipo C Con Linterna Incorporado De Luz Fuerte Negro",
+      "price": 85000.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO51032045",
+      "title": "Samsung Galaxy A56 5g Dual Sim 256 Gb Awesome Graphite 8 Gb Ram",
+      "price": 1718052.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 11
+    },
+    {
+      "id": "MLM56615552",
+      "title": "Bocina Xiaomi Sound Pocket Mdz-37-db Color Rosa",
+      "price": 349.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO27002552",
+      "title": "Audífonos Jbl Tune 770nc Cancelación De Ruido 70 Horas Batería Color Negro",
+      "price": 296091.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MCO19559684",
+      "title": "Gel Limpiador Cerave Espumoso 473ml. Normal A Grasa Día/noche",
+      "price": 64757.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "B07X4JG2G4",
+      "title": "DURACELL - Cargador premium pilas recargables, carga extra rápida compatible con baterías DURACELL AA y AAA NiMH, incluye 1 cargador + 4 pilas AA recargables (pre-cargadas)",
+      "price": 359.4,
+      "category": "Electrónica",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 26
+    }
+  ],
+  "dropped_products": [
+    {
+      "id": "MCO61330255",
+      "title": "Labial Mate Studio Look - Cyzone Color Blush Pink",
+      "price": 9685.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "MCO2683639650",
+      "title": "Carpa Impermeable Moto Pijama Argolla Metalica Con Malla Negro L",
+      "price": 76585.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 10
+    },
+    {
+      "id": "MCO21334121",
+      "title": "Power Bank Batería Portátil 10000mah Con Built In 4 Cables Micro Usb V8 Ip Tipo C 1hora Con Pantalla Digital Cargador De... Negro",
+      "price": 42850.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "MLM51913831",
+      "title": "Lentes De Contacto Soflens 59 Bausch + Lomb Graduados Para Miopia Graduación -1.25 Con Estuche Y Solución Kit Marca Optioutlet",
+      "price": 398.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO28854249",
+      "title": "Guillotina Metálica 30 X 25 Cm A4 Calidad Superior",
+      "price": 64500.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 19
+    },
+    {
+      "id": "MEC42485998",
+      "title": "Asistente Virtual Inteligente Alexa Amazon Echo Pop, Color Lavanda",
+      "price": 69.0,
+      "category": "Electrónica, Audio y Video",
+      "country": "EC",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MLM54930469",
+      "title": "Guante De Nitrilo Plateado Metalico Chico Uniseal C/100",
+      "price": 180.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 5
+    },
+    {
+      "id": "MCO23132570",
+      "title": "Calculadora Científica Casio Fx-991 Cw Negro",
+      "price": 137699.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 20
+    },
+    {
+      "id": "MCO19712370",
+      "title": "Repetidor Extensor De Rango Wifi Dual Band 5g Tp-link Ac750 Color Blanco",
+      "price": 73900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MCO25108722",
+      "title": "The Ordinary Niacinamida 10% + Zinc 1% - Niacinamida 30 Ml Para Todo Tipo De Piel",
+      "price": 41310.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "B0CZDHTDJQ",
+      "title": "SAN KARA Toallas Deportivas de Microfibra (3 PCS) - Toallas Microfibra Secado Rápido, Ligeras para Viaje, Playa, Natación, Yoga y Gimnasio - Gris",
+      "price": 199.0,
+      "category": "Deportes y Aire Libre",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 3
+    },
+    {
+      "id": "MCO54263914",
+      "title": "Silla Mecedora, Vibradora Y Musical Crececonmigo 3 En 1 Bebe Color Rey De La Selva - Toldillo",
+      "price": 124900.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO29339784",
+      "title": "Dercos Shampoo Anticaspa Vichy 200 Ml.",
+      "price": 80175.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "ML_7713616570",
+      "title": "Impermeable Siliconado Para Motociclista",
+      "price": 57714.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "MLM43809029",
+      "title": "Aldeaprint Papel Fotográfico Glossy Brillante Carta 230g 20 Hojas Blanco",
+      "price": 75.0,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MCO27766156",
+      "title": "Audífonos Jbl Tune 770nc Cancelación De Ruido 70 Horas Batería Color Azul",
+      "price": 289900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "B09SG2Q23M",
+      "title": "Anker Power Strip with 2100J Surge Protector, Outlet Extender, 5ft Extension Cord with Multiple Outlets, 12 AC, 2 USB A,1 USB C Port for 20W, Home Office, Dorm Room Essentials, TUV Listed",
+      "price": 23.51,
+      "category": "Electronics",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 22
+    },
+    {
+      "id": "B0CCV4TKP6",
+      "title": "JETech Funda para iPad (A16) 11.ª/10.ª Generación (2025/2022) con Portalápiz, Clara Transparente Carcasa Trasera Slim Soporte Antigolpes Cover Tableta (Rosado)",
+      "price": 319.0,
+      "category": "Electrónica",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 29
+    },
+    {
+      "id": "B0DLCHQFFH",
+      "title": "Monster High, Muñeca Cumpleaños Draculaura 1600, con Vestido de Gala y Accesorios de Fiesta, para Niñas de 4 Años en Adelante",
+      "price": 572.76,
+      "category": "Juguetes y Juegos",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 27
+    },
+    {
+      "id": "MCO15279609",
+      "title": "Plancha Alisadora Remington Shine Therapy Aguacate S9960 Color Verde 110v",
+      "price": 145000.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "B09JFV7HHY",
+      "title": "J.VER Men's Dress Shirts Solid Long Sleeve Stretch Wrinkle-Free Formal Shirt Business Casual Button Down Shirts",
+      "price": 16.99,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 18
+    },
+    {
+      "id": "MCO2828762632",
+      "title": "Pijama Moto, Impermeable 100% Forro De Motos, Reflectiva Negro",
+      "price": 76364.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "B07C2MK43L",
+      "title": "Jasinber Bandas Elásticas, 3 Unidades Bandas de Resistencia para Yoga，Pilates, Gimnasio, Entrenamientos",
+      "price": 149.0,
+      "category": "Deportes y Aire Libre",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 22
+    },
+    {
+      "id": "B0BWT84GZ7",
+      "title": "OLANLY Dog Door Mat for Muddy Paws 30x20, Absorbs Moisture and Dirt, Absorbent Non-Slip Washable Doormat, Quick Dry Chenille Mud Mat for Dogs, Entry Indoor Entryway Carpet for Inside Floor, Grey",
+      "price": 9.49,
+      "category": "Home & Garden",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 19
+    },
+    {
+      "id": "MCO43938480",
+      "title": "Ventilador De Mesa Genérica Mini Ventilador Usb Con 3 Palas De Plástico Color Negro Estructura Color Negro, 25cm De Diámetro 10 25 Cm 110v",
+      "price": 31611.0,
+      "category": "Antigüedades y Colecciones",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO65123567",
+      "title": "Casco Integral Shaft 562 R Toxic Certificado Color Negro Brillo Con Azul Y Visor Iridium Azul Tamaño Del Casco Xl Negro Brillo Con Azul Visor Iridium Azul Brillante",
+      "price": 310000.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 1
+    },
+    {
+      "id": "MCO61810585",
+      "title": "Kit Iniciador Batería De Emergencia Para Carro Moto Portátil",
+      "price": 108336.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "B081JLDJLB",
+      "title": "ZELUS Chaleco con peso, 6 libras/8 libras/16 libras/20 libras/25 libras/30 libras chaleco de peso con rayas reflectantes para entrenamiento, entrenamiento de fuerza, correr, fitness, construcción",
+      "price": 492.69,
+      "category": "Deportes y Aire Libre",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 30
+    },
+    {
+      "id": "B0F8BFWD3N",
+      "title": "Hstyle Baby Sock Shoes Toddler Walking Shoes Infant Non-Slip Slippers Soft Rubber Sole Sneakers for Baby Boys Girls",
+      "price": 9.99,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 8
+    },
+    {
+      "id": "B0DGHMNQ5Z",
+      "title": "Apple AirPods 4 Wireless Earbuds, Bluetooth Headphones, Personalized Spatial Audio, Sweat and Water Resistant, USB-C Charging Case, H2 Chip, Up to 30 Hours of Battery Life, Effortless Setup for iPhone",
+      "price": 99.0,
+      "category": "Electronics",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 3
+    },
+    {
+      "id": "B0G5S8VQHV",
+      "title": "Pokémon TCG: Mega Charizard Y Tin",
+      "price": 499.0,
+      "category": "Juguetes y Juegos",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 23
+    },
+    {
+      "id": "ML_2283769218",
+      "title": "Guantes Moto Tactil Termicos Proteccion St09-dimo Promocion",
+      "price": 48015.0,
+      "category": "Accesorios para Vehículos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 20
+    },
+    {
+      "id": "MCO18957818",
+      "title": "Garnier Express Aclara Anti Manchas Sérum Vitamina C Día 30ml Todo Tipo De Piel",
+      "price": 39178.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 19
+    },
+    {
+      "id": "ML_2168859189",
+      "title": "Llavero Lujo En Cuero Gamuza Elegante Con Logo Emblema Carro",
+      "price": 27455.0,
+      "category": "Antigüedades y Colecciones",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 6
+    },
+    {
+      "id": "B096423LXW",
+      "title": "Crocs Kid's Classic Clog",
+      "price": 39.95,
+      "category": "Clothing, Shoes & Jewelry",
+      "country": "CO",
+      "source": "amazon",
+      "ranking": 9
+    },
+    {
+      "id": "MCO27418282",
+      "title": "Malla Correa Para Smartwatch Xiaomi Redmi Watch 3 Active Color Medianoche",
+      "price": 15600.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 17
+    },
+    {
+      "id": "MCO45868595",
+      "title": "Casio Fx-991es Plus Calculadora Científica 417 Funciones Ews Negro",
+      "price": 180000.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 14
+    },
+    {
+      "id": "MCO44113911",
+      "title": "Teléfono Celular Samsung Galaxy A16 128 Gb 4 Gb De Ram Nfc Verde Claro",
+      "price": 504900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 9
+    },
+    {
+      "id": "B0FJX86YTG",
+      "title": "Pokémon TCG: Mega Latias ex Box",
+      "price": 499.99,
+      "category": "Juguetes y Juegos",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 22
+    },
+    {
+      "id": "MCO32624832",
+      "title": "Cinta Ancha Adhesiva Transparente X 6 Rollos Empaque Embalaje",
+      "price": 35730.0,
+      "category": "Arte, Papelería y Mercería",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "MCO54544773",
+      "title": "Celular Xiaomi Redmi 15 4g Dual Sim 8gb Ram 256gb - Negro",
+      "price": 599900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 4
+    },
+    {
+      "id": "MCO18987698",
+      "title": "Ésika D'orsay Parfum 90ml Para Hombre",
+      "price": 51500.0,
+      "category": "Belleza y Cuidado Personal",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 7
+    },
+    {
+      "id": "MLM22696511",
+      "title": "Caja Scribe Verde 5000 Hojas Tamaño Carta Blanco",
+      "price": 1.109,
+      "category": "Computación",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MCO64290959",
+      "title": "Bañera Tina Plegable Para Bebé Con Desagüe Y Patas Color Rosa Animales",
+      "price": 90458.0,
+      "category": "Bebés",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 18
+    },
+    {
+      "id": "B07V6TQTD8",
+      "title": "UGREEN 100W Cable USB Tipo C a C 20V 5A, Carga Rápida Type C a C Compatible con MacBook Pro Air, iPad Pro, Galaxy S25 S24 S23, iPhone 17 16 15 Pro Max Plus Air, Huawei, Xiaomi, Pixel 10, 2M",
+      "price": 219.0,
+      "category": "Electrónica",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 22
+    },
+    {
+      "id": "MLM19946133",
+      "title": "Cubrebocas Ambiderm 3 Pliegos Plisado Colores Caja 50pz Color De Colores Multicolor Liso",
+      "price": 229.0,
+      "category": "Salud y Equipamiento Médico",
+      "country": "MX",
+      "source": "mercadolibre",
+      "ranking": 3
+    },
+    {
+      "id": "MCO45818960",
+      "title": "Xiaomi Redmi Note 14 4g 6,67 256gb 8gb Ram Cámara 108mpx - Color Negro",
+      "price": 649900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 8
+    },
+    {
+      "id": "B0DXR5FH9C",
+      "title": "SAMSUNG Celular Galaxy A56 5G Negro 256GB",
+      "price": 6199.0,
+      "category": "Electrónica",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 30
+    },
+    {
+      "id": "MCO39962085",
+      "title": "Auriculares Inalámbricos Xiaomi Redmi Buds 6 Play Negro",
+      "price": 57900.0,
+      "category": "Celulares y Teléfonos",
+      "country": "CO",
+      "source": "mercadolibre",
+      "ranking": 2
+    },
+    {
+      "id": "B0FH5P9SVW",
+      "title": "Pokémon TCG: Team Rocket Tin - Mewtwo",
+      "price": 660.0,
+      "category": "Juguetes y Juegos",
+      "country": "MX",
+      "source": "amazon",
+      "ranking": 16
+    }
+  ],
+  "price_changes": [
+    {
+      "id": "B0B8DXN3K2",
+      "title": "Silk Pillowcase for Hair and Skin, Mulberry Silk Pillow Cases Standard Size, Anti Acne Cooling Sleep Both Sides Natural Silk Satin Pillow Covers with Hidden Zipper, Gifts for Women Men, Ash Blue",
+      "old_price": 7.83,
+      "new_price": 11.95,
+      "pct_change": 52.6,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "B01LYNW421",
+      "title": "Beckham Hotel Collection Bed Pillows Standard/Queen Size Set of 2 - Original Soft Down Alternative Pillow for Sleeping - Soft Support for Back, Stomach or Side Sleepers",
+      "old_price": 41.97,
+      "new_price": 59.99,
+      "pct_change": 42.9,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "B0CG5P42QH",
+      "title": "G4Free EverGoing Yoga Pants Women Wide Leg Pants with Pockets High Waist Stretch Dress Casual Sweatpants Petite/Regular/Tall",
+      "old_price": 26.33,
+      "new_price": 36.99,
+      "pct_change": 40.5,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Clothing, Shoes & Jewelry"
+    },
+    {
+      "id": "B00T0C9XRK",
+      "title": "essence | Lash Princess False Lash Effect Mascara | Volumizing & Lengthening | Cruelty Free & Paraben Free",
+      "old_price": 7.99,
+      "new_price": 4.99,
+      "pct_change": -37.5,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": "MCO21860771",
+      "title": "Búlgaros De Leche Frescos, Bacilos, Nódulos Para Kefir",
+      "old_price": 35000.0,
+      "new_price": 23000.0,
+      "pct_change": -34.3,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Alimentos y Bebidas"
+    },
+    {
+      "id": "MCO27960105",
+      "title": "Samsung Adaptador De 25w - Carga Rápida Color Negro",
+      "old_price": 60000.0,
+      "new_price": 40155.0,
+      "pct_change": -33.1,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Celulares y Teléfonos"
+    },
+    {
+      "id": "B0113UZJE2",
+      "title": "Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel",
+      "old_price": 13.99,
+      "new_price": 9.95,
+      "pct_change": -28.9,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "B09SFPJS27",
+      "title": "UGREEN Mouse Inalámbrico 2.4 GHz con Receptor USB, 15M de Conexión, Ratón Ergonómico de 6 Botones, hasta 4K dpi, Compatible con PC, Portátil, Macbook, Windows 11 10, macOS, Linux",
+      "old_price": 249.0,
+      "new_price": 182.0,
+      "pct_change": -26.9,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0CFPHTWP3",
+      "title": "CXJYSD Mini Bolso Cruzado En El Pecho,Para Hombre Y Mujer Con Bolsillos Dobles,Riñonera Impermeable Con Manos Libres,Adecuado Para Deportes Al Aire Libre,Correr Y Viajar",
+      "old_price": 165.0,
+      "new_price": 208.0,
+      "pct_change": 26.1,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Deportes y Aire Libre"
+    },
+    {
+      "id": "B077QJ1HVT",
+      "title": "ADATA 128 GB Tarjeta de Memoria Micro SDXC con Adaptador Color Negro con Azul A1 (Clase 10)",
+      "old_price": 219.0,
+      "new_price": 273.0,
+      "pct_change": 24.7,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B09PZ9J45G",
+      "title": "Maybelline Brillo Labial Lifter Gloss, Tono Petal, 5.4ml, de Larga Duración, con Ácido Hialurónico, Brillo hidratante hasta por 4 horas, con aplicador XL para una aplicación uniforme",
+      "old_price": 137.0,
+      "new_price": 108.92,
+      "pct_change": -20.5,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B09ZTXVNVD",
+      "title": "metapen A8 Lápiz para iPad 2018-2025, Carga Rápida 2X, Inclinación y Precisión de Píxeles, Apple Pencil para iPad 11/10/9/8/7/6 Gen, Pro12.9/11\"/13\" M4, Air 3/4/5/M2/M3, Mini5/6 Gen, Blanco",
+      "old_price": 332.49,
+      "new_price": 399.99,
+      "pct_change": 20.3,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "MCO2058552429",
+      "title": "Pulverizador De Espuma Con Bomba Manual De 2 Litros, Lavador",
+      "old_price": 18654.0,
+      "new_price": 22336.0,
+      "pct_change": 19.7,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Agro"
+    },
+    {
+      "id": "B010ASII32",
+      "title": "EUCERIN Protector solar facial efecto mate toque seco Oil Control 50 ml, matificante control brillo 12h con antioxidantes",
+      "old_price": 385.0,
+      "new_price": 315.41,
+      "pct_change": -18.1,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "MCO1465968577",
+      "title": "Set De Teteros Avent Natural Response 4 Oz + 9 Oz Scd838/26 Transparente Clásico",
+      "old_price": 90930.0,
+      "new_price": 103920.0,
+      "pct_change": 14.3,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Bebés"
+    },
+    {
+      "id": "B0BQR2BQYZ",
+      "title": "upsimples 11x14 Picture Frame, Display Pictures 8x10 with Mat or 11x14 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack",
+      "old_price": 6.99,
+      "new_price": 7.99,
+      "pct_change": 14.3,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "MCO22775025",
+      "title": "Bolígrafos Offi-esco Semigel Retráctil 0.7mm Negro Punta Fina X12",
+      "old_price": 13500.0,
+      "new_price": 15296.0,
+      "pct_change": 13.3,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Arte, Papelería y Mercería"
+    },
+    {
+      "id": "B00NX0WXQI",
+      "title": "Utopia Bedding Queen Size Sheet Set – 4 Piece Bed Sheets, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases – Oeko Tex (Grey)",
+      "old_price": 14.99,
+      "new_price": 12.99,
+      "pct_change": -13.3,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "MCO1377235233",
+      "title": "Impulsor Eléctrico 200km Cerca Electrica Ganado 110v",
+      "old_price": 198850.0,
+      "new_price": 225000.0,
+      "pct_change": 13.2,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Agro"
+    },
+    {
+      "id": "B0CP4XY9QC",
+      "title": "YARRAMATE 16oz/470ml Glass Olive Oil Sprayer for Cooking with Stickers, 2 in 1 Oil Dispenser for Kitchen Gadgets, Food Grade Premium Spray Bottle with Portion Control for Salad, Frying, BBQ (Black)",
+      "old_price": 7.98,
+      "new_price": 8.99,
+      "pct_change": 12.7,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "B08V3JGB1F",
+      "title": "Kitsch Dermaplane Razor for Women Face – Face Razors for Women & Men, Eye Brow Razors & Face Shaver – Exfoliating Facial Razor & Dermaplaner as Skin Care Tool for Smoother Skin - Terracotta, 12 pcs",
+      "old_price": 7.99,
+      "new_price": 8.99,
+      "pct_change": 12.5,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Beauty & Personal Care"
+    },
+    {
+      "id": "B0D64VGPWY",
+      "title": "EUCERIN Anti-Pigment Crema Corporal para Áreas Específicas (200ml) Ayuda a reducir manchas oscuras para una piel más uniforme, suave y radiante",
+      "old_price": 354.99,
+      "new_price": 399.0,
+      "pct_change": 12.4,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B0DXXYS4BJ",
+      "title": "Roku Streaming Stick HD — HD Streaming Device for TV with Roku Voice Remote, Free & Live TV",
+      "old_price": 27.99,
+      "new_price": 24.77,
+      "pct_change": -11.5,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Electronics"
+    },
+    {
+      "id": "MCO52279138",
+      "title": "Taladro Inalámbrico Sisdata 45talv1 Potencia Real 650w 1y Color Amarillo Frecuencia 50hz /60hz 110v",
+      "old_price": 80967.0,
+      "new_price": 89250.0,
+      "pct_change": 10.2,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Agro"
+    },
+    {
+      "id": "B0DJDHWJYC",
+      "title": "Bluelander Caminadora Electrica, Walking Pad con Asa, 100 * 48 * 120 cm, 110 V, Pantalla Digital, Caminadora Plegable, Portatil, Ideal para Oficina, Hogar, Cinta para Caminar (Walking Pad con Asa)",
+      "old_price": 2879.0,
+      "new_price": 2595.0,
+      "pct_change": -9.9,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Deportes y Aire Libre"
+    },
+    {
+      "id": "B0FQGG9VLN",
+      "title": "Audífonos inalámbricos AirPods Pro 3 de Apple, Cancelación Activa de Ruido, Traducción en Vivo, Detección de la frecuencia Cardiaca, audífonos Bluetooth, Audio Espacial, Sonido de Alta fidelidad",
+      "old_price": 5719.0,
+      "new_price": 5199.0,
+      "pct_change": -9.1,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "MLM50366054",
+      "title": "Auriculares Inalámbricos Bluetooth Jbl Wave Beam Color Negro",
+      "old_price": 625.0,
+      "new_price": 574.0,
+      "pct_change": -8.2,
+      "country": "MX",
+      "source": "mercadolibre",
+      "category": "Consolas y Videojuegos"
+    },
+    {
+      "id": "B09Y1FRP35",
+      "title": "TOCOBO [TOCOBO] Barra solar suave de algodón SPF50+ PA+++ 0.67 onzas / 0.67 oz | Ingredientes naturales, antisebo, sensación mate suave | EWG Green + sin PEG, barra solar vegana coreana para la cara",
+      "old_price": 259.0,
+      "new_price": 278.0,
+      "pct_change": 7.3,
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B0CYJBB2JQ",
+      "title": "bella 2 Slice Slim Toaster, Fits-anywhere™ Kitchenware, 6 Setting Shade Control with Reheat & Cancel Buttons, Fits sourdough, 10” Long Slot, Anti Jam & Auto Shutoff, 900 Watt, Oatmilk",
+      "old_price": 17.39,
+      "new_price": 18.59,
+      "pct_change": 6.9,
+      "country": "CO",
+      "source": "amazon",
+      "category": "Home & Garden"
+    },
+    {
+      "id": "MCO36161240",
+      "title": "Jabón De Turmalina Hgw 100g Piel Revitalizante E Hidratante Rostro Cuerpo",
+      "old_price": 14900.0,
+      "new_price": 13990.0,
+      "pct_change": -6.1,
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Bebés"
+    }
+  ],
+  "ranking_changes": [
+    {
+      "id": "B0DG93MZCR",
+      "title": "UGREEN 30W GAN Cargador Tipo USB C con 3 Puertos, Cubo de Carga Rápido Pared para Celular, 2C1A Compatible con Galaxy S25/S24, iPhone 17 16 15 Pro MAX, Macbook Air, iPad Pro, Negro",
+      "old_ranking": 25,
+      "new_ranking": 7,
+      "positions_changed": 18,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0FQGG9VLN",
+      "title": "Audífonos inalámbricos AirPods Pro 3 de Apple, Cancelación Activa de Ruido, Traducción en Vivo, Detección de la frecuencia Cardiaca, audífonos Bluetooth, Audio Espacial, Sonido de Alta fidelidad",
+      "old_ranking": 6,
+      "new_ranking": 23,
+      "positions_changed": -17,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0DTY5228W",
+      "title": "Pokémon TCG: Charizard ex Special Collection",
+      "old_ranking": 10,
+      "new_ranking": 26,
+      "positions_changed": -16,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0G3CT3VFH",
+      "title": "Pokémon TCG: Mega Evolution—Ascended Heroes Mini Tin - Pikachu and Tepig",
+      "old_ranking": 26,
+      "new_ranking": 11,
+      "positions_changed": 15,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0FG5B8TKV",
+      "title": "Pokémon TCG: Venusaur ex & Blastoise ex Premium Collection",
+      "old_ranking": 7,
+      "new_ranking": 17,
+      "positions_changed": -10,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0CQMLYFQT",
+      "title": "Amazon Fire TV Stick HD (modelo más reciente), TV gratuito, Control remoto por voz Alexa, controles de Smart Home, streaming en HD",
+      "old_ranking": 5,
+      "new_ranking": 14,
+      "positions_changed": -9,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B000P22TIY",
+      "title": "Nautica Voyage Eau de Toilette para Hombre, Multicolor, 100 ml",
+      "old_ranking": 11,
+      "new_ranking": 4,
+      "positions_changed": 7,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B0FBGGCYR4",
+      "title": "OEAK Womens Wireless Jelly Bra Plus Size Supportive Seamless Bras Full Coverage Push Up Comfortable No Underwire Tshirt Bras",
+      "old_ranking": 10,
+      "new_ranking": 17,
+      "positions_changed": -7,
+      "direction": "down",
+      "country": "CO",
+      "source": "amazon",
+      "category": "Clothing, Shoes & Jewelry"
+    },
+    {
+      "id": "MCO2058552429",
+      "title": "Pulverizador De Espuma Con Bomba Manual De 2 Litros, Lavador",
+      "old_ranking": 19,
+      "new_ranking": 12,
+      "positions_changed": 7,
+      "direction": "up",
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Agro"
+    },
+    {
+      "id": "B0F6VKZ4FB",
+      "title": "LetsJoli Bras for Women Supportive Wireless Push Up Bra Full Coverage No Underwire Seamless Plus Size for Older Women",
+      "old_ranking": 19,
+      "new_ranking": 12,
+      "positions_changed": 7,
+      "direction": "up",
+      "country": "CO",
+      "source": "amazon",
+      "category": "Clothing, Shoes & Jewelry"
+    },
+    {
+      "id": "B00PPWUMLA",
+      "title": "Basta!! Juego de Mesa Fotorama",
+      "old_ranking": 13,
+      "new_ranking": 7,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B09SFPJS27",
+      "title": "UGREEN Mouse Inalámbrico 2.4 GHz con Receptor USB, 15M de Conexión, Ratón Ergonómico de 6 Botones, hasta 4K dpi, Compatible con PC, Portátil, Macbook, Windows 11 10, macOS, Linux",
+      "old_ranking": 28,
+      "new_ranking": 22,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B01LX98VOO",
+      "title": "ISDIN Fotoprotector Fusion Water Magic SPF 50, Protector Solar Facial OIL CONTROL, de fase acuosa para uso diario, Textura ultra ligera, 50 ml",
+      "old_ranking": 3,
+      "new_ranking": 9,
+      "positions_changed": -6,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B0DGJ7MDGW",
+      "title": "Audífonos inalámbricos AirPods 4 de Apple,audífonos Bluetooth,Audio Espacial Personalizado,Resistentes al Polvo,al Agua y al Sudor,Chip H2,hasta 30 Horas de batería,fácil configuración para el iPhone",
+      "old_ranking": 11,
+      "new_ranking": 17,
+      "positions_changed": -6,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0CP31QS6R",
+      "title": "Amazon Kindle 16 GB (modelo más reciente): El Kindle más ligero y compacto, ahora con cambios de página más rápidos y mayor contraste, para una experiencia de lectura mejorada - Matcha",
+      "old_ranking": 12,
+      "new_ranking": 6,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B010ASII32",
+      "title": "EUCERIN Protector solar facial efecto mate toque seco Oil Control 50 ml, matificante control brillo 12h con antioxidantes",
+      "old_ranking": 23,
+      "new_ranking": 17,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Belleza"
+    },
+    {
+      "id": "B0DDL8WGH5",
+      "title": "dji Mic Mini (2 TX + 1 RX + Estuche de Carga), micrófono inalámbrico, superligero, Audio de Alta Calidad, 48 h de Uso, cancelación de Ruido, para cámaras/iPhone/Android, Vlogs, Streaming",
+      "old_ranking": 10,
+      "new_ranking": 4,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0G3CRP2NZ",
+      "title": "Pokémon TCG: Mega Evolution—Ascended Heroes Mini Tin - Riolu and Darumaka",
+      "old_ranking": 19,
+      "new_ranking": 13,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0FN8Z7HYH",
+      "title": "Pokémon TCG: Team Rocket’s Moltres ex Ultra-Premium Collection",
+      "old_ranking": 8,
+      "new_ranking": 14,
+      "positions_changed": -6,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0BWSFG5J8",
+      "title": "TP-Link Deco WiFi Mesh, Sistema WiFi de Malla para Todo el Hogar, AC1900, hasta 1300Mbps en 5GHz, 3*Gigabit, Compatible con Todos los Deco, Deco S7(2-Pack)",
+      "old_ranking": 24,
+      "new_ranking": 18,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0BR3M8XHK",
+      "title": "UGREEN USB C Hub, 5 en 1 Adaptador USB C Multipuerto Aluminio a 4K 30Hz HDMI, 1 USB 3.0 y 2 USB 2.0, PD Carga Compatible con MacBook M1 M2 Pro Air iPad iPhone 16 Galaxy S24 Chromebook DELL XPS y Más",
+      "old_ranking": 18,
+      "new_ranking": 12,
+      "positions_changed": 6,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B0C3WQTVDH",
+      "title": "Plan Blink Básico con renovación automática mensual",
+      "old_ranking": 3,
+      "new_ranking": 8,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Electrónica"
+    },
+    {
+      "id": "B071CP6X88",
+      "title": "Plumones Marcadores Crayola Super tips 100 colores",
+      "old_ranking": 11,
+      "new_ranking": 6,
+      "positions_changed": 5,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B0BVQSNSYL",
+      "title": "183 x 61CM Tapete de Yoga Antideslizante, Tapete para Ejercicio de Material TPE Ecológico, Portátil Esterilla para Yoga de 6mm Grosor, Tapete de Pilates Antiderrapante Grueso Mat de Ejercicio Gimnasio",
+      "old_ranking": 8,
+      "new_ranking": 13,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Deportes y Aire Libre"
+    },
+    {
+      "id": "B0DTYS14XZ",
+      "title": "Pokémon TCG: Iono's Bellibolt ex Premium Collection",
+      "old_ranking": 5,
+      "new_ranking": 10,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    },
+    {
+      "id": "B07543D21Q",
+      "title": "CHARMKING Compression Socks for Women & Men Circulation (3 Pairs) 15-20 mmHg is Best Support for Athletic Running Cycling",
+      "old_ranking": 20,
+      "new_ranking": 25,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "CO",
+      "source": "amazon",
+      "category": "Clothing, Shoes & Jewelry"
+    },
+    {
+      "id": "MCO19487610",
+      "title": "Nivea Gel Facial Refrescante Con Ácido - mL a $244",
+      "old_ranking": 12,
+      "new_ranking": 17,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "CO",
+      "source": "mercadolibre",
+      "category": "Belleza y Cuidado Personal"
+    },
+    {
+      "id": "MLM50366054",
+      "title": "Auriculares Inalámbricos Bluetooth Jbl Wave Beam Color Negro",
+      "old_ranking": 5,
+      "new_ranking": 10,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "MX",
+      "source": "mercadolibre",
+      "category": "Consolas y Videojuegos"
+    },
+    {
+      "id": "B0C4NW11BS",
+      "title": "DQST Toalla Microfibra Secado Rápido 3 Pack, Toalla de Viaje Ligera y Portatil, Toalla Deportiva para Playa, Natación, Yoga, Gimnasio, Camping, Senderismo, ect (Negro, 76 * 152cm+40 * 80cm+30 * 30cm)",
+      "old_ranking": 2,
+      "new_ranking": 7,
+      "positions_changed": -5,
+      "direction": "down",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Deportes y Aire Libre"
+    },
+    {
+      "id": "B0G3CRPF91",
+      "title": "Pokémon TCG: Mega Evolution—Ascended Heroes Mini Tin - Togepi and Totodile",
+      "old_ranking": 29,
+      "new_ranking": 24,
+      "positions_changed": 5,
+      "direction": "up",
+      "country": "MX",
+      "source": "amazon",
+      "category": "Juguetes y Juegos"
+    }
+  ],
+  "sales_velocity": [],
+  "category_trends": [
+    {
+      "category": "Consolas y Videojuegos",
+      "current_count": 16,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Ropa, Bolsas y Calzado",
+      "current_count": 20,
+      "previous_count": 0,
+      "change_pct": 100,
+      "trend": "growing"
+    },
+    {
+      "category": "Computación",
+      "current_count": 13,
+      "previous_count": 9,
+      "change_pct": 44.4,
+      "trend": "growing"
+    },
+    {
+      "category": "Salud y Equipamiento Médico",
+      "current_count": 14,
+      "previous_count": 11,
+      "change_pct": 27.3,
+      "trend": "growing"
+    },
+    {
+      "category": "Antigüedades y Colecciones",
+      "current_count": 13,
+      "previous_count": 11,
+      "change_pct": 18.2,
+      "trend": "growing"
+    },
+    {
+      "category": "Accesorios para Vehículos",
+      "current_count": 23,
+      "previous_count": 27,
+      "change_pct": -14.8,
+      "trend": "shrinking"
+    },
+    {
+      "category": "Juguetes y Juegos",
+      "current_count": 21,
+      "previous_count": 24,
+      "change_pct": -12.5,
+      "trend": "shrinking"
+    },
+    {
+      "category": "Celulares y Teléfonos",
+      "current_count": 26,
+      "previous_count": 25,
+      "change_pct": 4.0,
+      "trend": "growing"
+    }
+  ],
+  "enrichment": {
+    "amazon:B08YHLVJN3": {
+      "isNew": true
+    },
+    "mercadolibre:MCO52347854": {
+      "isNew": true
+    },
+    "mercadolibre:MLM52069200": {
+      "isNew": true
+    },
+    "mercadolibre:MLM27646246": {
+      "isNew": true
+    },
+    "mercadolibre:MCO29078198": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19480202": {
+      "isNew": true
+    },
+    "mercadolibre:MCO56067795": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27606910": {
+      "isNew": true
+    },
+    "mercadolibre:MCO812496246": {
+      "isNew": true
+    },
+    "amazon:B001M5TW6K": {
+      "isNew": true
+    },
+    "mercadolibre:MCO62312110": {
+      "isNew": true
+    },
+    "mercadolibre:MCO54564318": {
+      "isNew": true
+    },
+    "mercadolibre:MCO53348593": {
+      "isNew": true
+    },
+    "amazon:B0FVDS27XT": {
+      "isNew": true
+    },
+    "mercadolibre:MLM29109246": {
+      "isNew": true
+    },
+    "mercadolibre:MLM34962481": {
+      "isNew": true
+    },
+    "mercadolibre:ML_7133314760": {
+      "isNew": true
+    },
+    "mercadolibre:MLM37828632": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21318959": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44716550": {
+      "isNew": true
+    },
+    "mercadolibre:MCO23958967": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27436118": {
+      "isNew": true
+    },
+    "amazon:B08MTBCXWX": {
+      "isNew": true
+    },
+    "amazon:B075ZZ7XKD": {
+      "isNew": true
+    },
+    "mercadolibre:MCO43938473": {
+      "isNew": true
+    },
+    "amazon:B00NESCOY0": {
+      "isNew": true
+    },
+    "mercadolibre:MLM37879250": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24454586": {
+      "isNew": true
+    },
+    "amazon:B0B9WDZZXH": {
+      "isNew": true
+    },
+    "amazon:B09JFR8HTV": {
+      "isNew": true
+    },
+    "amazon:B00N1Q5WYO": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2064351961": {
+      "isNew": true
+    },
+    "mercadolibre:ML_5404586339": {
+      "isNew": true
+    },
+    "mercadolibre:MLM41354999": {
+      "isNew": true
+    },
+    "mercadolibre:MLM47345483": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63651615": {
+      "isNew": true
+    },
+    "mercadolibre:MEC16211422": {
+      "isNew": true
+    },
+    "mercadolibre:MEC23995389": {
+      "isNew": true
+    },
+    "amazon:B0714K41PB": {
+      "isNew": true
+    },
+    "mercadolibre:MCO42520227": {
+      "isNew": true
+    },
+    "mercadolibre:MLM40283636": {
+      "isNew": true
+    },
+    "mercadolibre:MLM46018983": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19975321": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63975732": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28765287": {
+      "isNew": true
+    },
+    "mercadolibre:MCO51032045": {
+      "isNew": true
+    },
+    "mercadolibre:MLM56615552": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27002552": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19559684": {
+      "isNew": true
+    },
+    "amazon:B07X4JG2G4": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19951903": {
+      "isNew": true
+    },
+    "amazon:B0BT1WL6KY": {
+      "isNew": true
+    },
+    "mercadolibre:MLM48710705": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53301261": {
+      "isNew": true
+    },
+    "mercadolibre:ML_506076356": {
+      "isNew": true
+    },
+    "mercadolibre:ML_1661045731": {
+      "isNew": true
+    },
+    "amazon:B0F2DZXLBQ": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19863024": {
+      "isNew": true
+    },
+    "mercadolibre:MLM62375828": {
+      "isNew": true
+    },
+    "mercadolibre:MLM46003317": {
+      "isNew": true
+    },
+    "mercadolibre:MLM18593688": {
+      "isNew": true
+    },
+    "mercadolibre:MLM33301582": {
+      "isNew": true
+    },
+    "mercadolibre:MLM23138486": {
+      "isNew": true
+    },
+    "mercadolibre:MLM39962085": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19692998": {
+      "isNew": true
+    },
+    "amazon:B0DQNFSW4Q": {
+      "isNew": true
+    },
+    "mercadolibre:MCO57509692": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51987316": {
+      "isNew": true
+    },
+    "mercadolibre:MLM6088699": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1628400015": {
+      "isNew": true
+    },
+    "amazon:B09NMFFG8B": {
+      "isNew": true
+    },
+    "amazon:B0CQX5KMKV": {
+      "isNew": true
+    },
+    "mercadolibre:MCO39943889": {
+      "isNew": true
+    },
+    "mercadolibre:MLM49888073": {
+      "isNew": true
+    },
+    "mercadolibre:MLM23633415": {
+      "isNew": true
+    },
+    "amazon:B0DBHRWRKC": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24829400": {
+      "isNew": true
+    },
+    "mercadolibre:MLM55745179": {
+      "isNew": true
+    },
+    "mercadolibre:MLM18010994": {
+      "isNew": true
+    },
+    "mercadolibre:MLM41354356": {
+      "isNew": true
+    },
+    "mercadolibre:MLM23357332": {
+      "isNew": true
+    },
+    "mercadolibre:ML_149037195": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28531465": {
+      "isNew": true
+    },
+    "mercadolibre:MLM49494126": {
+      "isNew": true
+    },
+    "amazon:B0727RZ7WZ": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63859760": {
+      "isNew": true
+    },
+    "mercadolibre:MLM63651900": {
+      "isNew": true
+    },
+    "mercadolibre:MCO2061344874": {
+      "isNew": true
+    },
+    "amazon:B0FTBTFNCL": {
+      "isNew": true
+    },
+    "mercadolibre:MLM36006152": {
+      "isNew": true
+    },
+    "mercadolibre:MLM21414618": {
+      "isNew": true
+    },
+    "mercadolibre:MCO44372867": {
+      "isNew": true
+    },
+    "amazon:B09XFL1TQ7": {
+      "isNew": true
+    },
+    "amazon:B0DGJ7HYG1": {
+      "isNew": true
+    },
+    "amazon:B00SFSU53G": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2600979771": {
+      "isNew": true
+    },
+    "mercadolibre:MLM59819659": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53509701": {
+      "isNew": true
+    },
+    "mercadolibre:MLM40871713": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55462947": {
+      "isNew": true
+    },
+    "amazon:B0CD7JSPWW": {
+      "isNew": true
+    },
+    "amazon:B0CXGXT6W8": {
+      "isNew": true
+    },
+    "mercadolibre:ML_6652951246": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3514568890": {
+      "isNew": true
+    },
+    "mercadolibre:MCO1408048655": {
+      "isNew": true
+    },
+    "amazon:B0C7ZMJ4QZ": {
+      "isNew": true
+    },
+    "mercadolibre:MCO45824212": {
+      "isNew": true
+    },
+    "mercadolibre:MEC54524741": {
+      "isNew": true
+    },
+    "mercadolibre:MLM27865972": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28863969": {
+      "isNew": true
+    },
+    "mercadolibre:ML_198146645": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51959381": {
+      "isNew": true
+    },
+    "amazon:B0014C2NBC": {
+      "isNew": true
+    },
+    "mercadolibre:MCO47672151": {
+      "isNew": true
+    },
+    "mercadolibre:MEC55462947": {
+      "isNew": true
+    },
+    "amazon:B0F58QK7KN": {
+      "isNew": true
+    },
+    "mercadolibre:MCO65792766": {
+      "isNew": true
+    },
+    "mercadolibre:MEC44710557": {
+      "isNew": true
+    },
+    "mercadolibre:MLM51506301": {
+      "isNew": true
+    },
+    "mercadolibre:ML_8328463508": {
+      "isNew": true
+    },
+    "mercadolibre:MCO49925848": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21096841": {
+      "isNew": true
+    },
+    "mercadolibre:MLM19837562": {
+      "isNew": true
+    },
+    "mercadolibre:MCO24394711": {
+      "isNew": true
+    },
+    "amazon:B0DL6GR9VK": {
+      "isNew": true
+    },
+    "mercadolibre:MLM53302890": {
+      "isNew": true
+    },
+    "mercadolibre:MCO19138557": {
+      "isNew": true
+    },
+    "amazon:B006A5KF4A": {
+      "isNew": true
+    },
+    "mercadolibre:MCO28036188": {
+      "isNew": true
+    },
+    "mercadolibre:MCO53258696": {
+      "isNew": true
+    },
+    "mercadolibre:MLM45894293": {
+      "isNew": true
+    },
+    "mercadolibre:MCO21348445": {
+      "isNew": true
+    },
+    "mercadolibre:ML_2147150079": {
+      "isNew": true
+    },
+    "mercadolibre:ML_5191196500": {
+      "isNew": true
+    },
+    "mercadolibre:MLM17467202": {
+      "isNew": true
+    },
+    "amazon:B0CFWKMK2L": {
+      "isNew": true
+    },
+    "mercadolibre:MCO34102999": {
+      "isNew": true
+    },
+    "mercadolibre:MCO27236956": {
+      "isNew": true
+    },
+    "amazon:B0DHNTQXQ7": {
+      "isNew": true
+    },
+    "amazon:B085DTZQNZ": {
+      "isNew": true
+    },
+    "mercadolibre:MCO55520619": {
+      "isNew": true
+    },
+    "mercadolibre:MCO41279269": {
+      "isNew": true
+    },
+    "mercadolibre:MLM45939146": {
+      "isNew": true
+    },
+    "amazon:B07S5PH3H9": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44067473": {
+      "isNew": true
+    },
+    "mercadolibre:MLM44514070": {
+      "isNew": true
+    },
+    "mercadolibre:MCO3067163522": {
+      "isNew": true
+    },
+    "mercadolibre:MLM18970239": {
+      "isNew": true
+    },
+    "mercadolibre:MCO616090327": {
+      "isNew": true
+    },
+    "amazon:B0B8DXN3K2": {
+      "priceChange": 52.6,
+      "oldPrice": 7.83
+    },
+    "amazon:B01LYNW421": {
+      "priceChange": 42.9,
+      "oldPrice": 41.97
+    },
+    "amazon:B0CG5P42QH": {
+      "priceChange": 40.5,
+      "oldPrice": 26.33
+    },
+    "amazon:B00T0C9XRK": {
+      "priceChange": -37.5,
+      "oldPrice": 7.99
+    },
+    "mercadolibre:MCO21860771": {
+      "priceChange": -34.3,
+      "oldPrice": 35000.0
+    },
+    "mercadolibre:MCO27960105": {
+      "priceChange": -33.1,
+      "oldPrice": 60000.0
+    },
+    "amazon:B0113UZJE2": {
+      "priceChange": -28.9,
+      "oldPrice": 13.99
+    },
+    "amazon:B09SFPJS27": {
+      "priceChange": -26.9,
+      "oldPrice": 249.0,
+      "rankingChange": 6,
+      "oldRanking": 28
+    },
+    "amazon:B0CFPHTWP3": {
+      "priceChange": 26.1,
+      "oldPrice": 165.0
+    },
+    "amazon:B077QJ1HVT": {
+      "priceChange": 24.7,
+      "oldPrice": 219.0
+    },
+    "amazon:B09PZ9J45G": {
+      "priceChange": -20.5,
+      "oldPrice": 137.0
+    },
+    "amazon:B09ZTXVNVD": {
+      "priceChange": 20.3,
+      "oldPrice": 332.49
+    },
+    "mercadolibre:MCO2058552429": {
+      "priceChange": 19.7,
+      "oldPrice": 18654.0,
+      "rankingChange": 7,
+      "oldRanking": 19
+    },
+    "amazon:B010ASII32": {
+      "priceChange": -18.1,
+      "oldPrice": 385.0,
+      "rankingChange": 6,
+      "oldRanking": 23
+    },
+    "mercadolibre:MCO1465968577": {
+      "priceChange": 14.3,
+      "oldPrice": 90930.0
+    },
+    "amazon:B0BQR2BQYZ": {
+      "priceChange": 14.3,
+      "oldPrice": 6.99
+    },
+    "mercadolibre:MCO22775025": {
+      "priceChange": 13.3,
+      "oldPrice": 13500.0,
+      "rankingChange": -3,
+      "oldRanking": 17
+    },
+    "amazon:B00NX0WXQI": {
+      "priceChange": -13.3,
+      "oldPrice": 14.99
+    },
+    "mercadolibre:MCO1377235233": {
+      "priceChange": 13.2,
+      "oldPrice": 198850.0,
+      "rankingChange": -3,
+      "oldRanking": 15
+    },
+    "amazon:B0CP4XY9QC": {
+      "priceChange": 12.7,
+      "oldPrice": 7.98
+    },
+    "amazon:B08V3JGB1F": {
+      "priceChange": 12.5,
+      "oldPrice": 7.99
+    },
+    "amazon:B0D64VGPWY": {
+      "priceChange": 12.4,
+      "oldPrice": 354.99
+    },
+    "amazon:B0DXXYS4BJ": {
+      "priceChange": -11.5,
+      "oldPrice": 27.99
+    },
+    "mercadolibre:MCO52279138": {
+      "priceChange": 10.2,
+      "oldPrice": 80967.0
+    },
+    "amazon:B0DJDHWJYC": {
+      "priceChange": -9.9,
+      "oldPrice": 2879.0
+    },
+    "amazon:B0FQGG9VLN": {
+      "priceChange": -9.1,
+      "oldPrice": 5719.0,
+      "rankingChange": -17,
+      "oldRanking": 6
+    },
+    "mercadolibre:MLM50366054": {
+      "priceChange": -8.2,
+      "oldPrice": 625.0,
+      "rankingChange": -5,
+      "oldRanking": 5
+    },
+    "amazon:B09Y1FRP35": {
+      "priceChange": 7.3,
+      "oldPrice": 259.0
+    },
+    "amazon:B0CYJBB2JQ": {
+      "priceChange": 6.9,
+      "oldPrice": 17.39
+    },
+    "mercadolibre:MCO36161240": {
+      "priceChange": -6.1,
+      "oldPrice": 14900.0
+    },
+    "amazon:B0DG93MZCR": {
+      "rankingChange": 18,
+      "oldRanking": 25
+    },
+    "amazon:B0DTY5228W": {
+      "rankingChange": -16,
+      "oldRanking": 10
+    },
+    "amazon:B0G3CT3VFH": {
+      "rankingChange": 15,
+      "oldRanking": 26
+    },
+    "amazon:B0FG5B8TKV": {
+      "rankingChange": -10,
+      "oldRanking": 7
+    },
+    "amazon:B0CQMLYFQT": {
+      "rankingChange": -9,
+      "oldRanking": 5
+    },
+    "amazon:B000P22TIY": {
+      "rankingChange": 7,
+      "oldRanking": 11
+    },
+    "amazon:B0FBGGCYR4": {
+      "rankingChange": -7,
+      "oldRanking": 10
+    },
+    "amazon:B0F6VKZ4FB": {
+      "rankingChange": 7,
+      "oldRanking": 19
+    },
+    "amazon:B00PPWUMLA": {
+      "rankingChange": 6,
+      "oldRanking": 13
+    },
+    "amazon:B01LX98VOO": {
+      "rankingChange": -6,
+      "oldRanking": 3
+    },
+    "amazon:B0DGJ7MDGW": {
+      "rankingChange": -6,
+      "oldRanking": 11
+    },
+    "amazon:B0CP31QS6R": {
+      "rankingChange": 6,
+      "oldRanking": 12
+    },
+    "amazon:B0DDL8WGH5": {
+      "rankingChange": 6,
+      "oldRanking": 10
+    },
+    "amazon:B0G3CRP2NZ": {
+      "rankingChange": 6,
+      "oldRanking": 19
+    },
+    "amazon:B0FN8Z7HYH": {
+      "rankingChange": -6,
+      "oldRanking": 8
+    },
+    "amazon:B0BWSFG5J8": {
+      "rankingChange": 6,
+      "oldRanking": 24
+    },
+    "amazon:B0BR3M8XHK": {
+      "rankingChange": 6,
+      "oldRanking": 18
+    },
+    "amazon:B0C3WQTVDH": {
+      "rankingChange": -5,
+      "oldRanking": 3
+    },
+    "amazon:B071CP6X88": {
+      "rankingChange": 5,
+      "oldRanking": 11
+    },
+    "amazon:B0BVQSNSYL": {
+      "rankingChange": -5,
+      "oldRanking": 8
+    },
+    "amazon:B0DTYS14XZ": {
+      "rankingChange": -5,
+      "oldRanking": 5
+    },
+    "amazon:B07543D21Q": {
+      "rankingChange": -5,
+      "oldRanking": 20
+    },
+    "mercadolibre:MCO19487610": {
+      "rankingChange": -5,
+      "oldRanking": 12
+    },
+    "amazon:B0C4NW11BS": {
+      "rankingChange": -5,
+      "oldRanking": 2
+    },
+    "amazon:B0G3CRPF91": {
+      "rankingChange": 5,
+      "oldRanking": 29
+    },
+    "mercadolibre:MCO50164794": {
+      "rankingChange": 5,
+      "oldRanking": 18
+    },
+    "amazon:B09HHDHXWX": {
+      "rankingChange": 4,
+      "oldRanking": 13
+    },
+    "amazon:B0BZWYJYR9": {
+      "rankingChange": -4,
+      "oldRanking": 19
+    },
+    "amazon:B01L8JJ57U": {
+      "rankingChange": 4,
+      "oldRanking": 25
+    },
+    "amazon:B08DQQC61G": {
+      "rankingChange": 4,
+      "oldRanking": 20
+    },
+    "mercadolibre:MLM22538839": {
+      "rankingChange": -4,
+      "oldRanking": 4
+    },
+    "amazon:B07D5DN269": {
+      "rankingChange": -4,
+      "oldRanking": 7
+    },
+    "mercadolibre:MCO40700622": {
+      "rankingChange": 4,
+      "oldRanking": 14
+    },
+    "amazon:B0C3HCD34R": {
+      "rankingChange": 4,
+      "oldRanking": 24
+    },
+    "amazon:B00K5CN370": {
+      "rankingChange": -4,
+      "oldRanking": 6
+    },
+    "amazon:B08DTH86Q2": {
+      "rankingChange": 3,
+      "oldRanking": 28
+    },
+    "amazon:B0DQ59R1LB": {
+      "rankingChange": -3,
+      "oldRanking": 26
+    },
+    "amazon:B0BTYCRJSS": {
+      "rankingChange": -3,
+      "oldRanking": 23
+    },
+    "amazon:B0B6DCN2CJ": {
+      "rankingChange": -3,
+      "oldRanking": 1
+    },
+    "mercadolibre:MCO540485150": {
+      "rankingChange": 3,
+      "oldRanking": 16
+    },
+    "amazon:B01FSQILVU": {
+      "rankingChange": 3,
+      "oldRanking": 9
+    },
+    "amazon:B06XKSR4R1": {
+      "rankingChange": -3,
+      "oldRanking": 15
+    },
+    "amazon:B0BT63ZNVG": {
+      "rankingChange": 3,
+      "oldRanking": 9
+    },
+    "amazon:B0F52PRMC2": {
+      "rankingChange": 3,
+      "oldRanking": 15
+    },
+    "mercadolibre:MCO43932195": {
+      "rankingChange": -3,
+      "oldRanking": 7
+    },
+    "amazon:B00D1ARZMC": {
+      "rankingChange": 3,
+      "oldRanking": 11
+    },
+    "amazon:B07PLX7JLR": {
+      "rankingChange": 3,
+      "oldRanking": 14
+    },
+    "mercadolibre:MCO29262058": {
+      "rankingChange": -3,
+      "oldRanking": 5
+    },
+    "mercadolibre:MCO1800150059": {
+      "rankingChange": -3,
+      "oldRanking": 13
+    },
+    "amazon:B0CP9YB3Q4": {
+      "rankingChange": 3,
+      "oldRanking": 21
+    },
+    "amazon:B0CNV9F72P": {
+      "rankingChange": 3,
+      "oldRanking": 28
+    },
+    "mercadolibre:MCO21700786": {
+      "rankingChange": -3,
+      "oldRanking": 12
+    },
+    "amazon:B0DNTWQ4DS": {
+      "rankingChange": -3,
+      "oldRanking": 16
+    },
+    "mercadolibre:MCO62388737": {
+      "rankingChange": 3,
+      "oldRanking": 14
+    },
+    "amazon:B0DZ254SSR": {
+      "rankingChange": 3,
+      "oldRanking": 27
+    },
+    "amazon:B004QF0TFQ": {
+      "rankingChange": -3,
+      "oldRanking": 23
+    },
+    "mercadolibre:MCO23508486": {
+      "rankingChange": 3,
+      "oldRanking": 19
+    },
+    "mercadolibre:MCO2808220948": {
+      "rankingChange": -3,
+      "oldRanking": 15
+    },
+    "amazon:B0BRMYHMS5": {
+      "rankingChange": -3,
+      "oldRanking": 9
+    },
+    "mercadolibre:MCO40558360": {
+      "rankingChange": 3,
+      "oldRanking": 18
+    }
+  }
+}
