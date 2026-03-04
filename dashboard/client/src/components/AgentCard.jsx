@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { TrendingUp, PenTool, Search, ArrowRight, Calendar } from 'lucide-react';
+import { TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone, Search, ArrowRight, Calendar, Settings } from 'lucide-react';
 import StatusBadge from './StatusBadge';
+import AgentSettingsModal from './AgentSettingsModal';
 
-const iconMap = { TrendingUp, PenTool };
+const iconMap = { TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone };
 
 function formatLastSearch(dateStr) {
   if (!dateStr) return 'Sin busquedas previas';
@@ -12,25 +14,42 @@ function formatLastSearch(dateStr) {
   return date.toLocaleDateString('es-EC', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
-export default function AgentCard({ agent }) {
+export default function AgentCard({ agent, onUpdate }) {
   const navigate = useNavigate();
   const { dark } = useTheme();
+  const [showSettings, setShowSettings] = useState(false);
   const Icon = iconMap[agent.icon] || TrendingUp;
   const link = agent.slug === 'market-research' ? '/market' : '/content';
 
   return (
+    <>
     <div
       onClick={() => navigate(link)}
-      className={`rounded-xl p-6 border cursor-pointer group transition-all ${
+      className={`relative rounded-xl p-6 border cursor-pointer group transition-all ${
         dark
           ? 'bg-dark-card border-dark-border hover:border-gray-600'
           : 'bg-white border-gray-200 hover:shadow-md'
       }`}
     >
+      {/* Settings button */}
+      <button
+        onClick={e => { e.stopPropagation(); setShowSettings(true); }}
+        className={`absolute top-3 right-3 p-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-all ${
+          dark ? 'hover:bg-gray-700 text-gray-400' : 'hover:bg-gray-100 text-gray-400'
+        }`}
+        title="Configurar agente"
+      >
+        <Settings size={16} />
+      </button>
+
       <div className="flex items-start justify-between mb-4">
-        <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${agent.color}15` }}>
-          <Icon size={24} style={{ color: agent.color }} />
-        </div>
+        {agent.custom_image ? (
+          <img src={agent.custom_image} alt={agent.name} className="w-[96px] h-[96px] rounded-full object-cover ring-2 ring-white dark:ring-gray-700 shadow-md transition-transform duration-300 ease-out group-hover:scale-125" />
+        ) : (
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${agent.color}15` }}>
+            <Icon size={24} style={{ color: agent.color }} />
+          </div>
+        )}
         <StatusBadge status={agent.liveState?.status || 'sin datos'} date={agent.liveState?.lastRun} />
       </div>
 
@@ -55,5 +74,14 @@ export default function AgentCard({ agent }) {
         <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
       </div>
     </div>
+
+    {showSettings && (
+      <AgentSettingsModal
+        agent={agent}
+        onClose={() => setShowSettings(false)}
+        onSave={() => { setShowSettings(false); onUpdate?.(); }}
+      />
+    )}
+    </>
   );
 }

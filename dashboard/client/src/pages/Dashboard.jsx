@@ -11,7 +11,7 @@ export default function Dashboard() {
   const [marketTotal, setMarketTotal] = useState(null);
   const [contentPacks, setContentPacks] = useState(null);
 
-  useEffect(() => {
+  const fetchData = () => {
     Promise.all([
       api.get('/agents'),
       api.get('/market/summary').catch(() => ({ data: {} })),
@@ -22,7 +22,9 @@ export default function Dashboard() {
       setContentPacks(Array.isArray(contentRes.data) ? contentRes.data.length : 0);
     }).catch(console.error)
       .finally(() => setLoading(false));
-  }, []);
+  };
+
+  useEffect(() => { fetchData(); }, []);
 
   if (loading) {
     return (
@@ -92,7 +94,7 @@ export default function Dashboard() {
       <h2 className={`text-lg font-semibold mb-4 ${dark ? 'text-white' : 'text-gray-900'}`}>Agentes</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {agents.map(agent => (
-          <AgentCard key={agent.id} agent={agent} />
+          <AgentCard key={agent.id} agent={agent} onUpdate={fetchData} />
         ))}
       </div>
     </div>

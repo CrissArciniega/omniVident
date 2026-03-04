@@ -25,6 +25,21 @@ export default function ContentAgent() {
   const [customPacks, setCustomPacks] = useState([]);
   const [customError, setCustomError] = useState('');
 
+  // Agent name (dynamic)
+  const [agentName, setAgentName] = useState('Contenido y RRSS');
+  useEffect(() => {
+    api.get('/agents').then(res => {
+      const a = (res.data || []).find(a => a.slug === 'content-rrss');
+      if (a?.name) setAgentName(a.name);
+    }).catch(() => {});
+    const h = () => api.get('/agents').then(res => {
+      const a = (res.data || []).find(a => a.slug === 'content-rrss');
+      if (a?.name) setAgentName(a.name);
+    }).catch(() => {});
+    window.addEventListener('agents-updated', h);
+    return () => window.removeEventListener('agents-updated', h);
+  }, []);
+
   // AI providers state
   const [aiStatus, setAiStatus] = useState({ providers: {}, activeCount: 0 });
 
@@ -151,12 +166,7 @@ export default function ContentAgent() {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <div className="flex items-center gap-3 mb-1">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${dark ? 'bg-accent-900/40' : 'bg-accent-50'}`}>
-              <PenTool size={22} className={dark ? 'text-accent-400' : 'text-accent-600'} />
-            </div>
-            <h1 className={`text-2xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Contenido y RRSS</h1>
-          </div>
+          <h1 className={`text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
           <p className={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
             Guiones para TikTok, Instagram, Facebook, YouTube y Blog
           </p>

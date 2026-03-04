@@ -15,7 +15,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3001'], credentials: true }));
-app.use(express.json());
+app.use(express.json({ limit: '2mb' }));
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -39,36 +39,54 @@ if (fs.existsSync(clientDist)) {
   });
 }
 
-// ─── Ejecucion automatica: Lunes, Miercoles, Viernes a las 7:00 AM ───
-cron.schedule('0 7 * * 1,3,5', async () => {
-  console.log(`[Cron] ${new Date().toISOString()} — Iniciando busqueda automatica`);
+// ─── Ejecucion automatica dinamica desde DB ───
+const pool = require('./config/db');
+const activeCronJobs = {};
 
-  // Ejecutar agente de mercado
-  if (!isRunning('market-research')) {
-    try {
-      await runAgent('market-research');
-      console.log('[Cron] Agente de mercado iniciado');
-    } catch (err) {
-      console.error('[Cron] Error iniciando agente de mercado:', err.message);
-    }
+async function setupCronJobs() {
+  // Stop existing jobs
+  for (const [slug, job] of Object.entries(activeCronJobs)) {
+    job.stop();
+    delete activeCronJobs[slug];
   }
 
-  // Esperar 30s y luego ejecutar agente de contenido
-  setTimeout(async () => {
-    if (!isRunning('content-rrss')) {
-      try {
-        await runAgent('content-rrss');
-        console.log('[Cron] Agente de contenido iniciado');
-      } catch (err) {
-        console.error('[Cron] Error iniciando agente de contenido:', err.message);
+  try {
+    const [agents] = await pool.query('SELECT slug, schedule_cron, schedule_description FROM agents WHERE is_active = TRUE');
+    for (const agent of agents) {
+      const cronExpr = agent.schedule_cron || '0 7 * * 1,3,5';
+      if (!cron.validate(cronExpr)) {
+        console.log(`[Cron] Invalid cron expression for ${agent.slug}: ${cronExpr}, skipping`);
+        continue;
       }
+      activeCronJobs[agent.slug] = cron.schedule(cronExpr, async () => {
+        console.log(`[Cron] ${new Date().toISOString()} — Ejecutando ${agent.slug}`);
+        if (!isRunning(agent.slug)) {
+          try {
+            await runAgent(agent.slug);
+            console.log(`[Cron] ${agent.slug} iniciado`);
+          } catch (err) {
+            console.error(`[Cron] Error iniciando ${agent.slug}:`, err.message);
+          }
+        }
+      }, { timezone: 'America/Guayaquil' });
+      console.log(`[Cron] ${agent.slug}: "${cronExpr}" (${agent.schedule_description || 'sin descripcion'})`);
     }
-  }, 30000);
-}, {
-  timezone: 'America/Guayaquil'
-});
+  } catch (err) {
+    console.error('[Cron] Error setting up jobs:', err.message);
+    // Fallback to hardcoded schedule
+    activeCronJobs['fallback'] = cron.schedule('0 7 * * 1,3,5', async () => {
+      if (!isRunning('market-research')) await runAgent('market-research').catch(() => {});
+      setTimeout(async () => {
+        if (!isRunning('content-rrss')) await runAgent('content-rrss').catch(() => {});
+      }, 30000);
+    }, { timezone: 'America/Guayaquil' });
+    console.log('[Cron] Fallback: Lun/Mie/Vie 7:00 AM (Ecuador)');
+  }
+}
 
-console.log('[Cron] Busqueda automatica programada: Lun/Mie/Vie 7:00 AM (Ecuador)');
+// Export for re-init when agent settings change
+app.locals.setupCronJobs = setupCronJobs;
+setupCronJobs();
 
 app.listen(PORT, () => {
   console.log(`[Server] Mission Control corriendo en http://localhost:${PORT}`);

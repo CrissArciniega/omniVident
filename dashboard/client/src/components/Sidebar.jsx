@@ -1,15 +1,40 @@
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { LayoutDashboard, TrendingUp, PenTool, Sun, Moon } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone, Sun, Moon } from 'lucide-react';
+import api from '../api/client';
 
-const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard', end: true },
-  { to: '/market', icon: TrendingUp, label: 'Estudio de Mercado' },
-  { to: '/content', icon: PenTool, label: 'Contenido y RRSS' },
-];
+const iconMap = { TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone };
+
+const AGENT_ROUTES = {
+  'market-research': '/market',
+  'content-rrss': '/content',
+};
 
 export default function Sidebar() {
   const { dark, toggle } = useTheme();
+  const [agentItems, setAgentItems] = useState([]);
+
+  const fetchAgents = () => {
+    api.get('/agents').then(res => {
+      setAgentItems(
+        (res.data || []).map(a => ({
+          to: AGENT_ROUTES[a.slug] || `/${a.slug}`,
+          icon: iconMap[a.icon] || TrendingUp,
+          label: a.name,
+          customImage: a.custom_image || null,
+          color: a.color,
+        }))
+      );
+    }).catch(() => {});
+  };
+
+  useEffect(() => {
+    fetchAgents();
+    const handler = () => fetchAgents();
+    window.addEventListener('agents-updated', handler);
+    return () => window.removeEventListener('agents-updated', handler);
+  }, []);
 
   return (
     <aside className={`w-64 flex flex-col h-screen fixed left-0 top-0 border-r transition-colors ${
@@ -28,11 +53,25 @@ export default function Sidebar() {
 
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-1">
-        {navItems.map((item) => (
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              isActive
+                ? dark ? 'bg-primary-900/40 text-primary-400' : 'bg-primary-50 text-primary-700'
+                : dark ? 'text-gray-400 hover:bg-dark-border hover:text-gray-200' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+            }`
+          }
+        >
+          <LayoutDashboard size={20} />
+          Dashboard
+        </NavLink>
+
+        {agentItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
-            end={item.end}
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                 isActive
@@ -41,7 +80,6 @@ export default function Sidebar() {
               }`
             }
           >
-            <item.icon size={20} />
             {item.label}
           </NavLink>
         ))}

@@ -22,6 +22,8 @@ CREATE TABLE IF NOT EXISTS agents (
   state_file_path TEXT NOT NULL,
   output_dir TEXT NOT NULL,
   schedule_description VARCHAR(100),
+  schedule_cron VARCHAR(50) DEFAULT '0 7 * * 1,3,5',
+  custom_image LONGTEXT DEFAULT NULL,
   is_active BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;

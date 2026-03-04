@@ -165,18 +165,27 @@ export default function MarketAgent() {
     return undefined;
   };
 
+  const [agentName, setAgentName] = useState('Estudio de Mercado');
+  useEffect(() => {
+    api.get('/agents').then(res => {
+      const a = (res.data || []).find(a => a.slug === 'market-research');
+      if (a?.name) setAgentName(a.name);
+    }).catch(() => {});
+    const h = () => api.get('/agents').then(res => {
+      const a = (res.data || []).find(a => a.slug === 'market-research');
+      if (a?.name) setAgentName(a.name);
+    }).catch(() => {});
+    window.addEventListener('agents-updated', h);
+    return () => window.removeEventListener('agents-updated', h);
+  }, []);
+
   return (
     <div>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
-          <div className="flex items-center gap-3 mb-1">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${dark ? 'bg-blue-900/40' : 'bg-blue-50'}`}>
-              <TrendingUp size={22} className="text-primary-600" />
-            </div>
-            <h1 className={`text-2xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Estudio de Mercado</h1>
-          </div>
-          <p className={`text-sm ml-13 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+          <h1 className={`text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
+          <p className={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
             MercadoLibre + Amazon — EC, MX, CO, USA
           </p>
         </div>

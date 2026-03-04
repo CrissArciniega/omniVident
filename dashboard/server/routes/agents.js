@@ -66,6 +66,49 @@ router.get('/:slug/status', auth, async (req, res) => {
   }
 });
 
+// Update agent settings
+router.put('/:slug', auth, async (req, res) => {
+  try {
+    const { slug } = req.params;
+    const [agents] = await pool.query('SELECT * FROM agents WHERE slug = ?', [slug]);
+    if (agents.length === 0) return res.status(404).json({ error: 'Agente no encontrado' });
+
+    const { name, description, schedule_description, schedule_cron, icon, custom_image } = req.body;
+    const updates = [];
+    const values = [];
+
+    if (name && name.trim()) { updates.push('name = ?'); values.push(name.trim()); }
+    if (description !== undefined) { updates.push('description = ?'); values.push(description.trim()); }
+    if (schedule_description !== undefined) { updates.push('schedule_description = ?'); values.push(schedule_description); }
+    if (schedule_cron !== undefined) { updates.push('schedule_cron = ?'); values.push(schedule_cron); }
+    if (icon !== undefined) { updates.push('icon = ?'); values.push(icon); }
+    if (custom_image !== undefined) {
+      // null to clear, or base64 data URL string (limit ~1.5MB)
+      if (custom_image && custom_image.length > 1500000) {
+        return res.status(400).json({ error: 'Imagen demasiado grande (max 1MB)' });
+      }
+      updates.push('custom_image = ?');
+      values.push(custom_image);
+    }
+
+    if (updates.length === 0) return res.status(400).json({ error: 'No hay campos para actualizar' });
+
+    values.push(slug);
+    await pool.query(`UPDATE agents SET ${updates.join(', ')} WHERE slug = ?`, values);
+
+    // Refresh cron jobs if schedule changed
+    if (schedule_cron !== undefined && req.app.locals.setupCronJobs) {
+      req.app.locals.setupCronJobs();
+    }
+
+    const [updated] = await pool.query('SELECT * FROM agents WHERE slug = ?', [slug]);
+    res.json(updated[0]);
+  } catch (err) {
+    console.error('[Agents] Error update:', err);
+    res.status(500).json({ error: 'Error actualizando agente' });
+  }
+});
+
 // Run agent manually
 router.post('/:slug/run', auth, async (req, res) => {
   try {
