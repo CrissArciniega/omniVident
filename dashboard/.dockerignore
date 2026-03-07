@@ -1,0 +1,8 @@
+# No copiar estas carpetas al contenedor (son pesadas e innecesarias)
+node_modules
+client/node_modules
+client/dist
+.env
+*.log
+nul
+.git

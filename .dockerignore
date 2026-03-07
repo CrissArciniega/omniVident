@@ -1,0 +1,47 @@
+# ============================================
+# Archivos que Docker NO debe copiar al contenedor
+# (ahorra tiempo y espacio en la imagen)
+# ============================================
+
+# Dependencias (se instalan dentro del contenedor)
+**/node_modules
+**/__pycache__
+**/*.pyc
+
+# Archivos de entorno (se pasan via docker-compose)
+**/.env
+**/.env.local
+**/.env.example
+
+# Build del frontend (se compila dentro del contenedor)
+dashboard/client/dist
+
+# Git y editores
+.git
+.gitignore
+**/.vscode
+**/.idea
+
+# Logs y temporales
+**/*.log
+**/nul
+**/.DS_Store
+
+# Docker propio (evita recursion)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentacion
+**/*.md
+**/docs/
+
+# Tests
+**/tests/
+**/test/
+**/*.test.*
+**/*.spec.*
+
+# Credenciales (NUNCA deben ir al contenedor)
+**/credentials/
+**/service_account.json

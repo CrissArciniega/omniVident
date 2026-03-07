@@ -15,7 +15,14 @@ const { runAgent, isRunning } = require('./services/agentRunner');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:3001'], credentials: true }));
+// CORS: en produccion (Docker) el frontend se sirve desde el mismo servidor,
+// asi que solo se necesita en desarrollo (Vite en :5173)
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3001',
+  process.env.CORS_ORIGIN,  // Opcional: dominio personalizado
+].filter(Boolean);
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json({ limit: '2mb' }));
 
 // Routes

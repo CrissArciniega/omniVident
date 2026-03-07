@@ -1,8 +1,10 @@
 node_modules/
 .env
+.env.docker
 logs/
 downloads/
 output/
+outputs/
 credentials/
 nul
 .claude/

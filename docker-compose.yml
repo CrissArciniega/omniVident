@@ -1,0 +1,81 @@
+# ============================================================
+# OmniVident - Docker Compose
+# ============================================================
+# Levanta TODO el proyecto con un solo comando:
+#   docker compose up -d
+#
+# Servicios:
+#   1. mysql   → Base de datos MySQL 8
+#   2. app     → Dashboard + Agentes (Node.js + Python)
+# ============================================================
+
+services:
+  # ─────────────────────────────────────────────
+  # BASE DE DATOS - MySQL 8
+  # ─────────────────────────────────────────────
+  mysql:
+    image: mysql:8.0
+    container_name: omnivident-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-3antiserver3}
+      MYSQL_DATABASE: ${DB_NAME:-omnivident}
+    ports:
+      - "3307:3306"  # Puerto 3307 externo para no chocar con MySQL local
+    volumes:
+      # Persistencia: los datos sobreviven aunque borres el contenedor
+      - mysql_data:/var/lib/mysql
+      # Inicializar la BD automaticamente con el schema
+      - ./dashboard/db/init.sql:/docker-entrypoint-initdb.d/01-init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_PASSWORD:-3antiserver3}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # ─────────────────────────────────────────────
+  # APP - Dashboard + Agentes
+  # ─────────────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: omnivident-app
+    restart: unless-stopped
+    ports:
+      - "3001:3001"  # Acceder al dashboard en http://localhost:3001
+    environment:
+      # Base de datos (apunta al contenedor mysql, no a localhost)
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD:-3antiserver3}
+      DB_NAME: ${DB_NAME:-omnivident}
+      DB_PORT: 3306
+      # JWT
+      JWT_SECRET: ${JWT_SECRET:-omniVident_s3cr3t_k3y_2026_m1ss10n_c0ntr0l}
+      JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-24h}
+      # Server
+      PORT: 3001
+      # Rutas a los agentes (relativas desde /app/dashboard/)
+      SEOS_AGENT_PATH: "../agente de seo y product hunt"
+      RRSS_AGENT_PATH: "../agente contenido y rrss"
+      # API Keys (se leen del .env local)
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    depends_on:
+      mysql:
+        condition: service_healthy  # Espera a que MySQL este listo
+    volumes:
+      # Persistir outputs de los agentes (para no perderlos al recrear)
+      - seo_outputs:/app/agente\ de\ seo\ y\ product\ hunt/outputs
+      - content_outputs:/app/agente\ contenido\ y\ rrss/output
+
+# Volumenes persistentes (datos que sobreviven a docker compose down)
+volumes:
+  mysql_data:
+    name: omnivident-mysql-data
+  seo_outputs:
+    name: omnivident-seo-outputs
+  content_outputs:
+    name: omnivident-content-outputs
