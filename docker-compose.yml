@@ -60,6 +60,8 @@ services:
       # Rutas a los agentes (relativas desde /app/dashboard/)
       SEOS_AGENT_PATH: "../agente de seo y product hunt"
       RRSS_AGENT_PATH: "../agente contenido y rrss"
+      # CORS (dominio de produccion)
+      CORS_ORIGIN: ${CORS_ORIGIN:-}
       # API Keys (se leen del .env local)
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
