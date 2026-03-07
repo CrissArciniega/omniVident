@@ -373,7 +373,10 @@ def collect_country(country: str, scraping_config: dict, categories_config: dict
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=scraping_config["playwright"]["headless"])
+            browser = p.chromium.launch(
+                headless=scraping_config["playwright"]["headless"],
+                args=["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+            )
             context = browser.new_context(
                 user_agent=random.choice(user_agents),
                 viewport=scraping_config["playwright"]["viewport"],
