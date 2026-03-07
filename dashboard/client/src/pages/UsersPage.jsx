@@ -374,9 +374,9 @@ export default function UsersPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
         <div>
-          <h1 className={`text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>Usuarios</h1>
+          <h1 className={`text-xl md:text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>Usuarios</h1>
           <p className={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Administra los usuarios y sus permisos</p>
         </div>
         {isSuperAdmin && (
@@ -392,13 +392,14 @@ export default function UsersPage() {
 
       {/* Users table */}
       <div className={`rounded-xl border overflow-hidden ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
-        <table className="w-full">
+        <div className="overflow-x-auto">
+        <table className="w-full min-w-[600px]">
           <thead>
             <tr className={dark ? 'bg-dark-bg' : 'bg-gray-50'}>
-              <th className={`text-left px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Usuario</th>
-              <th className={`text-left px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Rol</th>
-              <th className={`text-center px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Estado</th>
-              <th className={`text-right px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Acciones</th>
+              <th className={`text-left px-3 sm:px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Usuario</th>
+              <th className={`text-left px-3 sm:px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Rol</th>
+              <th className={`text-center px-3 sm:px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Estado</th>
+              <th className={`text-right px-3 sm:px-5 py-3 text-xs font-semibold uppercase tracking-wider ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Acciones</th>
             </tr>
           </thead>
           <tbody className={`divide-y ${dark ? 'divide-dark-border' : 'divide-gray-100'}`}>
@@ -408,7 +409,7 @@ export default function UsersPage() {
               const canDelete = !isSelf && u.id !== SUPER_ADMIN_ID;
               return (
                 <tr key={u.id} className={dark ? 'hover:bg-dark-bg/50' : 'hover:bg-gray-50'}>
-                  <td className="px-5 py-4">
+                  <td className="px-3 sm:px-5 py-3 sm:py-4">
                     <div>
                       <p className={`text-sm font-medium ${dark ? 'text-white' : 'text-gray-900'}`}>
                         {u.name} {isSelf && <span className={`text-[10px] ml-1 ${dark ? 'text-gray-500' : 'text-gray-400'}`}>(tu)</span>}
@@ -416,12 +417,12 @@ export default function UsersPage() {
                       <p className={`text-xs ${dark ? 'text-gray-500' : 'text-gray-400'}`}>{u.email}</p>
                     </div>
                   </td>
-                  <td className="px-5 py-4">
+                  <td className="px-3 sm:px-5 py-3 sm:py-4">
                     <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${badge.cls}`}>
                       {badge.label}
                     </span>
                   </td>
-                  <td className="px-5 py-4 text-center">
+                  <td className="px-3 sm:px-5 py-3 sm:py-4 text-center">
                     <button
                       onClick={() => !isSelf && handleToggleActive(u)}
                       disabled={isSelf}
@@ -432,7 +433,7 @@ export default function UsersPage() {
                       <div className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${u.active ? 'translate-x-4' : ''}`} />
                     </button>
                   </td>
-                  <td className="px-5 py-4 text-right">
+                  <td className="px-3 sm:px-5 py-3 sm:py-4 text-right">
                     <div className="flex items-center justify-end gap-1">
                       <button
                         onClick={() => openEdit(u)}
@@ -457,6 +458,7 @@ export default function UsersPage() {
             })}
           </tbody>
         </table>
+        </div>
       </div>
 
       {showModal && (

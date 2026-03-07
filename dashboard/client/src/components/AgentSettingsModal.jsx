@@ -195,19 +195,19 @@ export default function AgentSettingsModal({ agent, onClose, onSave }) {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       <div
         onClick={e => e.stopPropagation()}
-        className={`relative w-full max-w-lg rounded-2xl border shadow-2xl max-h-[90vh] overflow-y-auto ${
+        className={`relative w-full max-w-md sm:max-w-lg rounded-2xl border shadow-2xl max-h-[90vh] overflow-y-auto ${
           dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'
         }`}
       >
         {/* Header */}
-        <div className={`flex items-center justify-between px-6 py-4 border-b ${dark ? 'border-dark-border' : 'border-gray-100'}`}>
+        <div className={`flex items-center justify-between px-4 sm:px-6 py-4 border-b ${dark ? 'border-dark-border' : 'border-gray-100'}`}>
           <h3 className={`text-lg font-semibold ${dark ? 'text-white' : 'text-gray-900'}`}>Configurar Agente</h3>
           <button onClick={onClose} className={`p-1.5 rounded-lg transition-colors ${dark ? 'hover:bg-gray-700 text-gray-400' : 'hover:bg-gray-100 text-gray-500'}`}>
             <X size={18} />
           </button>
         </div>
 
-        <div className="px-6 py-5 space-y-5">
+        <div className="px-4 sm:px-6 py-5 space-y-5">
           {/* Name */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
@@ -375,7 +375,7 @@ export default function AgentSettingsModal({ agent, onClose, onSave }) {
         </div>
 
         {/* Footer */}
-        <div className={`flex items-center justify-end gap-3 px-6 py-4 border-t ${dark ? 'border-dark-border' : 'border-gray-100'}`}>
+        <div className={`flex items-center justify-end gap-3 px-4 sm:px-6 py-4 border-t ${dark ? 'border-dark-border' : 'border-gray-100'}`}>
           <button
             onClick={onClose}
             className={`px-4 py-2 text-sm rounded-lg transition-colors ${

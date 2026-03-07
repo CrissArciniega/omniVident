@@ -12,7 +12,7 @@ export default function PriceChart({ summary }) {
   }));
 
   return (
-    <div className={`rounded-xl p-6 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
+    <div className={`rounded-xl p-4 sm:p-6 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
       <h3 className={`text-sm font-semibold mb-4 ${dark ? 'text-white' : 'text-gray-900'}`}>Productos por Pais</h3>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={chartData}>
@@ -51,13 +51,13 @@ export function CategoryChart({ summary }) {
   }));
 
   return (
-    <div className={`rounded-xl p-6 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
+    <div className={`rounded-xl p-4 sm:p-6 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
       <h3 className={`text-sm font-semibold mb-4 ${dark ? 'text-white' : 'text-gray-900'}`}>Top Categorias</h3>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={data} layout="vertical">
           <CartesianGrid strokeDasharray="3 3" stroke={dark ? '#334155' : '#E5E7EB'} />
           <XAxis type="number" tick={{ fontSize: 11, fill: dark ? '#94A3B8' : '#6B7280' }} />
-          <YAxis dataKey="name" type="category" tick={{ fontSize: 11, fill: dark ? '#94A3B8' : '#6B7280' }} width={150} />
+          <YAxis dataKey="name" type="category" tick={{ fontSize: 11, fill: dark ? '#94A3B8' : '#6B7280' }} width={100} />
           <Tooltip
             contentStyle={{
               borderRadius: '8px',

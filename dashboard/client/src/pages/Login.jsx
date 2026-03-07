@@ -53,18 +53,18 @@ export default function Login() {
       </button>
 
       {/* Logo — limpio, sin cuadro ni sombra */}
-      <div className="mb-10 text-center">
+      <div className="mb-6 sm:mb-10 text-center">
         <img
           src="/logo.png"
           alt="El Mayorista"
-          className="w-44 h-auto object-contain mx-auto"
+          className="w-32 sm:w-44 h-auto object-contain mx-auto"
         />
-        <h1 className={`text-3xl font-bold mt-4 ${dark ? 'text-white' : 'text-gray-900'}`}>OmniVident</h1>
+        <h1 className={`text-2xl sm:text-3xl font-bold mt-4 ${dark ? 'text-white' : 'text-gray-900'}`}>OmniVident</h1>
       </div>
 
       {/* Formulario en su propio cuadro */}
       <div className="w-full max-w-md">
-        <div className={`rounded-2xl shadow-sm border p-8 ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
+        <div className={`rounded-2xl shadow-sm border p-5 sm:p-8 ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
           <h2 className={`text-lg font-semibold mb-6 ${dark ? 'text-white' : 'text-gray-900'}`}>Iniciar Sesión</h2>
 
           {error && (

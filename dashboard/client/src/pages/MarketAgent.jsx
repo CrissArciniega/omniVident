@@ -182,14 +182,14 @@ export default function MarketAgent() {
   return (
     <div>
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
         <div>
-          <h1 className={`text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
+          <h1 className={`text-xl md:text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
           <p className={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
             MercadoLibre + Amazon — EC, MX, CO, USA
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           {status && <StatusBadge status={status.status} date={status.lastRun} />}
           <RunAgentButton
             slug="market-research"
@@ -440,8 +440,8 @@ export default function MarketAgent() {
 
       {/* Filters */}
       <div className={`rounded-xl p-4 mb-4 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full sm:w-auto">
             <CountryFilter countries={countries} selected={country} onChange={(c) => { setCountry(c); setPage(1); }} />
 
             <select

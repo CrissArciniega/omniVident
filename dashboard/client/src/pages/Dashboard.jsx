@@ -46,8 +46,8 @@ export default function Dashboard() {
   return (
     <div>
       {/* Header */}
-      <div className="mb-8">
-        <h1 className={`text-2xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Mission Control</h1>
+      <div className="mb-4 md:mb-8">
+        <h1 className={`text-xl md:text-2xl font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Mission Control</h1>
         <p className={`text-sm mt-1 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
           Panel de control centralizado para todos los agentes de OmniVident
         </p>

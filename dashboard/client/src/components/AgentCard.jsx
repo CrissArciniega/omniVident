@@ -25,7 +25,7 @@ export default function AgentCard({ agent, onUpdate }) {
     <>
     <div
       onClick={() => navigate(link)}
-      className={`relative rounded-xl p-6 border cursor-pointer group transition-all ${
+      className={`relative rounded-xl p-4 sm:p-6 border cursor-pointer group transition-all ${
         dark
           ? 'bg-dark-card border-dark-border hover:border-gray-600'
           : 'bg-white border-gray-200 hover:shadow-md'

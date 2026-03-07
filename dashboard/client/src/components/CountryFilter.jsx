@@ -6,7 +6,7 @@ export default function CountryFilter({ countries, selected, onChange }) {
   const { dark } = useTheme();
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
       <button
         onClick={() => onChange('all')}
         className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${

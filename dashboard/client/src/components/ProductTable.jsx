@@ -133,10 +133,10 @@ export default function ProductTable({ products, loading, emptyMessage }) {
             <tr className={`border-b ${dark ? 'bg-dark-bg border-dark-border' : 'bg-gray-50 border-gray-200'}`}>
               <th className={`text-center px-2 py-3 font-medium w-12 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Rank</th>
               <th className={`text-center px-2 py-3 font-medium w-12 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Fuente</th>
-              <th className={`text-left px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Producto</th>
+              <th className={`text-left px-2 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Producto</th>
               <th className={`text-left px-3 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Pais</th>
-              <th className={`text-right px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Precio</th>
-              <th className={`text-right px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Vendidos</th>
+              <th className={`text-right px-2 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Precio</th>
+              <th className={`text-right px-2 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Vendidos</th>
               <th className={`text-center px-3 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Rating</th>
               <th className={`text-left px-3 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Categoria</th>
               <th className={`text-center px-3 py-3 font-medium w-10 ${dark ? 'text-gray-400' : 'text-gray-500'}`}></th>
@@ -151,7 +151,7 @@ export default function ProductTable({ products, loading, emptyMessage }) {
                 <td className="px-2 py-3 text-center">
                   <SourceBadge source={p.source} dark={dark} />
                 </td>
-                <td className="px-4 py-3">
+                <td className="px-2 sm:px-4 py-3">
                   <div className="flex items-center gap-3">
                     {p.thumbnail && (
                       <img
@@ -180,7 +180,7 @@ export default function ProductTable({ products, loading, emptyMessage }) {
                     <span className={dark ? 'text-gray-400' : 'text-gray-600'}>{p.country}</span>
                   </span>
                 </td>
-                <td className={`px-4 py-3 text-right font-medium ${dark ? 'text-gray-200' : 'text-gray-900'}`}>
+                <td className={`px-2 sm:px-4 py-3 text-right font-medium ${dark ? 'text-gray-200' : 'text-gray-900'}`}>
                   {p.source === 'alibaba' && p.priceMin && p.priceMax && p.priceMin !== p.priceMax ? (
                     <div>
                       <span>{formatPrice(p.priceMin, 'USD')}-{formatPrice(p.priceMax, 'USD')}</span>
@@ -194,7 +194,7 @@ export default function ProductTable({ products, loading, emptyMessage }) {
                     formatPrice(p.price, p.currency)
                   )}
                 </td>
-                <td className={`px-4 py-3 text-right font-medium ${
+                <td className={`px-2 sm:px-4 py-3 text-right font-medium ${
                   p.soldQuantity > 0
                     ? dark ? 'text-green-400' : 'text-green-600'
                     : dark ? 'text-gray-600' : 'text-gray-300'

@@ -126,7 +126,7 @@ export default function ContentAgent() {
       {/* Generation Progress Modal */}
       {customGenerating && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className={`w-full max-w-md mx-4 rounded-2xl shadow-2xl p-8 ${dark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
+          <div className={`w-full max-w-md mx-4 rounded-2xl shadow-2xl p-5 sm:p-8 ${dark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
             <div className="text-center mb-6">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/10 mb-4">
                 <Sparkles className="text-amber-400 animate-pulse" size={30} />
@@ -164,14 +164,14 @@ export default function ContentAgent() {
       )}
 
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
         <div>
-          <h1 className={`text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
+          <h1 className={`text-xl md:text-2xl font-bold mb-1 ${dark ? 'text-white' : 'text-gray-900'}`}>{agentName}</h1>
           <p className={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
             Guiones para TikTok, Instagram, Facebook, YouTube y Blog
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           {pipelineStatus && <StatusBadge status={pipelineStatus.status} date={pipelineStatus.lastRun} />}
           <RunAgentButton
             slug="content-rrss"
@@ -183,7 +183,7 @@ export default function ContentAgent() {
             className="flex items-center gap-2 bg-accent-600 hover:bg-accent-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
           >
             <Download size={16} />
-            Descargar Todo
+            <span className="hidden sm:inline">Descargar Todo</span>
           </button>
         </div>
       </div>
@@ -205,7 +205,7 @@ export default function ContentAgent() {
       </div>
 
       {/* Two columns: Timeline + Content */}
-      <div className="grid grid-cols-12 gap-6">
+      <div className="grid grid-cols-12 gap-4 md:gap-6">
         {/* Left: Last Run Summary + AI Providers Config */}
         <div className="col-span-12 md:col-span-4 space-y-4">
           <LastRunSummary summary={runSummary} />
@@ -215,7 +215,7 @@ export default function ContentAgent() {
         {/* Right: Tabs with content */}
         <div className="col-span-12 md:col-span-8">
           {/* Tab buttons */}
-          <div className={`flex items-center gap-1 mb-4 rounded-lg p-1 w-fit ${dark ? 'bg-dark-bg' : 'bg-gray-100'}`}>
+          <div className={`flex items-center gap-1 mb-4 rounded-lg p-1 flex-wrap ${dark ? 'bg-dark-bg' : 'bg-gray-100'}`}>
             {tabs.map(tab => (
               <button
                 key={tab.id}
@@ -231,7 +231,7 @@ export default function ContentAgent() {
                 }`}
               >
                 <tab.icon size={16} />
-                {tab.label}
+                <span className="hidden sm:inline">{tab.label}</span>
               </button>
             ))}
           </div>

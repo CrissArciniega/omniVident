@@ -21,7 +21,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-3antiserver3}
       MYSQL_DATABASE: ${DB_NAME:-omnivident}
     ports:
-      - "3307:3306"  # Puerto 3307 externo para no chocar con MySQL local
+      - "3306:3306"  # Puerto estándar MySQL
     volumes:
       # Persistencia: los datos sobreviven aunque borres el contenedor
       - mysql_data:/var/lib/mysql

@@ -245,7 +245,7 @@ export function TopCategoriesTreemap({ data }) {
           content={<TreemapContent dark={dark} />}
         />
       </ResponsiveContainer>
-      <div className="flex items-center gap-4 mt-2 justify-center">
+      <div className="flex items-center flex-wrap gap-2 sm:gap-4 mt-2 justify-center">
         {Object.entries(SOURCE_LABELS).map(([key, label]) => (
           <div key={key} className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: SOURCE_COLORS[key] }} />

@@ -108,7 +108,7 @@ export default function RunAgentButton({ slug, color = '#2563EB', onComplete }) 
   // ── Progress Modal (shown when running) ──
   const modal = state === 'running' ? (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-      <div className={`w-full max-w-md mx-4 rounded-2xl shadow-2xl p-8 ${dark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
+      <div className={`w-full max-w-md mx-4 rounded-2xl shadow-2xl p-5 sm:p-8 ${dark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-200'}`}>
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-full mb-4" style={{ backgroundColor: color + '18' }}>
             <Sparkles className="animate-pulse" size={30} style={{ color }} />

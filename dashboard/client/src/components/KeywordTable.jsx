@@ -69,7 +69,7 @@ export default function KeywordTable({ keywords }) {
   return (
     <div className="space-y-3">
       {/* Source legend */}
-      <div className={`flex items-center gap-4 px-3 py-2 rounded-lg text-xs ${
+      <div className={`flex items-center flex-wrap gap-2 sm:gap-4 px-3 py-2 rounded-lg text-xs ${
         dark ? 'bg-dark-card border border-dark-border' : 'bg-gray-50 border border-gray-200'
       }`}>
         <span className={dark ? 'text-gray-400' : 'text-gray-500'}>
@@ -90,14 +90,15 @@ export default function KeywordTable({ keywords }) {
       </div>
 
       <div className={`rounded-xl overflow-hidden border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
-        <table className="w-full text-sm">
+        <div className="overflow-x-auto">
+        <table className="w-full text-sm min-w-[500px]">
           <thead>
             <tr className={`border-b ${dark ? 'bg-dark-bg border-dark-border' : 'bg-gray-50 border-gray-200'}`}>
-              <th className={`text-left px-4 py-3 font-medium w-12 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>#</th>
-              <th className={`text-left px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Keyword</th>
-              <th className={`text-center px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Relevancia</th>
-              <th className={`text-center px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Fuente</th>
-              <th className={`text-center px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Tendencia</th>
+              <th className={`text-left px-3 sm:px-4 py-3 font-medium w-12 ${dark ? 'text-gray-400' : 'text-gray-500'}`}>#</th>
+              <th className={`text-left px-3 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Keyword</th>
+              <th className={`text-center px-3 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Relevancia</th>
+              <th className={`text-center px-3 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Fuente</th>
+              <th className={`text-center px-3 sm:px-4 py-3 font-medium ${dark ? 'text-gray-400' : 'text-gray-500'}`}>Tendencia</th>
             </tr>
           </thead>
           <tbody>
@@ -126,6 +127,7 @@ export default function KeywordTable({ keywords }) {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );
