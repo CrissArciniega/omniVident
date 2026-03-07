@@ -24,11 +24,30 @@ RUN npm run build
 # --- STAGE 2: Servidor de produccion con Node.js + Python ---
 FROM node:20-slim
 
-# Instalar Python 3 + pip (necesario para los agentes de IA)
+# Instalar Python 3 + pip + dependencias de sistema para Playwright/Chromium
 RUN apt-get update && apt-get install -y --no-install-recommends \
     python3 \
     python3-pip \
     python3-venv \
+    # Dependencias de Chromium (requeridas por Playwright)
+    libnss3 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libcups2 \
+    libdrm2 \
+    libxkbcommon0 \
+    libxcomposite1 \
+    libxdamage1 \
+    libxrandr2 \
+    libgbm1 \
+    libpango-1.0-0 \
+    libcairo2 \
+    libasound2 \
+    libxshmfence1 \
+    libx11-xcb1 \
+    fonts-liberation \
+    wget \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/* \
     && ln -sf /usr/bin/python3 /usr/bin/python
 
@@ -42,6 +61,9 @@ RUN cd dashboard && npm ci --omit=dev
 COPY ["agente de seo y product hunt/requirements.txt", "/tmp/seo-req.txt"]
 RUN pip3 install --no-cache-dir --break-system-packages -r /tmp/seo-req.txt \
     && rm /tmp/seo-req.txt
+
+# ─── 2b. Instalar Chromium para Playwright (usado por mercadolibre_collector) ───
+RUN python3 -m playwright install chromium
 
 # ─── 3. Dependencias del Agente Contenido (Python + Node.js) ───
 COPY ["agente contenido y rrss/requirements.txt", "/tmp/content-req.txt"]
