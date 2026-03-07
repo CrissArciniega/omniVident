@@ -137,18 +137,17 @@ export function SourceDistributionChart({ data }) {
 
   return (
     <ChartCard title="Distribucion por Marketplace" dark={dark}>
-      <ResponsiveContainer width="100%" height={280}>
+      <ResponsiveContainer width="100%" height={300}>
         <PieChart>
           <Pie
             data={data}
             cx="50%"
             cy="50%"
-            innerRadius={55}
-            outerRadius={90}
+            innerRadius={45}
+            outerRadius={75}
             paddingAngle={3}
             dataKey="value"
-            label={({ name, value }) => `${name}: ${value}`}
-            labelLine={{ stroke: dark ? '#6b7280' : '#9ca3af', strokeWidth: 1 }}
+            label={false}
           >
             {data.map((entry) => (
               <Cell key={entry.source} fill={SOURCE_COLORS[entry.source] || '#888'} />
@@ -160,6 +159,20 @@ export function SourceDistributionChart({ data }) {
           />
         </PieChart>
       </ResponsiveContainer>
+      {/* Legend below chart — always shows full names */}
+      <div className="flex flex-col items-center gap-2 -mt-2">
+        {data.map((entry) => (
+          <div key={entry.source} className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-sm flex-shrink-0" style={{ backgroundColor: SOURCE_COLORS[entry.source] || '#888' }} />
+            <span className={`text-sm font-medium ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+              {entry.name}
+            </span>
+            <span className={`text-sm ${dark ? 'text-gray-500' : 'text-gray-400'}`}>
+              {entry.value} ({((entry.value / total) * 100).toFixed(1)}%)
+            </span>
+          </div>
+        ))}
+      </div>
     </ChartCard>
   );
 }

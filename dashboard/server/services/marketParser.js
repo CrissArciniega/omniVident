@@ -18,12 +18,22 @@ function getLatestRawFiles() {
     .sort()
     .reverse();
 
-  // Group by date (get the most recent set)
   if (files.length === 0) return [];
-  const latestDate = files[0].match(/_(\d{8})\.json$/)?.[1];
-  if (!latestDate) return [];
 
-  return files.filter(f => f.includes(latestDate));
+  // Get latest file per source+country (e.g., mercadolibre_EC, amazon_USA)
+  // This ensures that if EC failed on the latest run, its previous data still shows
+  const latestPerKey = {};
+  for (const f of files) {
+    const match = f.match(/^raw_((?:mercadolibre|amazon|temu|alibaba)_[A-Z]{2,6})_\d{8}\.json$/);
+    if (match) {
+      const key = match[1];
+      if (!latestPerKey[key]) {
+        latestPerKey[key] = f; // First match = most recent (sorted reverse)
+      }
+    }
+  }
+
+  return Object.values(latestPerKey);
 }
 
 function loadTrendEnrichment() {
