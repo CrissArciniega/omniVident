@@ -15,6 +15,7 @@ import random
 import re
 import sys
 import time
+import requests
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -353,6 +354,119 @@ def scrape_category(page, url: str, category_name: str, country: str, selectors:
     return products
 
 
+def collect_country_api_fallback(country: str, scraping_config: dict, country_idx: int = 0, total_countries: int = 3) -> dict | None:
+    """Fallback: Usa la API pública REST de MercadoLibre (sin Playwright).
+    Funciona siempre, incluso en servidores sin navegador o con IP bloqueada."""
+    site_id = COUNTRY_PREFIXES.get(country, "MEC")
+    country_label = COUNTRY_NAMES.get(country, country)
+    currency = get_currency_for_country(country)
+    base_pct = 5 + int((country_idx / total_countries) * 80)
+    country_range = int(80 / total_countries)
+
+    logger.info(f"  ⚡ Fallback API para {country_label} (site: {site_id})")
+    report_progress(base_pct, f"API Fallback: {country_label}...", "Usando API REST de MercadoLibre")
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json",
+    }
+
+    all_products = []
+
+    try:
+        # Step 1: Get top categories
+        cat_url = f"https://api.mercadolibre.com/sites/{site_id}/categories"
+        cat_resp = requests.get(cat_url, headers=headers, timeout=15)
+        categories = cat_resp.json() if cat_resp.status_code == 200 else []
+
+        max_cats = scraping_config.get("mercadolibre", {}).get("max_categories_per_country", 8)
+        categories = categories[:max_cats]
+
+        logger.info(f"  API: {len(categories)} categorías para {country}")
+
+        # Step 2: Get bestsellers per category
+        for cat_idx, cat in enumerate(categories):
+            cat_id = cat.get("id", "")
+            cat_name = cat.get("name", "Sin categoría")
+
+            cat_pct = base_pct + int(((cat_idx + 1) / max(len(categories), 1)) * country_range)
+            report_progress(cat_pct, f"API {country_label} ({cat_idx+1}/{len(categories)})", f"Categoría: {cat_name}")
+
+            try:
+                search_url = (
+                    f"https://api.mercadolibre.com/sites/{site_id}/search"
+                    f"?category={cat_id}&sort=sold_quantity_desc&limit=50"
+                )
+                resp = requests.get(search_url, headers=headers, timeout=15)
+                if resp.status_code != 200:
+                    logger.warning(f"    API error {resp.status_code} para {cat_name}")
+                    continue
+
+                data = resp.json()
+                results = data.get("results", [])
+
+                for rank, item in enumerate(results, 1):
+                    price = item.get("price", 0) or 0
+                    sold = item.get("sold_quantity", 0) or 0
+                    rating = item.get("reviews", {}).get("rating_average", 0) if isinstance(item.get("reviews"), dict) else 0
+                    reviews = item.get("reviews", {}).get("total", 0) if isinstance(item.get("reviews"), dict) else 0
+
+                    all_products.append({
+                        "product_id": item.get("id", ""),
+                        "title": item.get("title", ""),
+                        "price": price,
+                        "currency": item.get("currency_id", currency),
+                        "sold_quantity": sold,
+                        "condition": item.get("condition", "new"),
+                        "permalink": item.get("permalink", ""),
+                        "thumbnail": item.get("thumbnail", ""),
+                        "category_name": cat_name,
+                        "category_id": cat_id,
+                        "seller_id": str(item.get("seller", {}).get("id", "")),
+                        "ranking": rank,
+                        "ranking_label": f"#{rank} en {cat_name}",
+                        "rating_average": rating,
+                        "reviews_count": reviews,
+                        "shipping_free": item.get("shipping", {}).get("free_shipping", False),
+                    })
+
+                logger.info(f"    📊 {cat_name}: {len(results)} productos")
+                time.sleep(random.uniform(0.3, 0.8))
+
+            except Exception as e:
+                logger.warning(f"    Error API en {cat_name}: {e}")
+                continue
+
+    except Exception as e:
+        logger.error(f"  Error fatal API fallback para {country}: {e}")
+        return None
+
+    if not all_products:
+        logger.warning(f"  API Fallback: No se encontraron productos para {country}")
+        return None
+
+    # Deduplicate
+    seen = {}
+    for p in all_products:
+        pid = p["product_id"]
+        if pid not in seen or (p.get("ranking", 999) < seen[pid].get("ranking", 999)):
+            seen[pid] = p
+
+    unique = sorted(seen.values(), key=lambda x: (-x.get("sold_quantity", 0), x.get("ranking", 999)))
+    logger.info(f"  ✅ API {country}: {len(unique)} productos únicos")
+
+    return {
+        "collection_timestamp": datetime.now(timezone.utc).isoformat(),
+        "country": country,
+        "source": "mercadolibre",
+        "site_id": site_id,
+        "category_id": "all",
+        "category_name": "Más Vendidos - API MercadoLibre",
+        "total_results": len(unique),
+        "products": unique,
+    }
+
+
 def collect_country(country: str, scraping_config: dict, categories_config: dict,
                     test_mode: bool = False, country_idx: int = 0, total_countries: int = 3) -> dict | None:
     """Recolecta los productos MÁS VENDIDOS REALES de un país."""
@@ -496,18 +610,33 @@ def collect_country(country: str, scraping_config: dict, categories_config: dict
 
 
 def _collect_and_save(country, scraping_config, categories_config, test_mode, country_idx, total_countries):
-    """Worker: collect one country and save results. Returns (country, status)."""
+    """Worker: collect one country and save results. Returns (country, status).
+    Intenta Playwright primero, si falla usa API REST como fallback."""
     try:
         report_progress(
             5 + int((country_idx / total_countries) * 80),
             f"Analizando {COUNTRY_NAMES.get(country, country)}...",
             "Conectando con MercadoLibre..."
         )
-        collection = collect_country(
-            country, scraping_config, categories_config,
-            test_mode=test_mode,
-            country_idx=country_idx, total_countries=total_countries
-        )
+
+        # Try Playwright first
+        collection = None
+        try:
+            collection = collect_country(
+                country, scraping_config, categories_config,
+                test_mode=test_mode,
+                country_idx=country_idx, total_countries=total_countries
+            )
+        except Exception as pw_err:
+            logger.warning(f"  {country}: Playwright falló ({pw_err}), usando API fallback...")
+
+        # If Playwright failed or returned no data, use API fallback
+        if not collection or collection.get("total_results", 0) == 0:
+            logger.info(f"  {country}: Activando API REST fallback...")
+            collection = collect_country_api_fallback(
+                country, scraping_config,
+                country_idx=country_idx, total_countries=total_countries
+            )
 
         if collection:
             validated = validate_data(collection, MLRawCollection)
