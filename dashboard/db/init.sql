@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(255) UNIQUE NOT NULL,
   password_hash VARCHAR(255) NOT NULL,
   name VARCHAR(100) NOT NULL,
-  role ENUM('admin','viewer') DEFAULT 'admin',
+  role ENUM('admin','seo','rrss') DEFAULT 'seo',
+  active BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
@@ -42,6 +43,22 @@ CREATE TABLE IF NOT EXISTS executions (
   state_snapshot TEXT,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (agent_id) REFERENCES agents(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- Personalización de agentes por usuario (cada admin ve su propia config visual)
+CREATE TABLE IF NOT EXISTS user_agent_settings (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  agent_slug VARCHAR(50) NOT NULL,
+  custom_name VARCHAR(100) DEFAULT NULL,
+  custom_description TEXT DEFAULT NULL,
+  custom_icon VARCHAR(50) DEFAULT NULL,
+  custom_image LONGTEXT DEFAULT NULL,
+  schedule_cron VARCHAR(50) DEFAULT NULL,
+  schedule_description VARCHAR(100) DEFAULT NULL,
+  UNIQUE KEY uq_user_agent (user_id, agent_slug),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (agent_slug) REFERENCES agents(slug) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 -- Seed: agentes

@@ -23,4 +23,24 @@ function authMiddleware(req, res, next) {
   }
 }
 
+function requireRole(...roles) {
+  return (req, res, next) => {
+    if (!req.user) return res.status(401).json({ error: 'No autenticado' });
+    if (!roles.includes(req.user.role)) return res.status(403).json({ error: 'No tienes permiso para este recurso' });
+    next();
+  };
+}
+
+function requireAgentAccess(fixedSlug) {
+  const { canAccessAgent } = require('../config/permissions');
+  return (req, res, next) => {
+    if (!req.user) return res.status(401).json({ error: 'No autenticado' });
+    const slug = fixedSlug || req.params.slug;
+    if (!canAccessAgent(req.user.role, slug)) return res.status(403).json({ error: 'No tienes permiso para este agente' });
+    next();
+  };
+}
+
+authMiddleware.requireRole = requireRole;
+authMiddleware.requireAgentAccess = requireAgentAccess;
 module.exports = authMiddleware;

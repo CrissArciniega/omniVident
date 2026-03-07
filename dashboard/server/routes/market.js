@@ -4,7 +4,10 @@ const { getProducts, getSummary, getCountries, getCategories, getSources, getTre
 
 const router = express.Router();
 
-router.get('/products', auth, (req, res) => {
+// All market routes require market-research agent access
+router.use(auth, auth.requireAgentAccess('market-research'));
+
+router.get('/products', (req, res) => {
   try {
     const { country, category, sort, source, page, limit } = req.query;
     const result = getProducts({
@@ -22,7 +25,7 @@ router.get('/products', auth, (req, res) => {
   }
 });
 
-router.get('/summary', auth, (req, res) => {
+router.get('/summary', (req, res) => {
   try {
     res.json(getSummary());
   } catch (err) {
@@ -31,7 +34,7 @@ router.get('/summary', auth, (req, res) => {
   }
 });
 
-router.get('/countries', auth, (req, res) => {
+router.get('/countries', (req, res) => {
   try {
     res.json(getCountries());
   } catch (err) {
@@ -39,7 +42,7 @@ router.get('/countries', auth, (req, res) => {
   }
 });
 
-router.get('/categories', auth, (req, res) => {
+router.get('/categories', (req, res) => {
   try {
     res.json(getCategories());
   } catch (err) {
@@ -47,7 +50,7 @@ router.get('/categories', auth, (req, res) => {
   }
 });
 
-router.get('/sources', auth, (req, res) => {
+router.get('/sources', (req, res) => {
   try {
     res.json(getSources());
   } catch (err) {
@@ -55,7 +58,7 @@ router.get('/sources', auth, (req, res) => {
   }
 });
 
-router.get('/trends', auth, (req, res) => {
+router.get('/trends', (req, res) => {
   try {
     const trends = getTrends();
     if (!trends) {
@@ -68,7 +71,7 @@ router.get('/trends', auth, (req, res) => {
   }
 });
 
-router.get('/market-study', auth, (req, res) => {
+router.get('/market-study', (req, res) => {
   try {
     const { country } = req.query;
     const study = getMarketStudy(country);
@@ -82,7 +85,7 @@ router.get('/market-study', auth, (req, res) => {
   }
 });
 
-router.get('/report', auth, (req, res) => {
+router.get('/report', (req, res) => {
   try {
     const report = getReport();
     if (!report) {
@@ -96,7 +99,7 @@ router.get('/report', auth, (req, res) => {
 });
 
 // AI-powered market insights
-router.get('/insights', auth, async (req, res) => {
+router.get('/insights', async (req, res) => {
   try {
     const summary = getSummary();
     if (!summary || summary.totalProducts === 0) {

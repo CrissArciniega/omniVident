@@ -15,13 +15,16 @@ router.post('/login', async (req, res) => {
 
     const [rows] = await pool.query('SELECT * FROM users WHERE email = ?', [email]);
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Credenciales inválidas' });
+      return res.status(401).json({ error: 'Credenciales invalidas, correo o contraseña incorrecto' });
     }
 
     const user = rows[0];
+    if (user.active === 0 || user.active === false) {
+      return res.status(403).json({ error: 'Tu cuenta esta desactivada. Contacta al administrador.' });
+    }
     const valid = await bcrypt.compare(password, user.password_hash);
     if (!valid) {
-      return res.status(401).json({ error: 'Credenciales inválidas' });
+      return res.status(401).json({ error: 'Credenciales invalidas, correo o contraseña incorrecto' });
     }
 
     const token = jwt.sign(
@@ -43,10 +46,13 @@ router.post('/login', async (req, res) => {
 router.get('/me', auth, async (req, res) => {
   try {
     const [rows] = await pool.query(
-      'SELECT id, email, name, role, created_at FROM users WHERE id = ?',
+      'SELECT id, email, name, role, active, created_at FROM users WHERE id = ?',
       [req.user.id]
     );
     if (rows.length === 0) return res.status(404).json({ error: 'Usuario no encontrado' });
+    if (rows[0].active === 0 || rows[0].active === false) {
+      return res.status(403).json({ error: 'Tu cuenta esta desactivada' });
+    }
     res.json(rows[0]);
   } catch (err) {
     console.error('[Auth] Error me:', err);

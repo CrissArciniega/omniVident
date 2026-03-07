@@ -8,10 +8,13 @@ const { getAgentState } = require('../services/stateWatcher');
 
 const router = express.Router();
 
+// All content routes require content-rrss agent access
+router.use(auth, auth.requireAgentAccess('content-rrss'));
+
 // ============================================================================
 // GEMINI API KEY MANAGEMENT
 // ============================================================================
-router.get('/gemini-status', auth, async (req, res) => {
+router.get('/gemini-status', async (req, res) => {
   try {
     const geminiPath = path.resolve(__dirname, '../../../agente contenido y rrss/scripts/gemini_client.js');
     // Clear require cache to get fresh status
@@ -38,7 +41,7 @@ router.get('/gemini-status', auth, async (req, res) => {
   }
 });
 
-router.post('/gemini-key', auth, (req, res) => {
+router.post('/gemini-key', (req, res) => {
   try {
     const { apiKey } = req.body;
     if (!apiKey || typeof apiKey !== 'string' || apiKey.trim().length < 10) {
@@ -73,7 +76,7 @@ router.post('/gemini-key', auth, (req, res) => {
 // ============================================================================
 // MULTI-AI PROVIDER MANAGEMENT
 // ============================================================================
-router.get('/ai-status', auth, async (req, res) => {
+router.get('/ai-status', async (req, res) => {
   try {
     const aiPath = path.resolve(__dirname, '../../../agente contenido y rrss/scripts/ai_client.js');
     delete require.cache[require.resolve(aiPath)];
@@ -85,7 +88,7 @@ router.get('/ai-status', auth, async (req, res) => {
   }
 });
 
-router.post('/ai-key', auth, (req, res) => {
+router.post('/ai-key', (req, res) => {
   try {
     const { provider, apiKey } = req.body;
     if (!provider || !['gemini', 'openai', 'anthropic'].includes(provider)) {
@@ -112,7 +115,7 @@ router.post('/ai-key', auth, (req, res) => {
   }
 });
 
-router.delete('/ai-key/:provider', auth, (req, res) => {
+router.delete('/ai-key/:provider', (req, res) => {
   try {
     const { provider } = req.params;
     if (!['gemini', 'openai', 'anthropic'].includes(provider)) {
@@ -140,11 +143,11 @@ router.delete('/ai-key/:provider', auth, (req, res) => {
 // ============================================================================
 let generationProgress = { percent: 0, message: '', detail: '', active: false };
 
-router.get('/generate-progress', auth, (req, res) => {
+router.get('/generate-progress', (req, res) => {
   res.json(generationProgress);
 });
 
-router.post('/generate-custom', auth, async (req, res) => {
+router.post('/generate-custom', async (req, res) => {
   try {
     const { keyword, platforms } = req.body;
     if (!keyword || typeof keyword !== 'string' || keyword.trim().length < 2) {
@@ -175,7 +178,7 @@ router.post('/generate-custom', auth, async (req, res) => {
 });
 
 // List custom packs
-router.get('/custom-packs', auth, (req, res) => {
+router.get('/custom-packs', (req, res) => {
   try {
     const customDir = path.resolve(__dirname, '../../../agente contenido y rrss/output/custom_packs');
     const fs = require('fs');
@@ -216,7 +219,7 @@ router.get('/custom-packs', auth, (req, res) => {
 });
 
 // Download custom pack file
-router.get('/custom-packs/download/:folder/:file', auth, (req, res) => {
+router.get('/custom-packs/download/:folder/:file', (req, res) => {
   try {
     const customDir = path.resolve(__dirname, '../../../agente contenido y rrss/output/custom_packs');
     const filePath = path.join(customDir, req.params.folder, req.params.file);
@@ -229,7 +232,7 @@ router.get('/custom-packs/download/:folder/:file', auth, (req, res) => {
 });
 
 // List content packs
-router.get('/packs', auth, (req, res) => {
+router.get('/packs', (req, res) => {
   try {
     res.json(listPacks());
   } catch (err) {
@@ -239,7 +242,7 @@ router.get('/packs', auth, (req, res) => {
 });
 
 // Files in a pack
-router.get('/packs/:folder', auth, (req, res) => {
+router.get('/packs/:folder', (req, res) => {
   try {
     const files = getPackFiles(req.params.folder);
     if (!files) return res.status(404).json({ error: 'Pack no encontrado' });
@@ -250,7 +253,7 @@ router.get('/packs/:folder', auth, (req, res) => {
 });
 
 // Download single file
-router.get('/download/:folder/:file', auth, (req, res) => {
+router.get('/download/:folder/:file', (req, res) => {
   try {
     const filePath = getFilePath(req.params.folder, req.params.file);
     if (!filePath) return res.status(404).json({ error: 'Archivo no encontrado' });
@@ -261,7 +264,7 @@ router.get('/download/:folder/:file', auth, (req, res) => {
 });
 
 // Download all packs as ZIP
-router.get('/download-all', auth, (req, res) => {
+router.get('/download-all', (req, res) => {
   try {
     const packsDir = getContentPacksDir();
     const fs = require('fs');
@@ -283,7 +286,7 @@ router.get('/download-all', auth, (req, res) => {
 });
 
 // Keywords
-router.get('/keywords', auth, (req, res) => {
+router.get('/keywords', (req, res) => {
   try {
     res.json(getKeywords());
   } catch (err) {
@@ -292,7 +295,7 @@ router.get('/keywords', auth, (req, res) => {
 });
 
 // Trends
-router.get('/trends', auth, (req, res) => {
+router.get('/trends', (req, res) => {
   try {
     const trends = getTrends();
     if (!trends) return res.status(404).json({ error: 'No hay tendencias disponibles' });
@@ -303,7 +306,7 @@ router.get('/trends', auth, (req, res) => {
 });
 
 // Pipeline status
-router.get('/pipeline-status', auth, (req, res) => {
+router.get('/pipeline-status', (req, res) => {
   try {
     const state = getAgentState('content-rrss', '../agente contenido y rrss/output/pipeline_state.json');
     res.json(state);
@@ -313,7 +316,7 @@ router.get('/pipeline-status', auth, (req, res) => {
 });
 
 // Last run summary (trends used, keywords selected, etc.)
-router.get('/last-run-summary', auth, (req, res) => {
+router.get('/last-run-summary', (req, res) => {
   try {
     const fs = require('fs');
     const outputDir = path.resolve(__dirname, '../../../agente contenido y rrss/output');
@@ -415,7 +418,7 @@ router.get('/last-run-summary', auth, (req, res) => {
 });
 
 // Keyword → product matching (for custom generation too)
-router.get('/keyword-products', auth, (req, res) => {
+router.get('/keyword-products', (req, res) => {
   try {
     const { keyword } = req.query;
     if (!keyword || keyword.trim().length < 2) {
@@ -457,7 +460,7 @@ router.get('/keyword-products', auth, (req, res) => {
 });
 
 // Excel sheets list
-router.get('/excel/sheets', auth, (req, res) => {
+router.get('/excel/sheets', (req, res) => {
   try {
     res.json(getSheetNames());
   } catch (err) {
@@ -466,7 +469,7 @@ router.get('/excel/sheets', auth, (req, res) => {
 });
 
 // Excel sheet data
-router.get('/excel/data', auth, (req, res) => {
+router.get('/excel/data', (req, res) => {
   try {
     const { sheet } = req.query;
     if (!sheet) return res.status(400).json({ error: 'Parámetro sheet requerido' });

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
-import { LayoutDashboard, TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone, Sun, Moon } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone, Sun, Moon, Users } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 import api from '../api/client';
 
 const iconMap = { TrendingUp, PenTool, BarChart3, Bot, Zap, ShoppingCart, Globe, Megaphone };
@@ -13,6 +14,7 @@ const AGENT_ROUTES = {
 
 export default function Sidebar() {
   const { dark, toggle } = useTheme();
+  const { user } = useAuth();
   const [agentItems, setAgentItems] = useState([]);
 
   const fetchAgents = () => {
@@ -46,27 +48,45 @@ export default function Sidebar() {
           <img src="/logo.png" alt="El Mayorista" className="w-9 h-9 rounded-xl object-contain" />
           <div>
             <h1 className={`text-sm font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>OmniVident</h1>
-            <p className={`text-[11px] ${dark ? 'text-gray-500' : 'text-gray-400'}`}>El Mayorista</p>
+            <p className={`text-[11px] ${dark ? 'text-gray-500' : 'text-gray-400'}`}>Mega Mayorista</p>
           </div>
         </div>
       </div>
 
       {/* Navigation */}
       <nav className="flex-1 px-3 py-4 space-y-1">
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) =>
-            `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-              isActive
-                ? dark ? 'bg-primary-900/40 text-primary-400' : 'bg-primary-50 text-primary-700'
-                : dark ? 'text-gray-400 hover:bg-dark-border hover:text-gray-200' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-            }`
-          }
-        >
-          <LayoutDashboard size={20} />
-          Dashboard
-        </NavLink>
+        {user?.role === 'admin' && (
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                isActive
+                  ? dark ? 'bg-primary-900/40 text-primary-400' : 'bg-primary-50 text-primary-700'
+                  : dark ? 'text-gray-400 hover:bg-dark-border hover:text-gray-200' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+              }`
+            }
+          >
+            <LayoutDashboard size={20} />
+            Dashboard
+          </NavLink>
+        )}
+
+        {user?.id === 1 && (
+          <NavLink
+            to="/users"
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                isActive
+                  ? dark ? 'bg-primary-900/40 text-primary-400' : 'bg-primary-50 text-primary-700'
+                  : dark ? 'text-gray-400 hover:bg-dark-border hover:text-gray-200' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+              }`
+            }
+          >
+            <Users size={20} />
+            Usuarios
+          </NavLink>
+        )}
 
         {agentItems.map((item) => (
           <NavLink
@@ -83,6 +103,8 @@ export default function Sidebar() {
             {item.label}
           </NavLink>
         ))}
+
+        
       </nav>
 
       {/* Footer */}

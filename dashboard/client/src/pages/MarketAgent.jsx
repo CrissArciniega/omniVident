@@ -286,7 +286,7 @@ export default function MarketAgent() {
               className={`flex items-center gap-2 text-sm font-bold transition-colors ${dark ? 'text-gray-200 hover:text-white' : 'text-gray-700 hover:text-gray-900'}`}
             >
               <ShoppingBag size={16} className="text-primary-600" />
-              Analisis Visual del Mercado
+              Análisis Visual del Mercado
               {showStudy ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
             </button>
 
@@ -333,7 +333,7 @@ export default function MarketAgent() {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Sparkles size={18} className="text-blue-500" />
-              <h3 className={`text-sm font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Analisis IA del Mercado</h3>
+              <h3 className={`text-sm font-bold ${dark ? 'text-white' : 'text-gray-900'}`}>Análisis IA del Mercado</h3>
             </div>
             <button
               onClick={() => fetchInsights(true)}
@@ -385,7 +385,7 @@ export default function MarketAgent() {
               <div className={`flex items-start gap-3 rounded-lg p-3 ${dark ? 'bg-indigo-900/15' : 'bg-white/60'}`}>
                 <GitCompare size={16} className="text-indigo-500 mt-0.5 shrink-0" />
                 <div className="min-w-0">
-                  <p className={`text-xs font-semibold mb-0.5 ${dark ? 'text-indigo-400' : 'text-indigo-600'}`}>Comparacion Marketplaces</p>
+                  <p className={`text-xs font-semibold mb-0.5 ${dark ? 'text-indigo-400' : 'text-indigo-600'}`}>Comparación Marketplaces</p>
                   <p className={`text-sm leading-relaxed ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{insights.comparacion_marketplaces}</p>
                 </div>
               </div>
@@ -415,7 +415,7 @@ export default function MarketAgent() {
             <div className={`flex items-start gap-3 rounded-lg p-3 ${dark ? 'bg-purple-900/15' : 'bg-white/60'}`}>
               <Lightbulb size={16} className="text-purple-500 mt-0.5 shrink-0" />
               <div className="min-w-0">
-                <p className={`text-xs font-semibold mb-0.5 ${dark ? 'text-purple-400' : 'text-purple-600'}`}>Recomendacion</p>
+                <p className={`text-xs font-semibold mb-0.5 ${dark ? 'text-purple-400' : 'text-purple-600'}`}>Recomendación</p>
                 <p className={`text-sm leading-relaxed ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{insights.recomendacion}</p>
               </div>
             </div>
@@ -467,7 +467,7 @@ export default function MarketAgent() {
                   : 'bg-white border-gray-300 text-gray-600'
               }`}
             >
-              <option value="all">Todas las categorias</option>
+              <option value="all">Todas las categorías</option>
               {categories.map(c => (
                 <option key={c} value={c}>{c}</option>
               ))}
@@ -484,7 +484,7 @@ export default function MarketAgent() {
                   : 'bg-white border-gray-300 text-gray-600'
               }`}
             >
-              <option value="sold">Mas vendidos</option>
+              <option value="sold">Más vendidos</option>
               <option value="ranking">Ranking oficial</option>
               <option value="price_asc">Precio ↑</option>
               <option value="price_desc">Precio ↓</option>

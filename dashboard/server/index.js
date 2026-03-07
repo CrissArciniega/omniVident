@@ -9,6 +9,7 @@ const authRoutes = require('./routes/auth');
 const agentRoutes = require('./routes/agents');
 const marketRoutes = require('./routes/market');
 const contentRoutes = require('./routes/content');
+const userRoutes = require('./routes/users');
 const { runAgent, isRunning } = require('./services/agentRunner');
 
 const app = express();
@@ -22,6 +23,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/agents', agentRoutes);
 app.use('/api/market', marketRoutes);
 app.use('/api/content', contentRoutes);
+app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
@@ -45,31 +47,59 @@ const activeCronJobs = {};
 
 async function setupCronJobs() {
   // Stop existing jobs
-  for (const [slug, job] of Object.entries(activeCronJobs)) {
+  for (const [key, job] of Object.entries(activeCronJobs)) {
     job.stop();
-    delete activeCronJobs[slug];
+    delete activeCronJobs[key];
   }
 
   try {
     const [agents] = await pool.query('SELECT slug, schedule_cron, schedule_description FROM agents WHERE is_active = TRUE');
+    // Collect per-user schedules
+    const [userSchedules] = await pool.query(
+      'SELECT uas.agent_slug, uas.schedule_cron, u.name as user_name, u.id as user_id FROM user_agent_settings uas JOIN users u ON u.id = uas.user_id WHERE uas.schedule_cron IS NOT NULL AND u.active = TRUE'
+    );
+
     for (const agent of agents) {
-      const cronExpr = agent.schedule_cron || '0 7 * * 1,3,5';
-      if (!cron.validate(cronExpr)) {
-        console.log(`[Cron] Invalid cron expression for ${agent.slug}: ${cronExpr}, skipping`);
-        continue;
-      }
-      activeCronJobs[agent.slug] = cron.schedule(cronExpr, async () => {
-        console.log(`[Cron] ${new Date().toISOString()} — Ejecutando ${agent.slug}`);
-        if (!isRunning(agent.slug)) {
-          try {
-            await runAgent(agent.slug);
-            console.log(`[Cron] ${agent.slug} iniciado`);
-          } catch (err) {
-            console.error(`[Cron] Error iniciando ${agent.slug}:`, err.message);
+      // Gather all unique cron expressions for this agent
+      const cronSet = new Map(); // cronExpr → label (for logging)
+      const baseCron = agent.schedule_cron || '0 7 * * 1,3,5';
+
+      // User-specific schedules for this agent
+      const userCrons = userSchedules.filter(us => us.agent_slug === agent.slug);
+      if (userCrons.length > 0) {
+        for (const uc of userCrons) {
+          if (uc.schedule_cron && cron.validate(uc.schedule_cron)) {
+            const label = cronSet.get(uc.schedule_cron);
+            cronSet.set(uc.schedule_cron, label ? `${label}, ${uc.user_name}` : uc.user_name);
           }
         }
-      }, { timezone: 'America/Guayaquil' });
-      console.log(`[Cron] ${agent.slug}: "${cronExpr}" (${agent.schedule_description || 'sin descripcion'})`);
+      } else {
+        // No user has customized → use base agent schedule
+        cronSet.set(baseCron, 'default');
+      }
+
+      // Create a cron job for each unique expression
+      for (const [cronExpr, label] of cronSet) {
+        if (!cron.validate(cronExpr)) {
+          console.log(`[Cron] Invalid: ${agent.slug} "${cronExpr}" (${label}), skipping`);
+          continue;
+        }
+        const jobKey = `${agent.slug}__${cronExpr}`;
+        activeCronJobs[jobKey] = cron.schedule(cronExpr, async () => {
+          console.log(`[Cron] ${new Date().toISOString()} — Ejecutando ${agent.slug} (${label})`);
+          if (!isRunning(agent.slug)) {
+            try {
+              await runAgent(agent.slug);
+              console.log(`[Cron] ${agent.slug} iniciado`);
+            } catch (err) {
+              console.error(`[Cron] Error iniciando ${agent.slug}:`, err.message);
+            }
+          } else {
+            console.log(`[Cron] ${agent.slug} ya en ejecucion, omitiendo`);
+          }
+        }, { timezone: 'America/Guayaquil' });
+        console.log(`[Cron] ${agent.slug}: "${cronExpr}" (${label})`);
+      }
     }
   } catch (err) {
     console.error('[Cron] Error setting up jobs:', err.message);

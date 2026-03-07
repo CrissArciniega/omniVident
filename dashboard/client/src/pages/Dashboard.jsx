@@ -1,22 +1,28 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext';
+import { canAccessAgent } from '../config/permissions';
 import api from '../api/client';
 import AgentCard from '../components/AgentCard';
 import { Activity, Package, FileText } from 'lucide-react';
 
 export default function Dashboard() {
   const { dark } = useTheme();
+  const { user } = useAuth();
   const [agents, setAgents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [marketTotal, setMarketTotal] = useState(null);
   const [contentPacks, setContentPacks] = useState(null);
 
+  const hasMarket = canAccessAgent(user?.role, 'market-research');
+  const hasContent = canAccessAgent(user?.role, 'content-rrss');
+
   const fetchData = () => {
-    Promise.all([
-      api.get('/agents'),
-      api.get('/market/summary').catch(() => ({ data: {} })),
-      api.get('/content/packs').catch(() => ({ data: [] })),
-    ]).then(([agentsRes, marketRes, contentRes]) => {
+    const promises = [api.get('/agents')];
+    promises.push(hasMarket ? api.get('/market/summary').catch(() => ({ data: {} })) : Promise.resolve({ data: {} }));
+    promises.push(hasContent ? api.get('/content/packs').catch(() => ({ data: [] })) : Promise.resolve({ data: [] }));
+
+    Promise.all(promises).then(([agentsRes, marketRes, contentRes]) => {
       setAgents(agentsRes.data);
       setMarketTotal(marketRes.data?.totalProducts || 0);
       setContentPacks(Array.isArray(contentRes.data) ? contentRes.data.length : 0);
@@ -48,7 +54,7 @@ export default function Dashboard() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      <div className={`grid grid-cols-1 gap-4 mb-8 ${hasMarket && hasContent ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
         <div className={`rounded-xl p-5 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${dark ? 'bg-primary-900/40' : 'bg-primary-50'}`}>
@@ -61,6 +67,7 @@ export default function Dashboard() {
           </div>
         </div>
 
+        {hasMarket && (
         <div className={`rounded-xl p-5 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${dark ? 'bg-blue-900/40' : 'bg-blue-50'}`}>
@@ -74,7 +81,9 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+        )}
 
+        {hasContent && (
         <div className={`rounded-xl p-5 border ${dark ? 'bg-dark-card border-dark-border' : 'bg-white border-gray-200'}`}>
           <div className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${dark ? 'bg-accent-900/40' : 'bg-accent-50'}`}>
@@ -88,6 +97,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+        )}
       </div>
 
       {/* Agent Cards */}

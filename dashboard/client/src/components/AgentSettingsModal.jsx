@@ -222,7 +222,7 @@ export default function AgentSettingsModal({ agent, onClose, onSave }) {
           {/* Description with word counter */}
           <div>
             <div className="flex items-center justify-between mb-1.5">
-              <label className={`text-sm font-medium ${dark ? 'text-gray-300' : 'text-gray-700'}`}>Descripcion</label>
+              <label className={`text-sm font-medium ${dark ? 'text-gray-300' : 'text-gray-700'}`}>Descripción</label>
               <span className={`text-xs ${descWordCount >= MAX_DESC_WORDS ? 'text-red-500 font-medium' : dark ? 'text-gray-500' : 'text-gray-400'}`}>
                 {descWordCount}/{MAX_DESC_WORDS} palabras
               </span>
@@ -237,7 +237,7 @@ export default function AgentSettingsModal({ agent, onClose, onSave }) {
 
           {/* Schedule — free picker */}
           <div>
-            <label className={`text-sm font-medium mb-2 block ${dark ? 'text-gray-300' : 'text-gray-700'}`}>Horario de ejecucion</label>
+            <label className={`text-sm font-medium mb-2 block ${dark ? 'text-gray-300' : 'text-gray-700'}`}>Horario de ejecución</label>
 
             {/* Day buttons */}
             <div className="flex gap-1.5 mb-3">
